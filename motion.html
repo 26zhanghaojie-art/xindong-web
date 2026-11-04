@@ -3,106 +3,102 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="dark light">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-JHwM/L8men0CTsQeYhbDGMkh/Q4v9t1YlwTJBy7l1Y4='; style-src 'sha256-d7IUL4tGD0LnufRk9KVUvV+JRs3JlZJ2iSTAQa0Dgow='; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfd5AnsoYJpkF1vgucwIeEcJTT1JAGutXvXdFd1Ff6I='; style-src 'sha256-qcrd+jno0VTJraEsMnkuHcHn6VEHbykpp/Jr5ZtlWN8='; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>薪动 · 动态形象与烟雾预览</title>
 <style>:root{--paper:#161b18;--surface:#222a24;--raised:#2c362d;--ink:#f1f5e8;--muted:#adb9a7;--line:#3c493b;--accent:#d8fb68;--accent-ink:#243016;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--paper);color-scheme:dark}
 :root[data-theme="lavender"]{--paper:#f0edf7;--surface:#fcfaff;--raised:#eae2f4;--ink:#3b2c4d;--muted:#796a88;--line:#d9cde8;--accent:#c6a6ef;--accent-ink:#3b244d;color-scheme:light}
 :root[data-theme="moss"]{--paper:#eff2e8;--surface:#fbfcf6;--raised:#e2eada;--ink:#304c39;--muted:#6d7f67;--line:#d1ddc7;--accent:#a9c38f;--accent-ink:#2e4b30;color-scheme:light}
 :root[data-theme="orange"]{--paper:#fff6e9;--surface:#fffcf7;--raised:#ffe5c9;--ink:#3c281e;--muted:#89664d;--line:#ead3b8;--accent:#ff914d;--accent-ink:#4b2918;color-scheme:light}
 :root[data-theme="lamb"]{--paper:#fffdf1;--surface:#fffff9;--raised:#e7f1de;--ink:#375842;--muted:#758568;--line:#d9e3c6;--accent:#f4e68f;--accent-ink:#40573c;color-scheme:light}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 15%,color-mix(in srgb,var(--accent) 5%,transparent),transparent 48%),var(--paper);min-height:100vh}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{border:1px solid var(--line);background:var(--surface)}.preview{max-width:1020px;margin:0 auto;padding:25px 34px 50px}.masthead{display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:19px;font-weight:800}.brand>span{display:grid;place-items:center;width:31px;height:34px;border-radius:8px;background:var(--accent);color:var(--accent-ink);transform:rotate(-7deg)}.brand small{font-size:8px;letter-spacing:3px;font-weight:500}.preview-tag{padding:5px 9px;font-size:10px;border:1px solid var(--line);border-radius:20px;color:var(--muted)}.motion-switch{margin-left:auto;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}.motion-switch input{accent-color:var(--accent)}.intro{margin:34px 0 26px}.eyebrow{font-size:9px;letter-spacing:2.8px;color:var(--muted)}h1{font-size:clamp(26px,3vw,35px);letter-spacing:-1px;margin:8px 0 12px}.intro>p:last-child{font-size:12px;color:var(--muted);line-height:1.7}.theme-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.theme-list button{min-width:0;display:flex;align-items:center;gap:4px;text-align:left;padding:6px;border-radius:13px;transition:background .15s,box-shadow .15s}.theme-list button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 10%,var(--surface));border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.thumb{width:51px;height:60px;flex-shrink:0;pointer-events:none}.theme-list button>span:last-child{font-size:11px;font-weight:750;white-space:nowrap}.theme-list small{font-size:8px;font-weight:400;color:var(--muted);display:block;margin-top:5px;white-space:normal;line-height:1.5}.app-sample{margin-top:24px;padding:21px 24px 12px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}.sample-top{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.sample-label{font-size:9px}.sample-head{display:flex;align-items:center;justify-content:space-between;min-height:173px;gap:12px}.sample-head p{font-size:10px;color:var(--muted);margin:0 0 11px}.sample-head h2{font-size:clamp(18px,2.7vw,26px);margin:0 0 15px;letter-spacing:-.6px}.sample-head small{font-size:10px;color:var(--muted)}.buddy-area{width:175px;flex:none;text-align:center;position:relative}.buddy-area>div{width:160px;height:148px;margin:auto}.buddy-area>span{display:block;font-size:9px;color:var(--muted);position:relative;top:-5px}.salary{border-radius:16px;background:var(--accent);color:var(--accent-ink);display:grid;grid-template-columns:1.4fr 1fr;padding:23px 26px;gap:28px;min-height:165px}.salary>div>span{display:block;font-size:11px}.salary span small{border:1px solid #0002;border-radius:3px;padding:1px 3px;font-size:8px;margin-left:4px}.salary strong{display:block;font-size:46px;letter-spacing:-2px;margin:10px 0;font-variant-numeric:tabular-nums;line-height:1.1}.salary strong>span{font-size:27px;letter-spacing:-1px}.salary small{font-size:10px}.shift{border-left:1px solid #0002;padding-left:28px}.shift strong{font-size:28px;letter-spacing:-.5px;margin:15px 0}.progress{height:4px;background:#0002;border-radius:4px;margin:13px 0 9px;overflow:hidden}.progress i{display:block;background:var(--accent-ink);height:100%;width:51%}.life-list{padding:17px 2px 0}.life-list h3{font-size:13px;margin:0 0 10px}.life-list h3 small{background:var(--raised);padding:2px 5px;border-radius:4px;margin-left:4px;font-size:9px}.life-list>div{display:grid;grid-template-columns:1fr 90px 90px;padding:12px 0;border-top:1px solid var(--line);font-size:11px}.life-list small{color:var(--muted);font-size:10px;text-align:right}footer{display:grid;gap:8px;margin-top:22px;color:var(--muted);font-size:11px;line-height:1.7}footer small{font-size:9px}.toy{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:280px;max-width:calc(100vw - 24px);border:1px solid var(--line);border-radius:18px;padding:11px 12px 9px;background:var(--surface);box-shadow:0 14px 45px #0003;z-index:20}.toy header{display:flex;align-items:center;gap:10px}.toy header strong{font-size:12px}.toy header>span{margin-left:auto;font-size:10px;color:var(--muted)}.toy header button{width:25px;height:25px;background:var(--raised);border:0;border-radius:50%;font-size:18px;line-height:20px}.smoke-stage{width:244px;height:160px;position:relative;margin:0 auto;isolation:isolate;overflow:hidden;border-radius:12px}.smoke-stage canvas{width:100%;height:100%;position:absolute;inset:0;z-index:3;pointer-events:none}#hit{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;border-radius:12px;user-select:none}#fish{position:absolute;left:25px;top:16px;width:152px;height:152px;object-fit:contain;transform-origin:50% 87%;pointer-events:none;filter:drop-shadow(0 5px 4px #0002)}#mallet{position:absolute;left:130px;top:94px;width:113px;height:30px;transform-origin:100px 14px;transform:rotate(52deg);pointer-events:none;filter:drop-shadow(0 3px 2px #0002);z-index:2}.shaft{position:absolute;left:12px;top:9px;width:99px;height:11px;border-radius:7px;border:1px solid #9b6028;background:repeating-linear-gradient(175deg,#dca85f 0 2px,#e5b36c 3px 6px);box-shadow:inset 0 2px 2px #fff3}.head{position:absolute;left:0;top:0;width:29px;height:29px;border-radius:50%;background:radial-gradient(circle at 30% 24%,#ffe0a2,#d7994d 58%,#a86b2c);border:1px solid #b78042}#impact{position:absolute;left:138px;top:56px;opacity:0;color:var(--accent);font-size:22px;pointer-events:none;z-index:4}#floatLayer{position:absolute;inset:0;pointer-events:none;z-index:5}.float{position:absolute;left:145px;top:60px;font-size:11px;font-weight:750;border-radius:5px;background:var(--surface);padding:3px 5px;color:var(--ink);animation:float-away 950ms ease-out both}.toy-actions{display:flex;gap:8px}.toy-actions button{flex:1;min-height:35px;border-radius:9px;font-size:11px;padding:8px}.toy-actions button:first-child{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}.toy-note{text-align:center;font-size:9px;color:var(--muted);margin:7px 0 0}.toy[data-collapsed="true"]{width:170px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}[hidden]{display:none!important}@keyframes float-away{0%{opacity:0;transform:translate(0,4px) scale(.8)}18%{opacity:1}100%{opacity:0;transform:translate(var(--float-x,20px),-55px) scale(1.05)}}
-@media(max-width:700px){.preview{padding:18px 18px 310px}.masthead{gap:9px}.brand small{display:none}.intro{margin:26px 0 20px}.intro>p:last-child{max-width:295px;font-size:11px}.theme-list{gap:6px}.theme-list button{flex-direction:column;gap:0;text-align:center;padding:3px 1px 8px;border-radius:11px}.thumb{width:51px;height:53px}.theme-list button>span:last-child{font-size:9px}.theme-list small{display:none}.app-sample{padding:16px 14px 10px;margin-top:18px}.sample-head{min-height:150px;gap:0}.sample-head h2{font-size:19px;max-width:175px;line-height:1.35}.sample-head p{font-size:9px}.sample-head small{font-size:8px;display:block;max-width:160px;line-height:1.6}.buddy-area{width:108px}.buddy-area>div{width:111px;height:120px}.buddy-area>span{font-size:8px;top:0}.salary{padding:19px 15px;gap:12px;grid-template-columns:1.1fr 1fr;min-height:145px}.salary strong{font-size:32px;letter-spacing:-1.5px;margin:13px 0}.salary strong>span{font-size:20px}.shift{padding-left:12px}.shift strong{font-size:19px;letter-spacing:-.5px;margin:17px 0}.salary small{font-size:8px}.salary>div>span{font-size:10px}.life-list>div{grid-template-columns:1fr 55px 65px}.toy{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}footer{font-size:10px}.sample-top{font-size:9px}.sample-label{font-size:8px}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 15%,color-mix(in srgb,var(--accent) 5%,transparent),transparent 48%),var(--paper);min-height:100vh}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{border:1px solid var(--line);background:var(--surface)}.preview{max-width:1020px;margin:0 auto;padding:25px 34px 50px}.masthead{display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:19px;font-weight:800}.brand>span{display:grid;place-items:center;width:31px;height:34px;border-radius:8px;background:var(--accent);color:var(--accent-ink);transform:rotate(-7deg)}.brand small{font-size:8px;letter-spacing:3px;font-weight:500}.preview-tag{padding:5px 9px;font-size:10px;border:1px solid var(--line);border-radius:20px;color:var(--muted)}.motion-switch{margin-left:auto;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}.motion-switch input{accent-color:var(--accent)}.intro{margin:34px 0 26px}.eyebrow{font-size:9px;letter-spacing:2.8px;color:var(--muted)}h1{font-size:clamp(26px,3vw,35px);letter-spacing:-1px;margin:8px 0 12px}.intro>p:last-child{font-size:12px;color:var(--muted);line-height:1.7}.theme-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.theme-list button{min-width:0;display:flex;align-items:center;gap:4px;text-align:left;padding:6px;border-radius:13px;transition:background .15s,box-shadow .15s}.theme-list button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 10%,var(--surface));border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.thumb{width:51px;height:60px;flex-shrink:0;pointer-events:none}.theme-list button>span:last-child{font-size:11px;font-weight:750;white-space:nowrap}.theme-list small{font-size:8px;font-weight:400;color:var(--muted);display:block;margin-top:5px;white-space:normal;line-height:1.5}.app-sample{margin-top:24px;padding:21px 24px 12px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}.sample-top{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.sample-label{font-size:9px}.sample-head{display:flex;align-items:center;justify-content:space-between;min-height:173px;gap:12px}.sample-head p{font-size:10px;color:var(--muted);margin:0 0 11px}.sample-head h2{font-size:clamp(18px,2.7vw,26px);margin:0 0 15px;letter-spacing:-.6px}.sample-head small{font-size:10px;color:var(--muted)}.buddy-area{width:175px;flex:none;text-align:center;position:relative}.buddy-area>div{width:160px;height:148px;margin:auto}.buddy-area>span{display:block;font-size:9px;color:var(--muted);position:relative;top:-5px}.salary{border-radius:16px;background:var(--accent);color:var(--accent-ink);display:grid;grid-template-columns:1.4fr 1fr;padding:23px 26px;gap:28px;min-height:165px}.salary>div>span{display:block;font-size:11px}.salary span small{border:1px solid #0002;border-radius:3px;padding:1px 3px;font-size:8px;margin-left:4px}.salary strong{display:block;font-size:46px;letter-spacing:-2px;margin:10px 0;font-variant-numeric:tabular-nums;line-height:1.1}.salary strong>span{font-size:27px;letter-spacing:-1px}.salary small{font-size:10px}.shift{border-left:1px solid #0002;padding-left:28px}.shift strong{font-size:28px;letter-spacing:-.5px;margin:15px 0}.progress{height:4px;background:#0002;border-radius:4px;margin:13px 0 9px;overflow:hidden}.progress i{display:block;background:var(--accent-ink);height:100%;width:51%}.life-list{padding:17px 2px 0}.life-list h3{font-size:13px;margin:0 0 10px}.life-list h3 small{background:var(--raised);padding:2px 5px;border-radius:4px;margin-left:4px;font-size:9px}.life-list>div{display:grid;grid-template-columns:1fr 90px 90px;padding:12px 0;border-top:1px solid var(--line);font-size:11px}.life-list small{color:var(--muted);font-size:10px;text-align:right}footer{display:grid;gap:8px;margin-top:22px;color:var(--muted);font-size:11px;line-height:1.7}footer small{font-size:9px}.toy{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:280px;max-width:calc(100vw - 24px);border:1px solid var(--line);border-radius:18px;padding:11px 12px 9px;background:var(--surface);box-shadow:0 14px 45px #0003;z-index:20}.toy header{display:flex;align-items:center;gap:10px}.toy header strong{font-size:12px}.toy header>span{margin-left:auto;font-size:10px;color:var(--muted)}.toy header button{width:25px;height:25px;background:var(--raised);border:0;border-radius:50%;font-size:18px;line-height:20px}.smoke-stage{width:244px;height:200px;position:relative;margin:0 auto;isolation:isolate;overflow:hidden;border-radius:12px}.smoke-stage canvas{width:100%;height:100%;position:absolute;inset:0;z-index:3;pointer-events:none}#hit{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;border-radius:12px;user-select:none}#fish{position:absolute;left:25px;top:56px;width:152px;height:152px;object-fit:contain;transform-origin:50% 87%;pointer-events:none;filter:drop-shadow(0 5px 4px #0002)}#mallet{position:absolute;left:130px;top:134px;width:113px;height:30px;transform-origin:100px 14px;transform:rotate(52deg);pointer-events:none;filter:drop-shadow(0 3px 2px #0002);z-index:2}.shaft{position:absolute;left:12px;top:9px;width:99px;height:11px;border-radius:7px;border:1px solid #9b6028;background:repeating-linear-gradient(175deg,#dca85f 0 2px,#e5b36c 3px 6px);box-shadow:inset 0 2px 2px #fff3}.head{position:absolute;left:0;top:0;width:29px;height:29px;border-radius:50%;background:radial-gradient(circle at 30% 24%,#ffe0a2,#d7994d 58%,#a86b2c);border:1px solid #b78042}#impact{position:absolute;left:138px;top:96px;opacity:0;color:var(--accent);font-size:22px;pointer-events:none;z-index:4}#floatLayer{position:absolute;inset:0;pointer-events:none;z-index:5}.float{position:absolute;left:145px;top:100px;font-size:11px;font-weight:750;border-radius:5px;background:var(--surface);padding:3px 5px;color:var(--ink);animation:float-away 950ms ease-out both}.toy-actions{display:flex;gap:8px}.toy-actions button{flex:1;min-height:35px;border-radius:9px;font-size:11px;padding:8px}.toy-actions button:first-child{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}.toy-note{text-align:center;font-size:9px;color:var(--muted);margin:7px 0 0}.toy[data-collapsed="true"]{width:170px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}[hidden]{display:none!important}@keyframes float-away{0%{opacity:0;transform:translate(0,4px) scale(.8)}18%{opacity:1}100%{opacity:0;transform:translate(var(--float-x,20px),-55px) scale(1.05)}}
+@media(max-width:700px){.preview{padding:18px 18px 350px}.masthead{gap:9px}.brand small{display:none}.intro{margin:26px 0 20px}.intro>p:last-child{max-width:295px;font-size:11px}.theme-list{gap:6px}.theme-list button{flex-direction:column;gap:0;text-align:center;padding:3px 1px 8px;border-radius:11px}.thumb{width:51px;height:53px}.theme-list button>span:last-child{font-size:9px}.theme-list small{display:none}.app-sample{padding:16px 14px 10px;margin-top:18px}.sample-head{min-height:150px;gap:0}.sample-head h2{font-size:19px;max-width:175px;line-height:1.35}.sample-head p{font-size:9px}.sample-head small{font-size:8px;display:block;max-width:160px;line-height:1.6}.buddy-area{width:108px}.buddy-area>div{width:111px;height:120px}.buddy-area>span{font-size:8px;top:0}.salary{padding:19px 15px;gap:12px;grid-template-columns:1.1fr 1fr;min-height:145px}.salary strong{font-size:32px;letter-spacing:-1.5px;margin:13px 0}.salary strong>span{font-size:20px}.shift{padding-left:12px}.shift strong{font-size:19px;letter-spacing:-.5px;margin:17px 0}.salary small{font-size:8px}.salary>div>span{font-size:10px}.life-list>div{grid-template-columns:1fr 55px 65px}.toy{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}footer{font-size:10px}.sample-top{font-size:9px}.sample-label{font-size:8px}}
 @media(min-width:1000px){.preview{max-width:1030px;margin-left:max(16px,calc((100vw - 1340px)/2));margin-right:300px;padding-left:24px;padding-right:24px}}
 .thumb.animated-companion{width:51px;height:60px;aspect-ratio:auto}.buddy-area>div.animated-companion{width:160px;height:148px;aspect-ratio:auto}
 @media(max-width:700px){.thumb.animated-companion{width:51px;height:53px}.buddy-area>div.animated-companion{width:111px;height:120px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
-.animated-companion{width:160px;max-width:100%;aspect-ratio:200/190;position:relative;isolation:isolate;--buddy-energy:0;--buddy-breath-duration:3.8s;--buddy-puff-opacity:.28;--buddy-typing-duration:.72s}
+.animated-companion{width:160px;max-width:100%;aspect-ratio:200/190;position:relative;isolation:isolate;--buddy-energy:0;--buddy-breath-duration:3.8s;--buddy-puff-opacity:.28}
 .animated-companion .buddy-art{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;user-select:none}
 .animated-companion .buddy-art g{transform-box:view-box}
-.animated-companion .buddy-breathe{transform-origin:100px 164px;animation:buddy-breath var(--buddy-breath-duration) ease-in-out infinite}
-.animated-companion .buddy-cow-head{transform-origin:100px 124px;animation:buddy-cow-breath var(--buddy-breath-duration) ease-in-out infinite}
-.animated-companion .buddy-cheek{transform-box:fill-box;transform-origin:center;animation:buddy-cheek-inflate var(--buddy-breath-duration) ease-in-out infinite}
-.animated-companion .buddy-anger{transform-box:fill-box;transform-origin:center;animation:buddy-anger-pulse var(--buddy-breath-duration) ease-in-out infinite}
-.animated-companion .buddy-nostril-puff{opacity:0;transform-origin:100px 112px;animation-duration:var(--buddy-breath-duration);animation-timing-function:ease-out;animation-iteration-count:infinite}
+.animated-companion .buddy-breathe{transform-origin:100px 150px;animation:buddy-breath var(--buddy-breath-duration) ease-in-out infinite}
+.animated-companion .buddy-cow-head{transform-origin:100px 103px;animation:buddy-cow-breath var(--buddy-breath-duration) ease-in-out infinite}
+.animated-companion .buddy-nostril-puff{opacity:0;transform-origin:100px 96px;animation-duration:var(--buddy-breath-duration);animation-timing-function:ease-out;animation-iteration-count:infinite}
 .animated-companion .buddy-puff-left{animation-name:buddy-exhale-left}
 .animated-companion .buddy-puff-right{animation-name:buddy-exhale-right;animation-delay:.12s}
-.animated-companion .buddy-eyes{transform-origin:100px 93px;animation:buddy-blink 6.4s ease-in-out infinite}
-.animated-companion .buddy-ear-left{transform-origin:66px 82px;animation:buddy-ear-left 8s ease-in-out infinite}
-.animated-companion .buddy-ear-right{transform-origin:133px 82px;animation:buddy-ear-right 9.3s ease-in-out infinite}
-.animated-companion .buddy-drowsy-body{transform-origin:98px 166px;animation:buddy-drowsy-sway 5.6s ease-in-out infinite}
-.animated-companion .buddy-drowsy-head{transform-origin:99px 122px;animation:buddy-drowsy-nod 5.6s ease-in-out infinite}
-.animated-companion .buddy-off-eyes{transform-origin:99px 87px;animation:buddy-sleep-blink 7s ease-in-out infinite}
-.animated-companion .buddy-ghost{transform-origin:155px 62px;animation:buddy-soul-float 5.6s ease-in-out infinite}
+.animated-companion .buddy-eyes{transform-origin:100px 62px;animation:buddy-blink 6.4s ease-in-out infinite}
+.animated-companion .buddy-ear-left{transform-origin:76px 49px;animation:buddy-ear-left 9s ease-in-out infinite}
+.animated-companion .buddy-ear-right{transform-origin:123px 49px;animation:buddy-ear-right 10.3s ease-in-out infinite}
+.animated-companion .buddy-drowsy-body{transform-origin:98px 150px;animation:buddy-drowsy-sway 5.6s ease-in-out infinite}
+.animated-companion .buddy-drowsy-head{transform-origin:99px 105px;animation:buddy-drowsy-nod 5.6s ease-in-out infinite}
+.animated-companion .buddy-off-eyes{transform-origin:99px 62px;animation:buddy-sleep-blink 7s ease-in-out infinite}
+.animated-companion .buddy-ghost{transform-origin:153px 62px;animation:buddy-soul-float 5.6s ease-in-out infinite}
 .animated-companion .buddy-faint-spark{animation:buddy-faint-spark 5.6s ease-in-out infinite}
-.animated-companion .buddy-recline{transform-origin:85px 140px;animation:buddy-sunny-breathe 5s ease-in-out infinite}
-.animated-companion .buddy-swing-foot{transform-origin:112px 134px;animation:buddy-foot-swing 3.4s ease-in-out infinite}
-.animated-companion .buddy-sun{transform-origin:151px 47px;animation:buddy-sun-turn 20s linear infinite}
-.animated-companion .buddy-sun-glow{transform-origin:151px 47px;animation:buddy-sunlight 5s ease-in-out infinite}
-.animated-companion .buddy-leaf{transform-origin:30px 169px;animation:buddy-leaf-sway 5.5s ease-in-out infinite}
-.animated-companion .buddy-proud-chest{transform-origin:100px 148px;animation:buddy-proud-breathe 4.4s ease-in-out infinite}
-.animated-companion .buddy-proud-head{transform-origin:100px 126px;animation:buddy-proud-nod 4.4s ease-in-out infinite}
-.animated-companion .buddy-proud-spark{transform-box:fill-box;transform-origin:center;animation:buddy-glimmer 3.6s ease-in-out infinite}
-.animated-companion .buddy-spark-two{animation-delay:-1.6s}
-.animated-companion .buddy-lamb-head{transform-origin:99px 128px;animation:buddy-working-nod 2.8s ease-in-out infinite}
-.animated-companion .buddy-typing-left{transform-origin:72px 126px;animation:buddy-type-left var(--buddy-typing-duration) ease-in-out infinite}
-.animated-companion .buddy-typing-right{transform-origin:125px 126px;animation:buddy-type-right var(--buddy-typing-duration) ease-in-out infinite}
-.animated-companion .buddy-lamb-flower{transform-origin:132px 64px;animation:buddy-flower-rock 4s ease-in-out infinite}
-.animated-companion .buddy-work-spark{transform-origin:100px 130px;animation:buddy-work-spark 2.8s ease-in-out infinite}
-.animated-companion.buddy-reacting .buddy-reaction{transform-origin:100px 166px;animation:buddy-react .6s cubic-bezier(.2,.7,.2,1) both}
-.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-left{animation-duration:1.9s}
-.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-right{animation-duration:2.1s}
+.animated-companion .buddy-recline{transform-origin:85px 140px;animation:buddy-sunny-breathe 5.5s ease-in-out infinite}
+.animated-companion .buddy-swing-foot{transform-origin:121px 133px;animation:buddy-foot-swing 4.5s ease-in-out infinite}
+.animated-companion .buddy-sun{transform-origin:155px 43px;animation:buddy-sun-turn 30s linear infinite}
+.animated-companion .buddy-sun-glow{transform-origin:155px 43px;animation:buddy-sunlight 5.5s ease-in-out infinite}
+.animated-companion .buddy-leaf{transform-origin:24px 174px;animation:buddy-leaf-sway 6s ease-in-out infinite}
+.animated-companion .buddy-proud-chest{transform-origin:100px 148px;animation:buddy-proud-breathe 4.8s ease-in-out infinite}
+.animated-companion .buddy-proud-head{transform-origin:100px 106px;animation:buddy-proud-nod 4.8s ease-in-out infinite}
+.animated-companion .buddy-proud-spark{transform-box:fill-box;transform-origin:center;animation:buddy-glimmer 4.2s ease-in-out infinite}
+.animated-companion .buddy-goat-body{transform-origin:100px 150px;animation:buddy-goat-breathe 8.8s ease-in-out infinite}
+.animated-companion .buddy-goat-head{transform-origin:100px 97px;animation:buddy-goat-sip-head 8.8s ease-in-out infinite}
+.animated-companion .buddy-goat-beard{transform-box:fill-box;transform-origin:50% 0;animation:buddy-beard-sway 4.4s ease-in-out infinite}
+.animated-companion .buddy-tea-lift{transform-origin:100px 126px;animation:buddy-tea-sip 8.8s cubic-bezier(.4,0,.3,1) infinite}
+.animated-companion .buddy-tea-steam-one{animation:buddy-tea-steam 3s ease-in-out infinite}
+.animated-companion .buddy-tea-steam-two{animation:buddy-tea-steam 3s ease-in-out -1.4s infinite}
+.animated-companion.buddy-reacting .buddy-reaction{transform-origin:100px 170px;animation:buddy-react .6s ease-out both}
+.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-left{animation-duration:2.8s}
+.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-right{animation-duration:3.1s}
 .animated-companion.buddy-paused *{animation-play-state:paused!important}
 .animated-companion.buddy-paused .buddy-nostril-puff{opacity:0!important}
-@keyframes buddy-breath{0%,100%{transform:scale(1,1)}36%{transform:scale(1.035,1.055)}58%{transform:scale(1.02,.985)}76%{transform:scale(1,1)}}
-@keyframes buddy-cow-breath{0%,100%{transform:translateY(0) rotate(-.8deg)}36%{transform:translateY(-2px) rotate(.8deg)}58%{transform:translateY(1px) rotate(-1deg)}}
-@keyframes buddy-cheek-inflate{0%,100%{transform:scale(1)}36%{transform:scale(1.17,1.11)}57%{transform:scale(.98)}}
-@keyframes buddy-exhale-left{0%,40%{opacity:0;transform:translate(5px,0) scale(.35)}48%{opacity:var(--buddy-puff-opacity);transform:translate(-3px,-1px) scale(.8)}76%{opacity:0;transform:translate(-19px,-9px) scale(1.3)}100%{opacity:0;transform:translate(-19px,-9px) scale(1.3)}}
-@keyframes buddy-exhale-right{0%,40%{opacity:0;transform:translate(-5px,0) scale(.35)}48%{opacity:var(--buddy-puff-opacity);transform:translate(3px,-1px) scale(.8)}76%{opacity:0;transform:translate(19px,-9px) scale(1.3)}100%{opacity:0;transform:translate(19px,-9px) scale(1.3)}}
-@keyframes buddy-anger-pulse{0%,100%{opacity:.4;transform:scale(.85)}35%,50%{opacity:1;transform:scale(1.15)}}
-@keyframes buddy-blink{0%,42%,46%,72%,76%,100%{transform:scaleY(1)}44%,74%{transform:scaleY(.12)}}
-@keyframes buddy-ear-left{0%,42%,50%,100%{transform:rotate(0)}45%{transform:rotate(-7deg)}48%{transform:rotate(3deg)}}
-@keyframes buddy-ear-right{0%,60%,68%,100%{transform:rotate(0)}63%{transform:rotate(7deg)}66%{transform:rotate(-3deg)}}
-@keyframes buddy-drowsy-sway{0%,100%{transform:rotate(-1deg) scaleY(1)}50%{transform:rotate(1deg) scaleY(.98)}}
-@keyframes buddy-drowsy-nod{0%,100%{transform:translateY(0) rotate(-2deg)}48%{transform:translateY(3px) rotate(3deg)}72%{transform:translateY(2px) rotate(1deg)}}
+@keyframes buddy-breath{0%,100%{transform:scale(1)}34%{transform:scale(1.045,1.075) translateY(-1px)}56%{transform:scale(1.015,.985)}76%{transform:scale(1)}}
+@keyframes buddy-cow-breath{0%,100%{transform:translateY(0) rotate(-.6deg)}34%{transform:translateY(-3px) rotate(.6deg)}56%{transform:translateY(1px) rotate(-.8deg)}}
+@keyframes buddy-exhale-left{0%,39%{opacity:0;transform:translate(5px,0) scale(.35)}48%{opacity:var(--buddy-puff-opacity);transform:translate(-4px,-1px) scale(.85)}80%{opacity:0;transform:translate(-23px,-8px) scale(1.45)}100%{opacity:0;transform:translate(-23px,-8px) scale(1.45)}}
+@keyframes buddy-exhale-right{0%,39%{opacity:0;transform:translate(-5px,0) scale(.35)}48%{opacity:var(--buddy-puff-opacity);transform:translate(4px,-1px) scale(.85)}80%{opacity:0;transform:translate(23px,-8px) scale(1.45)}100%{opacity:0;transform:translate(23px,-8px) scale(1.45)}}
+@keyframes buddy-blink{0%,42%,47%,76%,81%,100%{transform:scaleY(1)}44%,79%{transform:scaleY(.15)}}
+@keyframes buddy-ear-left{0%,42%,50%,100%{transform:rotate(0)}45%{transform:rotate(-4deg)}48%{transform:rotate(1.5deg)}}
+@keyframes buddy-ear-right{0%,60%,68%,100%{transform:rotate(0)}63%{transform:rotate(4deg)}66%{transform:rotate(-1.5deg)}}
+@keyframes buddy-drowsy-sway{0%,100%{transform:rotate(-.7deg) scaleY(1)}50%{transform:rotate(.7deg) scaleY(.98)}}
+@keyframes buddy-drowsy-nod{0%,100%{transform:translateY(0) rotate(-1.5deg)}48%{transform:translateY(3px) rotate(2.5deg)}72%{transform:translateY(2px) rotate(1deg)}}
 @keyframes buddy-sleep-blink{0%,30%,62%,100%{transform:scaleY(1)}38%,55%{transform:scaleY(.25)}}
-@keyframes buddy-soul-float{0%,100%{transform:translate(-2px,7px) rotate(-7deg);opacity:.35}50%{transform:translate(3px,-7px) rotate(5deg);opacity:.95}}
-@keyframes buddy-faint-spark{0%,100%{opacity:.2}50%{opacity:.8}}
-@keyframes buddy-sunny-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.025)}}
-@keyframes buddy-foot-swing{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(6deg)}}
+@keyframes buddy-soul-float{0%,100%{transform:translate(-2px,7px) rotate(-5deg);opacity:.25}50%{transform:translate(3px,-7px) rotate(4deg);opacity:.85}}
+@keyframes buddy-faint-spark{0%,100%{opacity:.1}50%{opacity:.6}}
+@keyframes buddy-sunny-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.022)}}
+@keyframes buddy-foot-swing{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(5deg)}}
 @keyframes buddy-sun-turn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-@keyframes buddy-sunlight{0%,100%{opacity:.55;transform:scale(.9)}50%{opacity:.9;transform:scale(1.1)}}
-@keyframes buddy-leaf-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(5deg)}}
-@keyframes buddy-proud-breathe{0%,100%{transform:scale(1)}45%{transform:scale(1.025,1.045)}}
-@keyframes buddy-proud-nod{0%,100%{transform:translateY(0) rotate(-1.2deg)}35%{transform:translateY(-3px) rotate(2.8deg)}55%{transform:translateY(-1px) rotate(0)}70%{transform:translateY(-2px) rotate(1deg)}}
-@keyframes buddy-glimmer{0%,100%{transform:scale(.75) rotate(-8deg);opacity:.45}45%{transform:scale(1.1) rotate(8deg);opacity:1}}
-@keyframes buddy-working-nod{0%,100%{transform:rotate(-1deg) translateY(0)}45%{transform:rotate(1.2deg) translateY(1.5px)}75%{transform:rotate(.3deg) translateY(-1px)}}
-@keyframes buddy-type-left{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(-7deg) translateY(-3px)}}
-@keyframes buddy-type-right{0%,100%{transform:rotate(7deg) translateY(-3px)}50%{transform:rotate(0) translateY(0)}}
-@keyframes buddy-flower-rock{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(6deg)}}
-@keyframes buddy-work-spark{0%,100%{opacity:.2;transform:scale(.9)}50%{opacity:.8;transform:scale(1.06)}}
-@keyframes buddy-react{0%,100%{transform:translateY(0) scale(1)}18%{transform:translateY(2px) scale(1.045,.95)}45%{transform:translateY(-6px) scale(.98,1.025)}72%{transform:translateY(1px) scale(1.015,.99)}}
-@media(prefers-reduced-motion:reduce){.animated-companion *{animation:none!important;transition:none!important}.animated-companion .buddy-nostril-puff{display:none}.animated-companion .buddy-ghost{opacity:.7}}
+@keyframes buddy-sunlight{0%,100%{opacity:.45;transform:scale(.94)}50%{opacity:.8;transform:scale(1.07)}}
+@keyframes buddy-leaf-sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(4deg)}}
+@keyframes buddy-proud-breathe{0%,100%{transform:scale(1)}45%{transform:scale(1.02,1.035)}}
+@keyframes buddy-proud-nod{0%,100%{transform:translateY(0) rotate(-.8deg)}35%{transform:translateY(-2px) rotate(2deg)}55%{transform:translateY(-.5px) rotate(0)}70%{transform:translateY(-1px) rotate(.6deg)}}
+@keyframes buddy-glimmer{0%,100%{transform:scale(.9);opacity:.3}45%{transform:scale(1.1);opacity:.8}}
+@keyframes buddy-goat-breathe{0%,100%{transform:scaleY(1)}34%{transform:scaleY(1.025)}63%{transform:scaleY(1.01)}}
+@keyframes buddy-goat-sip-head{0%,42%,88%,100%{transform:translateY(0) rotate(-.7deg)}56%,72%{transform:translateY(2px) rotate(2deg)}80%{transform:translateY(1px) rotate(.5deg)}}
+@keyframes buddy-tea-sip{0%,39%,90%,100%{transform:translate(0,0) rotate(0)}58%,72%{transform:translate(-2px,-27px) rotate(-5deg)}78%{transform:translate(-1px,-25px) rotate(-2deg)}}
+@keyframes buddy-tea-steam{0%{opacity:0;transform:translateY(2px) scaleX(.9)}35%{opacity:.65}80%{opacity:0;transform:translateY(-10px) scaleX(1.08)}100%{opacity:0;transform:translateY(-10px) scaleX(1.08)}}
+@keyframes buddy-beard-sway{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.2deg)}}
+@keyframes buddy-react{0%,100%{transform:translateY(0)}25%{transform:translateY(1px) rotate(-.6deg)}55%{transform:translateY(-2px) rotate(.6deg)}80%{transform:translateY(.5px)}}
+@media(prefers-reduced-motion:reduce){.animated-companion *{animation:none!important;transition:none!important}.animated-companion .buddy-nostril-puff{display:none}.animated-companion .buddy-ghost{opacity:.7}.animated-companion .buddy-tea-steam{opacity:.35}}
 </style>
 </head>
 <body>
   <main class="preview">
     <header class="masthead"><a class="brand" href="https://26zhanghaojie-art.github.io/xindong-web/"><span>薪</span>薪动<small>XIN DONG</small></a><span class="preview-tag">动态效果预览</span><label class="motion-switch"><input id="motion" type="checkbox" checked> 动效</label></header>
-    <section class="intro"><p class="eyebrow">A LITTLE COMPANY AT WORK</p><h1>陪你上班的，小动静。</h1><p>选一个状态，点点右下角木鱼。看它呼吸，也看烟雾慢慢散去。</p></section>
+    <section class="intro"><p class="eyebrow">A LITTLE COMPANY AT WORK</p><h1>陪你上班的，小动静。</h1><p>选一个状态，点点右下角木鱼。看它喘气、喝茶；烟雾往上攒，想散时再吹散。</p></section>
     <nav class="theme-list" aria-label="选择动态形象">
-      <button data-theme-choice="acid" aria-pressed="true"><span class="thumb" data-thumb="acid"></span><span>怨气荧光<small>呼呼喘气的小牛</small></span></button>
-      <button data-theme-choice="lavender" aria-pressed="false"><span class="thumb" data-thumb="lavender"></span><span>精神离线<small>正在放空的小马</small></span></button>
-      <button data-theme-choice="moss" aria-pressed="false"><span class="thumb" data-thumb="moss"></span><span>佛系摸鱼<small>晒太阳的松弛搭子</small></span></button>
-      <button data-theme-choice="orange" aria-pressed="false"><span class="thumb" data-thumb="orange"></span><span>大动脉橙<small>底气十足的小马</small></span></button>
-      <button data-theme-choice="lamb" aria-pressed="false"><span class="thumb" data-thumb="lamb"></span><span>元气小羊<small>认真忙活的小羊</small></span></button>
+      <button data-theme-choice="acid" aria-pressed="true"><span class="thumb" data-thumb="acid"></span><span>怨气荧光<small>喘口粗气的老牛</small></span></button>
+      <button data-theme-choice="lavender" aria-pressed="false"><span class="thumb" data-thumb="lavender"></span><span>精神离线<small>放空片刻的老马</small></span></button>
+      <button data-theme-choice="moss" aria-pressed="false"><span class="thumb" data-thumb="moss"></span><span>佛系摸鱼<small>晒太阳的水豚</small></span></button>
+      <button data-theme-choice="orange" aria-pressed="false"><span class="thumb" data-thumb="orange"></span><span>大动脉橙<small>底气十足的老马</small></span></button>
+      <button data-theme-choice="lamb" aria-pressed="false"><span class="thumb" data-thumb="lamb"></span><span>从容茶歇<small>慢慢喝茶的老山羊</small></span></button>
     </nav>
     <section class="app-sample" aria-label="页面中的陪伴效果示例">
       <div class="sample-top"><span>我的工作日</span><span class="sample-label">页面示意 · 示例金额</span></div>
-      <div class="sample-head"><div><p id="mood">厌班，但钱要赚</p><h2 id="headline">精神已下班，工资请继续。</h2><small>09:00 — 18:00 · 本月 21 个工作日</small></div><div class="buddy-area"><div id="companion"></div><span id="buddyLabel">呼呼喘气的小牛</span></div></div>
+      <div class="sample-head"><div><p id="mood">厌班，但钱要赚</p><h2 id="headline">精神已下班，工资请继续。</h2><small>09:00 — 18:00 · 本月 21 个工作日</small></div><div class="buddy-area"><div id="companion"></div><span id="buddyLabel">喘口粗气的老牛</span></div></div>
       <div class="salary"><div><span>今日计薪 <small>示例</small></span><strong>¥ 248<span>.82</span></strong><small>每一秒，都算数。</small></div><div class="shift"><span>距离下班</span><strong>04:25:00</strong><div class="progress"><i></i></div><small>生活也在慢慢攒起来</small></div></div>
       <div class="life-list"><h3>优先支付清单 <small>03</small></h3><div><span>☕ 一杯咖啡</span><span>¥ 10</span><small>✓ 已覆盖</small></div><div><span>🍱 一顿午饭</span><span>¥ 20</span><small>✓ 已覆盖</small></div><div><span>🍰 一点小甜头</span><span>¥ 18</span><small>✓ 已覆盖</small></div></div>
     </section>
-    <footer><span>轻敲：一缕烟 · 连敲：卷起云团 · 清空：一阵风吹散</span><small>本页不读取或保存个人资料。烟雾和形象仅用于效果预览。</small></footer>
+    <footer><span>轻敲冒烟 · 向上聚拢后一直保留 · 点吹散，才消散</span><small>本页不读取或保存个人资料。烟雾和形象仅用于效果预览，刷新后重置。</small></footer>
   </main>
   <aside class="toy" aria-label="木鱼烟雾互动预览">
     <header><strong>敲走班味</strong><span id="count" aria-live="off">0 下</span><button id="collapse" aria-label="收起木鱼">−</button></header>
@@ -117,155 +113,175 @@ const __assets = Object.freeze({"body-horse.webp":"data:image/webp;base64,UklGRn
 const __asset = name => { if (!Object.hasOwn(__assets, name)) throw new Error('Missing embedded image: '+name); return __assets[name]; };
 const __modules = Object.create(null);
 __modules["companions.mjs"] = (() => {
-/** Original vector companions for the isolated animation preview. No saved data. */
+/** Original adult companions for the isolated animation preview. No saved data. */
 const labels = Object.freeze({
-  acid: '鼓着脸呼呼喘气的小牛',
-  lavender: '眨着困眼、灵魂轻轻飘走的小马',
-  moss: '躺着晒太阳、轻轻晃脚的水豚伙伴',
-  orange: '叉腰挺胸、得意点头的小马',
-  lamb: '耳朵轻动、认真敲小键盘的小羊',
+  acid: '灰白鬓毛、疲惫喘气的老牛',
+  lavender: '垂眼待机、灵魂轻飘的成年马',
+  moss: '靠椅晒太阳、慢慢晃脚的成年水豚',
+  orange: '叉腰挺胸、神态笃定的成年马',
+  lamb: '长角长须、捧茶慢饮的老山羊',
 });
 let nextId = 0;
 
 function art(theme, id) {
   const defs = `<defs>
-    <linearGradient id="${id}-cream" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFF8E4"/><stop offset="1" stop-color="#E8D7BC"/></linearGradient>
-    <linearGradient id="${id}-tan" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#DFAE78"/><stop offset="1" stop-color="#BC8657"/></linearGradient>
-    <linearGradient id="${id}-wool" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#FFFFF3"/><stop offset="1" stop-color="#E9E5D1"/></linearGradient>
-    <linearGradient id="${id}-orange" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#FFC98B"/><stop offset="1" stop-color="#E8A065"/></linearGradient>
-    <linearGradient id="${id}-chair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D7DDB5"/><stop offset="1" stop-color="#A8B88E"/></linearGradient>
-    <radialGradient id="${id}-shine"><stop stop-color="#FFF1AE" stop-opacity=".7"/><stop offset="1" stop-color="#FFF1AE" stop-opacity="0"/></radialGradient>
+    <linearGradient id="${id}-cream" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#D8C9AF"/><stop offset="1" stop-color="#B6A78F"/></linearGradient>
+    <linearGradient id="${id}-tan" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#BC946A"/><stop offset="1" stop-color="#987451"/></linearGradient>
+    <linearGradient id="${id}-hair" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#E8E3D5"/><stop offset="1" stop-color="#B5B0A4"/></linearGradient>
+    <linearGradient id="${id}-orange" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#C89769"/><stop offset="1" stop-color="#AB7851"/></linearGradient>
+    <linearGradient id="${id}-shirt" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#BFC6A5"/><stop offset="1" stop-color="#8E9C7C"/></linearGradient>
+    <linearGradient id="${id}-robe" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#B4B4A0"/><stop offset="1" stop-color="#8D9683"/></linearGradient>
+    <linearGradient id="${id}-chair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C5CEAB"/><stop offset="1" stop-color="#92A27A"/></linearGradient>
+    <radialGradient id="${id}-shine"><stop stop-color="#F5DB91" stop-opacity=".6"/><stop offset="1" stop-color="#F5DB91" stop-opacity="0"/></radialGradient>
   </defs>`;
   const fill = name => `url(#${id}-${name})`;
-  const common = `<ellipse class="buddy-shadow" cx="100" cy="169" rx="49" ry="7" fill="#5C4B3C" opacity=".11" stroke="none"/>`;
-  const star = (x,y,s=1) => `<path d="M${x} ${y-6*s}q0 ${6*s} ${6*s} ${6*s}q-${6*s} 0 -${6*s} ${6*s}q0 -${6*s} -${6*s} -${6*s}q${6*s} 0 ${6*s} -${6*s}Z"/>`;
+  const shadow = `<ellipse cx="100" cy="174" rx="47" ry="5" fill="#5C4B3C" opacity=".12" stroke="none"/>`;
   const bodies = {
     acid: `<g class="buddy-cow">
-      <path d="M141 124q18 9 10 23q-3 5-7 1" fill="none"/><path d="M144 148q-9-6-5-11q7-1 10 8Z" fill="#746051"/>
+      <path d="M130 137q20 12 12 28" fill="none"/><path d="M141 160l-7 11l10-1l4-9Z" fill="#777366"/>
+      <path d="M73 143l-6 26q8 8 21 3l10-29M109 144l4 28q14 6 21-3l-5-28" fill="#777B6C"/>
+      <path d="M67 165q13 3 22-1v9q-16 5-24-2Z" fill="#5F5A4C"/><path d="M113 165q10 4 20-2l3 9q-10 6-23 1Z" fill="#5F5A4C"/>
       <g class="buddy-breathe">
-        <path d="M70 108q-17 13-15 34q0 18 19 20h48q21-5 20-23q0-20-18-32Z" fill="${fill('cream')}"/>
-        <path d="M126 121q9 7 10 19q0 8-6 11q-13-4-14-14q-1-9 10-16Z" fill="#B4A392" stroke="none"/>
-        <path d="M76 141q-7 8-8 20q5 10 17 4l4-19" fill="${fill('cream')}"/>
-        <path d="M111 146l3 18q11 9 18-2l-5-18" fill="${fill('cream')}"/>
-        <path d="M67 159q10 4 19 0v6q-10 9-18 0Z" fill="#76604F"/>
-        <path d="M114 160q8 4 18-1v6q-8 9-17 0Z" fill="#76604F"/>
-        <path d="M72 120q-12 3-12 14q7 7 17-5M123 120q14 3 15 14q-8 7-18-4" fill="${fill('cream')}"/>
-        <path d="M88 116l11 14l12-14" fill="#C9DA8E"/><path d="M96 129l5 1l4 17l-5 6l-6-6Z" fill="#B4C572"/>
+        <path d="M79 83q-22 7-25 30l9 32q36 14 76-1l5-31q-7-24-27-29Z" fill="${fill('shirt')}"/>
+        <path d="M78 86l19 19l20-20l-7 24l-13-4l-10 6Z" fill="#D0D3B8"/>
+        <path d="M98 106v39M84 130l-11 3m37 9l14-1" fill="none" stroke="#7C896E" stroke-width="1.6"/>
+        <path d="M113 114h17v14h-16Z" fill="#A9B493" stroke-width="1.5"/>
+        <path d="M57 106q-13 15-8 39q2 10 13 6l4-32M137 106q16 18 10 39q-2 10-14 5l-4-30" fill="${fill('shirt')}"/>
+        <path d="M49 141l-1 13q3 7 9 4l5-13M136 143l1 13q7 6 11-2l-2-13" fill="${fill('cream')}"/>
+        <path d="M49 136l14 1M134 137l13-2" fill="none" stroke-width="1.7"/>
       </g>
       <g class="buddy-cow-head">
-        <g class="buddy-ear buddy-ear-left"><path d="M64 66Q33 48 36 74q2 15 25 12" fill="${fill('cream')}"/><path d="M54 70q-13-9-11 5q4 5 12 5" fill="#DAB6A8" stroke="none"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M136 66q30-18 28 8q-2 15-25 12" fill="${fill('cream')}"/><path d="M146 70q13-9 11 5q-4 5-12 5" fill="#DAB6A8" stroke="none"/></g>
-        <path d="M67 60Q50 47 61 32q0 14 14 17M128 59q21-11 10-27q-2 13-16 17" fill="#D2BB8A"/>
-        <path d="M55 85q-5-36 38-41q50-4 54 38l-1 17q-4 27-45 28q-40-1-46-25Z" fill="${fill('cream')}"/>
-        <path d="M105 45q24-1 35 17l-10 18q-16 1-22-12Z" fill="#AA9A89" stroke="none"/>
-        <path d="M86 47q8-15 15-7q9-5 13 6" fill="${fill('cream')}"/>
-        <g class="buddy-eyes"><path d="M72 84l13 3M116 86l13-4"/><path d="M78 88v6M123 88v6" stroke-width="3.6"/></g>
-        <path d="M66 78l17 5M116 81l15-6" stroke="#806450" stroke-width="3"/>
-        <ellipse class="buddy-cheek buddy-cheek-left" cx="68" cy="103" rx="14" ry="10" fill="#E9B5A3" opacity=".7" stroke="none"/>
-        <ellipse class="buddy-cheek buddy-cheek-right" cx="135" cy="102" rx="14" ry="10" fill="#E9B5A3" opacity=".7" stroke="none"/>
-        <path d="M69 98q30-13 61 0q13 5 7 19q-9 16-38 15q-29 0-35-15q-4-13 5-19Z" fill="#E7C7A9"/>
-        <path d="M81 110l3 2M118 109l3-2" stroke-width="4"/><path d="M95 121q7-3 14 0" stroke-width="2"/>
-        <path d="M137 57v-8m-5 4h10m-6-5l3 9" class="buddy-anger" stroke="#D88F75" stroke-width="2.3"/>
+        <path d="M76 44q-30-7-22-29q1 15 25 17M120 43q30-8 23-29q-2 15-27 18" fill="#B8AB89"/>
+        <path d="M59 27l7-4M64 34l7-5M134 27l-7-4M129 34l-6-5" stroke="#8D846C" stroke-width="1.4"/>
+        <g class="buddy-ear buddy-ear-left"><path d="M74 50q-29-11-30 1q7 17 28 9Z" fill="#A7A394"/><path d="M52 50l16 6" stroke="#7E8274" stroke-width="2"/></g>
+        <g class="buddy-ear buddy-ear-right"><path d="M124 50q27-13 31-1q-6 18-28 12Z" fill="#A7A394"/><path d="M145 50l-14 7" stroke="#7E8274" stroke-width="2"/></g>
+        <path d="M73 39q25-11 49 1q9 13 4 34l-4 17q-3 19-23 21q-21-3-25-21l-5-20q-3-21 4-32Z" fill="${fill('cream')}"/>
+        <path d="M71 44l-7 12l8-2l-6 12l9-4M124 43l9 13l-9-2l7 13l-9-4" fill="${fill('hair')}" stroke="#9D9E8E" stroke-width="1.6"/>
+        <path d="M76 38q8-12 16-9l-3 8q11-13 17-6l-3 8q12-8 18 2l-12 1l-10-3l-10 3Z" fill="${fill('hair')}"/>
+        <path d="M82 45l13-2M103 44l11 2M87 49h18" fill="none" stroke="#9C927F" stroke-width="1.4"/>
+        <path d="M76 54l16 3M106 57l15-4" stroke="#E0DED0" stroke-width="4"/>
+        <g class="buddy-eyes"><path d="M78 61l12 1M108 62l11-2" stroke-width="2.5"/><path d="M84 62v3M113 62v3" stroke-width="2.4"/></g>
+        <path d="M77 67q8 5 16 1M106 68q8 4 16-2M76 71l-4 3m51-4l4 3" fill="none" stroke="#96846D" stroke-width="1.5"/>
+        <path d="M84 68l-5 18M113 68l6 17" fill="none" stroke="#A59883" stroke-width="1.4"/>
+        <path d="M78 85q20-10 43 0q8 10 1 21q-22 13-43 0q-8-11-1-21Z" fill="#B6A18A"/>
+        <path d="M84 93l4 2M113 94l4-2" stroke-width="3.5"/><path d="M91 104q8-3 16 0" stroke-width="1.7"/>
       </g>
-      <g class="buddy-nostril-puff buddy-puff-left" fill="#DCE7C4" stroke="none"><circle cx="61" cy="112" r="5"/><circle cx="53" cy="108" r="7"/><circle cx="45" cy="113" r="5"/></g>
-      <g class="buddy-nostril-puff buddy-puff-right" fill="#DCE7C4" stroke="none"><circle cx="141" cy="111" r="5"/><circle cx="149" cy="106" r="7"/><circle cx="157" cy="111" r="5"/></g>
+      <g class="buddy-nostril-puff buddy-puff-left" fill="#CFD7C1" stroke="none"><ellipse cx="77" cy="96" rx="5" ry="3"/><ellipse cx="68" cy="92" rx="9" ry="5"/><ellipse cx="59" cy="97" rx="7" ry="4"/></g>
+      <g class="buddy-nostril-puff buddy-puff-right" fill="#CFD7C1" stroke="none"><ellipse cx="122" cy="96" rx="5" ry="3"/><ellipse cx="132" cy="92" rx="9" ry="5"/><ellipse cx="141" cy="97" rx="7" ry="4"/></g>
     </g>`,
     lavender: `<g class="buddy-horse-off">
-      <path d="M127 139q20-3 21 7q0 9-13 10" fill="none"/><path d="M139 150q8-1 11 3q-5 7-14 4Z" fill="#8E7290"/>
+      <path d="M131 139q19 6 12 27" fill="none"/><path d="M140 160l-8 13l13-4l4-10" fill="#726C74"/>
+      <path d="M76 142l-9 27q8 7 18 3l13-29M107 144l6 28q12 5 21-3l-9-29" fill="#8D8897"/>
+      <path d="M67 166l19-2l-1 9q-12 6-21-1ZM113 165l19-2l5 8q-11 7-24 2Z" fill="#625C67"/>
       <g class="buddy-drowsy-body">
-        <path d="M71 111q-9 15-11 39q7 18 36 17q33 0 43-16l-12-43" fill="#C9B8DB"/>
-        <path d="M65 145q3 11 18 10l-1 11q-14 5-23-4q-4-9 6-17M126 143q-1 12-14 13l3 12q15 2 23-8q2-10-12-17" fill="${fill('cream')}"/>
-        <path d="M65 157q8 5 17 1l1 9q-17 5-24-5Z" fill="#927B8B"/><path d="M115 158q9 3 18-2l4 7q-8 7-21 6Z" fill="#927B8B"/>
-        <path d="M78 117l-5 24q-8 9-13 0l5-23M120 117l9 24q9 9 14-2l-9-23" fill="${fill('cream')}"/>
-        <path d="M92 131v13m11-12v12" stroke="#AB96BD"/><path d="M84 148q12 6 25 0" fill="none" stroke="#AB96BD"/>
+        <path d="M78 84q-22 6-26 31l10 33q34 14 76-1l6-34q-7-24-28-28Z" fill="#ABA3B5"/>
+        <path d="M80 87l18 20l18-21M98 107v42" fill="none" stroke="#817589" stroke-width="1.7"/>
+        <path d="M87 102l10 3l8-3l-4 13l4 25l-7 8l-7-8l3-25Z" fill="#8B7B96"/>
+        <path d="M56 108q-10 20-7 38l12 1l8-25M139 110q13 19 9 38l-12-1l-9-27" fill="#ABA3B5"/>
+        <path d="M49 143l-1 12q4 7 11 2l3-12M136 145l2 12q6 5 11-2l-1-12" fill="${fill('cream')}"/>
+        <path d="M110 118h18v12h-18Z" fill="#BCB3C5" stroke-width="1.4"/>
       </g>
       <g class="buddy-drowsy-head">
-        <g class="buddy-ear buddy-ear-left"><path d="M65 62q-12-32 3-30q16 5 13 29" fill="${fill('cream')}"/><path d="M68 41l4 14" stroke="#C5ABA3" stroke-width="4"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M116 59q1-31 17-24q10 10-2 31" fill="${fill('cream')}"/><path d="M126 44l-4 13" stroke="#C5ABA3" stroke-width="4"/></g>
-        <path d="M58 83q-1-30 39-30q38 0 40 32l-1 21q-3 22-37 22q-35 0-42-24Z" fill="${fill('cream')}"/>
-        <path d="M74 58q5-18 25-14q18-6 28 11l-13 1l3 12l-17-9l-10 9l-1-12l-16 7Z" fill="#B299B6"/>
-        <g class="buddy-off-eyes"><path d="M70 87h15M111 87h15"/><path d="M77 88v5M118 88v5" stroke-width="3"/></g>
-        <ellipse cx="67" cy="101" rx="9" ry="5" fill="#D7B3BA" opacity=".7" stroke="none"/><ellipse cx="129" cy="101" rx="9" ry="5" fill="#D7B3BA" opacity=".7" stroke="none"/>
-        <path d="M70 103q25-12 54-1q12 7 5 19q-26 17-56 0q-9-10-3-18Z" fill="#E5CBB5"/>
-        <path d="M82 111v2M114 111v2" stroke-width="3"/><path d="M92 121h11"/>
+        <g class="buddy-ear buddy-ear-left"><path d="M78 39q-15-26-7-29q14 4 18 30" fill="${fill('cream')}"/><path d="M74 20l7 13" stroke="#A99583" stroke-width="2.5"/></g>
+        <g class="buddy-ear buddy-ear-right"><path d="M113 37q4-27 14-23q8 10-4 30" fill="${fill('cream')}"/><path d="M121 23l-4 12" stroke="#A99583" stroke-width="2.5"/></g>
+        <path d="M78 34q19-9 38 3q10 17 7 42l-5 23q-9 12-25 10q-17-4-19-19l-5-25q-1-22 9-34Z" fill="${fill('cream')}"/>
+        <path d="M78 34q5-14 23-12q21 0 24 15l-11-3l3 10l-15-8l-4 13l-7-11l-13 9Z" fill="#89818D"/>
+        <path d="M74 43l-6 19l9-7M119 43l7 19l-8-6" fill="#AAA6AA"/>
+        <path d="M79 55l12 1M104 56l13-1" fill="none" stroke="#8E827B" stroke-width="2.8"/>
+        <g class="buddy-off-eyes"><path d="M80 62h10M106 62h10"/><path d="M85 63v2M111 63v2" stroke-width="2.6"/></g>
+        <path d="M78 68q7 4 14 0M104 68q8 4 14 0M80 73l4 2m27-1l4-2" fill="none" stroke="#A28E7B" stroke-width="1.4"/>
+        <path d="M83 88q17-7 32 1l3 12q-16 17-33 1Z" fill="#BAA48A"/>
+        <path d="M88 95v2M109 95v2M94 106h11" stroke-width="1.9"/>
       </g>
-      <g class="buddy-ghost" stroke="#A294B3" stroke-width="1.7"><path d="M150 62q-9-8-8-19q0-13 13-13q15 0 14 15l-1 13l-7-3l-5 6l-6-3Z" fill="#FFFDF9" fill-opacity=".9"/><path d="M150 43v3m10-3v3"/><path d="M154 51h3"/></g>
-      <g class="buddy-faint-spark" stroke="#B4A2C7" fill="none" stroke-width="1.6"><path d="M151 74l-3 5m15-10l4 3"/></g>
+      <g class="buddy-ghost" stroke="#A294B3" stroke-width="1.4"><path d="M146 62q-5-8-3-17q1-12 9-16q8 1 8 13l-2 18l-5-4l-3 7l-4-4Z" fill="#E8E4EC" fill-opacity=".7"/><path d="M147 45h3m5-1h3"/><path d="M149 53h5"/></g>
+      <path class="buddy-faint-spark" d="M145 73l-2 5M158 70l3 4" fill="none" stroke="#B4A2C7" stroke-width="1.5"/>
     </g>`,
     moss: `<g class="buddy-sunny">
-      <circle class="buddy-sun-glow" cx="151" cy="47" r="35" fill="${fill('shine')}" stroke="none"/>
-      <g class="buddy-sun" stroke="#D7B75F" stroke-width="2"><circle cx="151" cy="47" r="16" fill="#F6DF94"/><path d="M151 23v-5m0 58v-5m24-24h5m-58 0h5m7-17l-4-4m38 38l4 4m-4-38l4-4m-38 38l-4 4" fill="none"/><path d="M146 47q2-3 4 0m5 0q2-3 4 0" fill="none" stroke="#9D8149" stroke-width="1.5"/></g>
-      <path d="M46 138l-9 31M142 136l9 33" stroke="#92725A" stroke-width="4"/>
-      <path d="M35 110q-4-13 4-13q6 0 10 13l19 29l74-5q14-2 14 8q-1 7-13 8H66q-10 0-16-11Z" fill="${fill('chair')}"/>
+      <circle class="buddy-sun-glow" cx="155" cy="43" r="34" fill="${fill('shine')}" stroke="none"/>
+      <g class="buddy-sun" stroke="#C8AB62" stroke-width="1.6"><circle cx="155" cy="43" r="14" fill="#EBD18A"/><path d="M155 21v-5m0 54v-5m22-22h5m-54 0h5m7-16l-4-4m35 35l4 4m-4-35l4-4m-35 35l-4 4" fill="none"/></g>
+      <path d="M50 137l-12 38M143 139l12 36" stroke="#7B6850" stroke-width="4"/>
+      <path d="M40 99q-4-11-10-6q-5 4 0 14l23 41q5 6 15 6h80q12-1 12-9q-1-8-13-6l-77 3Z" fill="${fill('chair')}"/>
       <g class="buddy-recline">
-        <path d="M74 91q20-7 47 21q12 12 15 25q-32 15-63 5L59 118Z" fill="${fill('tan')}"/>
-        <path d="M69 120q17 8 28 4" fill="none" stroke="#AA744C"/>
-        <path d="M84 126q13 15 32 10l22-9q12-1 14 8q0 8-12 10l-24 2" fill="${fill('tan')}"/>
-        <g class="buddy-swing-foot"><path d="M100 130l28-17q12-7 22-1q7 7 0 14q-6 5-15 0l-23 12" fill="${fill('tan')}"/><path d="M139 114l2 5m5-7l1 5" stroke="#9D6F4E" stroke-width="1.8"/></g>
+        <path d="M68 88q32-9 49 22l20 29q-30 14-64 2l-27-32Z" fill="#A9B19A"/>
+        <path d="M67 94l18 17l-9 7M85 111l15 27M87 126l15 1" fill="none" stroke="#7D8B70" stroke-width="1.6"/>
+        <path d="M97 134q13 5 28 4l24-5q11-3 15 5q3 7-7 10l-37 3" fill="#8C967C"/>
+        <path d="M152 133q14-5 20 2q4 10-12 12l-6-6Z" fill="${fill('tan')}"/>
+        <g class="buddy-swing-foot"><path d="M108 132l29-23q9-7 19-3l6 7l-7 9l-17-2l-17 17" fill="#8C967C"/><path d="M153 106q18-9 24-1q5 11-12 14l-9-3Z" fill="${fill('tan')}"/><path d="M169 105l2 6M164 107l2 5" stroke="#7D5E44" stroke-width="1.5"/></g>
         <g class="buddy-sunny-head">
-          <path d="M42 78q-10-11 0-16q9-3 14 8M86 65q4-15 14-9q8 8-2 16" fill="${fill('tan')}"/>
-          <path d="M35 95q-7-23 21-30q29-9 43 8q15 14 3 34q-9 15-32 13q-29 0-35-25Z" fill="${fill('tan')}"/>
-          <path d="M52 94q5-5 11-1M76 87q6-4 11 0" fill="none" stroke-width="2.5"/>
-          <path d="M39 98q5-5 12-2l1 7q-8 6-13-5Z" fill="#856246"/>
-          <path d="M51 104q7 7 15 2" fill="none"/>
-          <ellipse cx="72" cy="101" rx="8" ry="5" fill="#E5A784" opacity=".65" stroke="none"/>
-          <path d="M57 72q9-6 18-5" stroke="#E9BE8D" stroke-width="3" fill="none"/>
+          <path d="M44 63q-10-9-3-14q8-3 12 8M79 54q2-13 10-8q7 8-2 14" fill="${fill('tan')}"/>
+          <path d="M46 57q28-15 43 7q7 13-6 31q-13 15-43 10l-14-9q-6-12 0-20Z" fill="${fill('tan')}"/>
+          <path d="M28 77q13-5 19 2l-5 12q-11 6-17 0Z" fill="#A27D57" stroke-width="1.8"/>
+          <path d="M26 81l6-1M31 96q13 7 25 0" fill="none" stroke-width="1.9"/>
+          <path d="M54 71l12-2M77 65l8 2" stroke="#7B6048" stroke-width="2.3"/><path d="M54 77l10-2M76 73l8-1" stroke-width="1.8"/>
+          <path d="M52 82q7 4 13 0M73 78l10-1M52 88l4 2M47 61l13-4M48 65l13-3" fill="none" stroke="#8A6749" stroke-width="1.2"/>
         </g>
-        <path d="M81 110q0 16 22 11" fill="none" stroke-width="8" stroke="#B58054"/>
-        <path d="M81 110q0 16 22 11" fill="none" stroke-width="4" stroke="#D8A06A"/>
+        <path d="M78 105q-1 16 24 16" fill="none" stroke="#717F66" stroke-width="10"/><path d="M78 105q-1 16 24 16" fill="none" stroke="#ADB59F" stroke-width="6"/>
+        <path d="M99 117q12-1 11 6q-4 6-13 1" fill="${fill('tan')}"/>
       </g>
-      <g class="buddy-leaf" fill="#B6C99A" stroke="#789069" stroke-width="1.7"><path d="M30 155q-16-5-9-17q12 4 9 17M30 155q5-15 15-8q-2 12-15 8"/><path d="M30 152v17" fill="none"/></g>
+      <g class="buddy-leaf" fill="#9AAE82" stroke="#71845F" stroke-width="1.5"><path d="M24 160q-14-5-8-17q10 3 8 17M24 159q5-13 14-8q-1 11-14 8"/><path d="M24 157v17" fill="none"/></g>
     </g>`,
     orange: `<g class="buddy-proud">
-      <path d="M132 133q22 3 17 18q-5 12-17 5" fill="none" stroke-width="3"/><path d="M133 151q9-1 12 5q-6 9-14 3Z" fill="#9A6249"/>
-      <path d="M76 142l-9 19q3 10 19 5l10-20M111 145l4 21q16 5 21-4l-12-22" fill="${fill('orange')}"/>
-      <path d="M68 158q9 4 18-1v9q-13 7-20-1Z" fill="#8F604B"/><path d="M114 158q9 4 18-1l5 7q-8 7-22 3Z" fill="#8F604B"/>
+      <path d="M129 139q20 5 16 25" fill="none"/><path d="M141 159l-6 14l12-3l4-9Z" fill="#6F5948"/>
+      <path d="M78 140l-11 30q9 6 20 2l12-30M108 141l6 30q13 5 23-2l-14-29" fill="#8B7B62"/>
+      <path d="M67 166l20-2l-1 9q-11 5-22-1ZM114 165l20-1l5 8q-12 6-25 1Z" fill="#625445"/>
       <g class="buddy-proud-chest">
-        <path d="M75 107q-15 15-10 38q31 18 67-1q5-23-11-38Z" fill="#F2AD77"/>
-        <path d="M83 112q16-8 31-1l9 31q-26 12-46 0Z" fill="#FFE4B1" stroke="none"/>
-        <path d="M75 114q-20-1-24 14q2 11 22 13l4-9q-10 0-11-3l11-5M124 113q22-2 25 14q-1 11-21 14l-4-9q10 0 11-4l-11-4" fill="${fill('orange')}"/>
-        <path d="M90 119l10 4l10-4l-1 13l-9 5l-9-5Z" fill="#F5D66F"/>
-        <path d="M100 122l1 4l4 1l-3 3l1 4l-3-2l-4 2l1-4l-3-3l5-1Z" fill="#FFF5D2" stroke="none"/>
+        <path d="M80 84q-22 4-28 29l13 35q32 10 73-3l8-33q-9-24-29-28Z" fill="#E1C5A1"/>
+        <path d="M82 85l15 20l19-20l13 59q-27 7-51 1Z" fill="#B98658"/>
+        <path d="M97 105v40M94 116h5m-5 9h5m-5 9h5" fill="none" stroke="#8E6547" stroke-width="1.4"/>
+        <path d="M58 102q-23 5-19 25q5 11 27 11l5-11q-15 1-16-5l14-10M137 101q23 4 23 24q-3 13-24 14l-6-11q14-1 15-6l-13-10" fill="#E1C5A1"/>
+        <path d="M62 125q10-2 15 5l-4 9l-10-2M135 126q-10-2-14 5l4 9l10-3" fill="${fill('orange')}"/>
+        <path d="M109 116h14v12h-14Z" fill="#C99669" stroke-width="1.4"/>
       </g>
       <g class="buddy-proud-head">
-        <g class="buddy-ear buddy-ear-left"><path d="M68 59q-13-31 2-31q14 6 12 29" fill="${fill('orange')}"/><path d="M71 38l3 14" stroke="#D9906A" stroke-width="4"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M118 56q-2-31 15-25q12 9-1 32" fill="${fill('orange')}"/><path d="M128 40l-4 14" stroke="#D9906A" stroke-width="4"/></g>
-        <path d="M58 81q-1-30 39-32q41 1 42 33v23q-7 23-41 23q-33 0-41-25Z" fill="${fill('orange')}"/>
-        <path d="M73 54q5-17 25-16q22-5 30 13l-13 1l4 11l-17-8l-13 9l1-11l-17 8Z" fill="#AA7150"/>
-        <g class="buddy-eyes"><path d="M73 84q6-7 13 0M112 83q7-7 14-1" fill="none" stroke-width="2.8"/></g>
-        <path d="M73 73l11-2M114 71l11 3" fill="none"/>
-        <ellipse cx="68" cy="99" rx="10" ry="6" fill="#E88C6B" opacity=".65" stroke="none"/><ellipse cx="130" cy="98" rx="9" ry="6" fill="#E88C6B" opacity=".65" stroke="none"/>
-        <path d="M71 99q28-12 56 0q13 9 3 22q-28 17-58 0q-11-12-1-22Z" fill="#F6CEA0"/>
-        <path d="M82 109v2M116 108v2" stroke-width="3"/><path d="M91 118q10 10 21-1" fill="#FFF6DC"/>
+        <g class="buddy-ear buddy-ear-left"><path d="M79 38q-15-25-6-28q14 5 16 29" fill="${fill('orange')}"/><path d="M75 20l7 14" stroke="#8F6145" stroke-width="2.2"/></g>
+        <g class="buddy-ear buddy-ear-right"><path d="M113 37q2-27 13-23q8 10-3 29" fill="${fill('orange')}"/><path d="M121 23l-4 11" stroke="#8F6145" stroke-width="2.2"/></g>
+        <path d="M79 34q18-9 37 1q12 17 8 43l-5 22q-7 12-24 11q-17-2-21-17l-4-28q-2-20 9-32Z" fill="${fill('orange')}"/>
+        <path d="M78 34q9-17 24-14q18 1 23 16l-14-7l-7 6l-8-7l-17 17Z" fill="#75624D"/>
+        <path d="M74 42l-5 16l8-5M121 42l6 16l-9-5" fill="#A59C88"/>
+        <path d="M79 54l13-2M105 52l12 3" fill="none" stroke="#765B43" stroke-width="2.8"/>
+        <g class="buddy-eyes"><path d="M80 62l10-1M106 61l10 1" stroke-width="2.2"/><path d="M85 62v2M111 62v2" stroke-width="2.5"/></g>
+        <path d="M79 68q6 3 12 0M106 68q7 3 12 0M87 43h19M91 47h12" fill="none" stroke="#986E4E" stroke-width="1.2"/>
+        <path d="M84 86q15-6 30 0l5 13q-15 15-33 3Z" fill="#CCA27A"/>
+        <path d="M89 93v2M109 93v2M93 103q9 4 17-2" fill="none" stroke-width="1.7"/>
       </g>
-      <g class="buddy-proud-spark buddy-spark-one" fill="#F3C968" stroke="#C69644" stroke-width="1.4">${star(157,77,1.1)}</g>
-      <g class="buddy-proud-spark buddy-spark-two" fill="#F3C968" stroke="#C69644" stroke-width="1.3">${star(39,91,.65)}</g>
+      <g class="buddy-proud-spark buddy-spark-one" stroke="#D6AD60" stroke-width="1.8" fill="none"><path d="M157 72l3-7m-1 17l8-1"/></g>
     </g>`,
-    lamb: `<g class="buddy-working">
-      <path d="M70 135q-6 15 1 29q12 5 20 0l4-17M109 147l3 18q13 4 20-3l-6-28" fill="#F4EBD7"/>
-      <path d="M71 159q9 4 19-1v8q-12 6-20-1Z" fill="#A2947A"/><path d="M112 159q9 4 18-2l3 7q-9 7-20 2Z" fill="#A2947A"/>
-      <path d="M66 119q-11 4-8 15q-5 10 5 16q4 10 15 6q8 7 18 1q10 7 19 0q12 5 18-6q12-4 8-15q5-12-8-17Z" fill="${fill('wool')}"/>
-      <path d="M83 118q-3 17 1 28q14 5 31-1l-2-27" fill="#CCD7AD"/><path d="M89 137h17v10H89Z" fill="#EAF0D3" stroke-width="1.6"/>
-      <g class="buddy-lamb-head">
-        <g class="buddy-ear buddy-ear-left"><path d="M62 81Q31 65 35 89q8 13 27 9" fill="#E9CEB7"/><path d="M52 85l-10-3" stroke="#D8AF9B" stroke-width="4"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M136 81q30-15 27 9q-8 13-27 9" fill="#E9CEB7"/><path d="M145 86l10-3" stroke="#D8AF9B" stroke-width="4"/></g>
-        <path d="M59 72q-7-12 6-18q-1-13 13-14q6-12 19-5q12-9 21 3q15-3 19 12q15 4 11 17q12 12 1 23q6 14-8 20q0 15-16 15q-11 9-22 0q-12 9-23-1q-15 3-20-11q-14-4-9-18q-9-14 8-23Z" fill="${fill('wool')}"/>
-        <path d="M69 83q0-17 29-18q30 1 33 19l-1 20q-9 22-31 21q-25-2-30-22Z" fill="#EFD7BC"/>
-        <path d="M63 73q-2-14 12-14q2-14 16-8q9-12 18-2q15-7 21 8q14 0 13 14q-5 14-18 6q-10 10-18 0q-10 10-19 0q-13 10-25-4Z" fill="${fill('wool')}"/>
-        <g class="buddy-eyes"><path d="M82 94v5M116 94v5" stroke-width="3.4"/></g>
-        <ellipse cx="77" cy="107" rx="9" ry="6" fill="#E4AE9E" opacity=".6" stroke="none"/><ellipse cx="123" cy="107" rx="9" ry="6" fill="#E4AE9E" opacity=".6" stroke="none"/>
-        <path d="M96 106q4-4 8 0l-4 4Z" fill="#9A7660" stroke="none"/><path d="M100 110v3m-7 0q3 6 7 0q4 6 7 0" fill="none" stroke-width="1.9"/>
-        <g class="buddy-lamb-flower" stroke="#C7AB55" stroke-width="1.3"><path d="M130 61q-7-13 2-15q8-1 7 11q11-8 14 0q2 9-10 9q10 8 4 13q-8 5-14-6q-3 13-11 9q-7-5 2-14q-13 2-14-6q1-9 14-4Z" fill="#F7E59B"/><circle cx="132" cy="64" r="5" fill="#D8B861"/></g>
+    lamb: `<g class="buddy-old-goat">
+      <path d="M76 142l-10 29q9 7 22 2l11-30M109 142l5 30q13 6 23-1l-12-30" fill="#868E79"/>
+      <path d="M67 166l21-1v9q-13 5-24-1ZM114 166l20-1l5 8q-12 5-25 1Z" fill="#646D5A"/>
+      <g class="buddy-goat-body">
+        <path d="M77 85q-23 6-28 31l11 35q39 12 81-1l9-34q-7-25-31-31Z" fill="${fill('robe')}"/>
+        <path d="M80 86l18 27l20-28M98 113v39M75 134l-9 3M121 141l12-1" fill="none" stroke="#7B846F" stroke-width="1.7"/>
+        <path d="M89 101q-2 18 3 23l5-6l4 7l6-8l1-15Z" fill="#D1CEC0" stroke="#989C8A" stroke-width="1.2"/>
       </g>
-      <path d="M46 146h108l-5 10H51Z" fill="#D2DDCA"/><path d="M51 156l-3 15M149 156l3 15" fill="none" stroke="#B5C3AD" stroke-width="3"/>
-      <path d="M70 141h58l5 9H64Z" fill="#EEF1DE" stroke="#94A18A" stroke-width="1.5"/>
-      <g class="buddy-key-lines" stroke="#BBC5AD" stroke-width="1.3"><path d="M73 145h50m-43-3v5m10-5v5m10-5v5m10-5v5m10-5v5"/></g>
-      <g class="buddy-typing-left"><path d="M71 123q-8 5 2 18q8 5 14-2q1-6-10-12" fill="#EFD7BC"/><path d="M78 135l4 3" fill="none" stroke-width="1.6"/></g>
-      <g class="buddy-typing-right"><path d="M125 123q9 5-1 18q-8 5-14-2q-1-6 10-12" fill="#EFD7BC"/><path d="M117 135l-3 3" fill="none" stroke-width="1.6"/></g>
-      <g class="buddy-work-spark" fill="#D7DEAE" stroke="none">${star(156,123,.65)}${star(43,122,.4)}</g>
+      <g class="buddy-goat-head">
+        <path d="M78 41Q45 22 56 6q-1 17 28 25M119 40q35-18 23-34q2 17-29 25" fill="#A9A38C"/>
+        <path d="M59 18l9-2M64 25l9-4M71 31l8-5M139 18l-9-2M134 25l-9-4M127 31l-8-5" stroke="#777B68" stroke-width="1.4"/>
+        <g class="buddy-ear buddy-ear-left"><path d="M76 45q-23-7-33 2q12 15 31 10Z" fill="#C1B9A1"/><path d="M53 49l16 3" stroke="#9F967F" stroke-width="1.8"/></g>
+        <g class="buddy-ear buddy-ear-right"><path d="M122 45q24-7 34 2q-13 16-33 10Z" fill="#C1B9A1"/><path d="M145 49l-17 4" stroke="#9F967F" stroke-width="1.8"/></g>
+        <path d="M77 37q23-10 44 0q6 12 1 31l-4 20q-3 16-18 21q-18-7-21-21l-5-22q-3-17 3-29Z" fill="#C8C2AC"/>
+        <path d="M78 36q5-11 14-8l-1 7q6-11 13-6l-2 7q11-8 18 1l-12 3l-9-2l-9 3Z" fill="${fill('hair')}"/>
+        <path d="M79 44l12-2M105 42l11 3M86 47h22" fill="none" stroke="#9B9E88" stroke-width="1.3"/>
+        <path d="M77 53l16 2M105 55l15-3" stroke="#E0DDD0" stroke-width="4"/>
+        <g class="buddy-eyes"><path d="M79 60h12M107 60h11" stroke-width="1.8"/><path d="M84 61h3M111 61h3" stroke-width="2.5"/></g>
+        <path d="M78 66q8 4 15 0M105 66q8 4 15 0M81 71l7 2m22-1l7-2" fill="none" stroke="#969B84" stroke-width="1.3"/>
+        <path d="M96 74h8l-4 6Z" fill="#7F846D" stroke="none"/><path d="M100 80v7m-7-1q5 3 7 1q4 2 8-1" fill="none" stroke-width="1.6"/>
+        <path class="buddy-goat-beard" d="M84 86q7 9 16 6q10 3 17-7l-2 25l-8 17l-5-8l-6 13l-4-15l-6 5l-3-19Z" fill="${fill('hair')}" stroke="#959B88" stroke-width="1.4"/>
+        <path d="M92 97l3 18M101 97v19M109 96l-4 16" fill="none" stroke="#BBBDAF" stroke-width="1.1"/>
+        <path d="M78 75l-6 11l10-2M121 74l8 12l-11-3" fill="#DAD7C9" stroke="#9FA58F" stroke-width="1.4"/>
+      </g>
+      <g class="buddy-tea-lift">
+        <path d="M57 110q-9 14 4 25l20 5l5-10l-16-7l4-11M141 110q11 15-3 25l-18 5l-5-10l15-7l-3-10" fill="#A4AD96"/>
+        <path d="M80 127q8-5 13 2l2 10q-11 8-19 0Z" fill="#C8C2AC"/><path d="M115 127q-8-5-13 2l-1 11q11 7 19-1Z" fill="#C8C2AC"/>
+        <path d="M113 121q13-2 13 8q-1 10-13 7" fill="none" stroke="#7E9476" stroke-width="3"/>
+        <path d="M87 120h28l-2 20q-11 8-24 0Z" fill="#AFC3A3" stroke="#758B6C" stroke-width="1.8"/>
+        <ellipse cx="101" cy="120" rx="14" ry="3.6" fill="#D0DBC2" stroke="#758B6C" stroke-width="1.6"/><ellipse cx="101" cy="120" rx="10.5" ry="2" fill="#8E9565" stroke="none"/>
+        <path d="M93 126v10" stroke="#DAE5D0" stroke-width="1.8"/>
+        <g class="buddy-tea-steam" fill="none" stroke="#C8CFBB" stroke-width="2"><path class="buddy-tea-steam-one" d="M96 112q-5-5 0-9q5-5 1-9"/><path class="buddy-tea-steam-two" d="M107 111q5-6 0-11q-4-4 0-8"/></g>
+      </g>
     </g>`,
   };
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190" role="img" aria-label="${labels[theme]}" class="buddy-art" fill="none" stroke="#715747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${defs}${common}<g class="buddy-reaction">${bodies[theme]}</g></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190" role="img" aria-label="${labels[theme]}" class="buddy-art" fill="none" stroke="#635A48" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">${defs}${shadow}<g class="buddy-reaction">${bodies[theme]}</g></svg>`;
 }
 
 function mountCompanion(root, { theme = 'acid', motion = true } = {}) {
@@ -290,7 +306,6 @@ function mountCompanion(root, { theme = 'acid', motion = true } = {}) {
     root.style.setProperty('--buddy-energy', String(energy));
     root.style.setProperty('--buddy-breath-duration', `${3.8 - energy * 2.55}s`);
     root.style.setProperty('--buddy-puff-opacity', String(.28 + energy * .65));
-    root.style.setProperty('--buddy-typing-duration', `${.72 - energy * .35}s`);
     root.classList.toggle('buddy-energetic', energy > .55);
   }
   function setTheme(value) {
@@ -328,7 +343,7 @@ function mountCompanion(root, { theme = 'acid', motion = true } = {}) {
       root.replaceChildren();
       root.classList.remove('animated-companion', 'buddy-paused', 'buddy-reacting', 'buddy-energetic');
       delete root.dataset.companionTheme;
-      for (const property of ['--buddy-energy','--buddy-breath-duration','--buddy-puff-opacity','--buddy-typing-duration']) root.style.removeProperty(property);
+      for (const property of ['--buddy-energy','--buddy-breath-duration','--buddy-puff-opacity']) root.style.removeProperty(property);
     },
   });
 }
@@ -336,7 +351,7 @@ function mountCompanion(root, { theme = 'acid', motion = true } = {}) {
 return {mountCompanion};
 })();
 __modules["smoke.mjs"] = (() => {
-/** Transient canvas atmosphere. No stored data, network, or income state. */
+/** Session-only atmosphere. Smoke stays until the person explicitly blows it away. */
 const SMOKE_LIMIT = 64;
 const SMOKE_PALETTES = Object.freeze({
   acid: { body: [159, 141, 187], light: [221, 207, 239], line: [207, 191, 230] },
@@ -345,24 +360,18 @@ const SMOKE_PALETTES = Object.freeze({
   orange: { body: [186, 135, 97], light: [255, 223, 170], line: [221, 161, 112] },
   lamb: { body: [166, 160, 117], light: [255, 246, 194], line: [177, 175, 133] },
 });
-
 const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
 const rgba = (rgb, alpha) => `rgba(${rgb.join(',')},${alpha})`;
 const random = (low, high) => low + Math.random() * (high - low);
 
-/**
- * Position the canvas over a decorative stage and size it with CSS.
- * origin uses fractions of those bounds, so it follows a responsive woodfish.
- */
 function createSmoke(canvas, { theme = 'acid', motion = true, origin = { x: .6, y: .55 } } = {}) {
   if (!canvas?.getContext) throw new TypeError('Smoke requires a canvas');
-  const doc = canvas.ownerDocument;
-  const win = doc.defaultView;
+  const doc = canvas.ownerDocument, win = doc.defaultView;
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas animation is unavailable');
   const media = win.matchMedia?.('(prefers-reduced-motion: reduce)');
   let selectedTheme = Object.hasOwn(SMOKE_PALETTES, theme) ? theme : 'acid';
-  let motionRequested = Boolean(motion), destroyed = false;
+  let motionRequested = Boolean(motion), destroyed = false, manuallyPaused = false;
   let width = 280, height = 240, dpr = 1, frame = null, lastFrame = null;
   let puffs = [], breezes = [], recentTaps = [], sprites = [];
   const emitter = {
@@ -371,27 +380,24 @@ function createSmoke(canvas, { theme = 'acid', motion = true, origin = { x: .6, 
   };
   canvas.setAttribute('aria-hidden', 'true');
   canvas.style.pointerEvents = 'none';
-
-  const allowed = () => motionRequested && !media?.matches && !doc.hidden && !destroyed;
   const now = () => win.performance.now();
+  const motionEnabled = () => motionRequested && !media?.matches;
+  const visible = () => !doc.hidden && !manuallyPaused && !destroyed;
+  const canAnimate = () => visible() && motionEnabled();
+  const needsFrame = () => breezes.length || puffs.some(puff => puff.stage !== 'resting');
   const density = (time = now()) => {
     recentTaps = recentTaps.filter(t => time - t < 5000);
     if (!recentTaps.length) return 0;
-    const idleFade = clamp(1 - (time - recentTaps[recentTaps.length - 1]) / 4200, 0, 1);
+    const idleFade = clamp(1 - (time - recentTaps.at(-1)) / 4200, 0, 1);
     return clamp(recentTaps.length / 14, 0, 1) * idleFade;
   };
 
   function buildSprites() {
     const palette = SMOKE_PALETTES[selectedTheme];
     sprites = [0, 1, 2].map(variant => {
-      const sprite = doc.createElement('canvas');
-      sprite.width = sprite.height = 128;
+      const sprite = doc.createElement('canvas'); sprite.width = sprite.height = 128;
       const paint = sprite.getContext('2d');
-      // Asymmetric overlapping gradients give a soft folded edge, not a cloud icon.
-      const lobes = [
-        [61, 70, 44], [46 - variant * 2, 59, 34], [77, 47 + variant * 3, 32],
-        [84 + variant, 73, 31], [53, 88 - variant * 2, 27],
-      ];
+      const lobes = [[61, 70, 44], [46 - variant * 2, 59, 34], [77, 47 + variant * 3, 32], [84 + variant, 73, 31], [53, 88 - variant * 2, 27]];
       for (const [x, y, radius] of lobes) {
         const gradient = paint.createRadialGradient(x - 4, y - 5, 0, x, y, radius);
         gradient.addColorStop(0, rgba(palette.light, .30));
@@ -404,201 +410,216 @@ function createSmoke(canvas, { theme = 'acid', motion = true, origin = { x: .6, 
       return sprite;
     });
   }
-
   function clearPixels() {
     context.setTransform(1, 0, 0, 1, 0, 0);
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
-
-  function resize() {
-    if (destroyed) return;
-    const bounds = canvas.getBoundingClientRect();
-    const nextWidth = Math.max(1, bounds.width || width);
-    const nextHeight = Math.max(1, bounds.height || height);
-    const scaleX = nextWidth / width, scaleY = nextHeight / height;
-    for (const puff of puffs) {
-      puff.x *= scaleX; puff.y *= scaleY;
-    }
-    for (const breeze of breezes) {
-      breeze.x *= scaleX; breeze.y *= scaleY;
-    }
-    width = nextWidth; height = nextHeight;
-    dpr = clamp(win.devicePixelRatio || 1, 1, 2);
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
-    clearPixels();
-    if (puffs.length && allowed()) schedule();
-  }
-
-  function wipe() {
-    puffs = []; breezes = []; recentTaps = [];
+  function stop() {
     if (frame !== null) win.cancelAnimationFrame(frame);
     frame = null; lastFrame = null;
-    clearPixels();
   }
-
   function schedule() {
-    if (frame === null && allowed() && (puffs.length || breezes.length)) frame = win.requestAnimationFrame(draw);
+    if (frame === null && canAnimate() && needsFrame()) frame = win.requestAnimationFrame(draw);
   }
-
-  function draw(time) {
-    frame = null;
-    if (!allowed()) { wipe(); return; }
-    const dt = Math.min(.04, Math.max(0, (time - (lastFrame ?? time - 16)) / 1000));
-    lastFrame = time;
+  function shape(puff) {
+    if (puff.stage === 'clearing') {
+      const progress = clamp(puff.age / puff.duration, 0, 1);
+      return { radius: puff.radius * (1 + progress * 1.6), alpha: puff.alpha * Math.pow(1 - progress, 1.8) };
+    }
+    if (puff.stage === 'resting') return { radius: puff.radius, alpha: puff.alpha };
+    const progress = clamp(puff.age / puff.duration, 0, 1);
+    return { radius: puff.radius * (.65 + progress * .35), alpha: puff.alpha * clamp(progress / .055, 0, 1) };
+  }
+  function settle(puff) {
+    puff.stage = 'resting'; puff.x = puff.targetX; puff.y = puff.targetY; puff.age = puff.duration;
+  }
+  function paint() {
+    if (!visible()) return;
     clearPixels();
     const palette = SMOKE_PALETTES[selectedTheme];
-    puffs = puffs.filter(puff => time - puff.born < puff.life);
-    breezes = breezes.filter(breeze => time - breeze.born < breeze.life);
-
     for (const puff of puffs) {
-      const progress = clamp((time - puff.born) / puff.life, 0, 1);
-      // A gentle sideways curl changes direction as each puff rises.
-      const curl = Math.sin(progress * Math.PI * 2.1 + puff.phase);
-      puff.x += (puff.vx + curl * puff.curl) * dt;
-      puff.y += (puff.vy - 10 * progress) * dt;
-      puff.angle += puff.spin * dt;
-      const growth = puff.clearing ? 1 + progress * 1.7 : .52 + progress * 1.42;
-      const radius = puff.radius * growth;
-      const appear = puff.clearing ? 1 : clamp(progress / .065, 0, 1);
-      const fade = Math.pow(1 - progress, puff.clearing ? 1.8 : 1.12);
-      const opacity = puff.alpha * appear * fade;
+      const { radius, alpha } = shape(puff);
       context.save();
-      context.globalAlpha = opacity;
-      context.translate(puff.x, puff.y);
-      context.rotate(puff.angle);
-      context.scale(1 + Math.sin(progress * 8 + puff.phase) * .12, .9 + progress * .15);
+      context.globalAlpha = alpha;
+      context.translate(puff.x, puff.y); context.rotate(puff.angle);
+      context.scale(1.08, .85);
       context.drawImage(sprites[puff.sprite], -radius, -radius, radius * 2, radius * 2);
       context.restore();
-
-      // Thin curved ribbons thread through the soft puffs and loosen as they rise.
-      if (puff.ribbon && !puff.clearing) {
-        const length = radius * 1.08;
-        context.save();
-        context.globalAlpha = opacity * .23;
-        context.strokeStyle = rgba(palette.line, .9);
-        context.lineWidth = 1.25 + progress * .5;
-        context.lineCap = 'round';
-        context.beginPath();
-        context.moveTo(puff.x - curl * 4, puff.y + length * .5);
+      if (puff.ribbon && puff.stage === 'rising') {
+        const length = radius * .95;
+        context.save(); context.globalAlpha = alpha * .22;
+        context.strokeStyle = rgba(palette.line, .9); context.lineWidth = 1.25; context.lineCap = 'round';
+        context.beginPath(); context.moveTo(puff.x, puff.y + length * .5);
         context.bezierCurveTo(puff.x + length * .9 * puff.side, puff.y + length * .1,
           puff.x - length * .65 * puff.side, puff.y - length * .65,
           puff.x + length * .2 * puff.side, puff.y - length);
-        context.stroke();
-        context.restore();
+        context.stroke(); context.restore();
       }
     }
-
     for (const breeze of breezes) {
-      const progress = (time - breeze.born) / breeze.life;
-      const easing = 1 - Math.pow(1 - progress, 3);
+      const progress = clamp(breeze.age / breeze.duration, 0, 1), easing = 1 - Math.pow(1 - progress, 3);
       const x = breeze.x + breeze.dx * easing, y = breeze.y + breeze.dy * easing;
-      context.save();
-      context.globalAlpha = Math.sin(Math.PI * progress) * .48;
-      context.strokeStyle = rgba(palette.line, .85);
-      context.lineWidth = 1.3;
-      context.lineCap = 'round';
-      context.beginPath();
-      context.moveTo(x - breeze.side * 20, y + 6);
+      context.save(); context.globalAlpha = Math.sin(Math.PI * progress) * .48;
+      context.strokeStyle = rgba(palette.line, .85); context.lineWidth = 1.3; context.lineCap = 'round';
+      context.beginPath(); context.moveTo(x - breeze.side * 20, y + 6);
       context.bezierCurveTo(x - breeze.side * 8, y - 12, x + breeze.side * 22, y - 10, x + breeze.side * 18, y - 1);
-      context.stroke();
-      context.restore();
+      context.stroke(); context.restore();
     }
-    if (puffs.length || breezes.length) schedule();
-    else lastFrame = null;
   }
-
+  function advance(dt) {
+    for (const puff of puffs) {
+      if (puff.stage === 'resting') continue;
+      puff.age += dt;
+      const progress = clamp(puff.age / puff.duration, 0, 1);
+      if (puff.stage === 'clearing') {
+        puff.x += puff.vx * dt; puff.y += puff.vy * dt; puff.angle += puff.side * dt * 1.8;
+      } else {
+        const eased = 1 - Math.pow(1 - progress, 2);
+        const curl = Math.sin(progress * Math.PI * 2 + puff.phase) - Math.sin(puff.phase);
+        puff.x = puff.startX + (puff.targetX - puff.startX) * eased + curl * puff.curl * Math.sin(Math.PI * progress);
+        puff.y = puff.startY + (puff.targetY - puff.startY) * eased - Math.sin(progress * Math.PI) * 11;
+        puff.angle += puff.side * dt * .25;
+        if (progress >= 1) settle(puff);
+      }
+    }
+    puffs = puffs.filter(puff => puff.stage !== 'clearing' || puff.age < puff.duration);
+    for (const breeze of breezes) breeze.age += dt;
+    breezes = breezes.filter(breeze => breeze.age < breeze.duration);
+  }
+  function draw(time) {
+    frame = null;
+    if (!canAnimate()) { stop(); return; }
+    // Only active animation time advances. Background time cannot erase the cloud.
+    const dt = Math.min(.04, Math.max(0, (time - (lastFrame ?? time - 16)) / 1000));
+    lastFrame = time; advance(dt); paint();
+    if (needsFrame()) schedule(); else lastFrame = null;
+  }
+  function resize() {
+    if (destroyed) return;
+    const bounds = canvas.getBoundingClientRect();
+    const nextWidth = Math.max(1, bounds.width || width), nextHeight = Math.max(1, bounds.height || height);
+    const scaleX = nextWidth / width, scaleY = nextHeight / height;
+    for (const puff of puffs) {
+      for (const key of ['x', 'startX', 'targetX']) puff[key] *= scaleX;
+      for (const key of ['y', 'startY', 'targetY']) puff[key] *= scaleY;
+    }
+    for (const breeze of breezes) { breeze.x *= scaleX; breeze.y *= scaleY; }
+    width = nextWidth; height = nextHeight;
+    dpr = clamp(win.devicePixelRatio || 1, 1, 2);
+    canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
+    paint(); schedule();
+  }
+  function coalesce() {
+    while (puffs.length > SMOKE_LIMIT) {
+      // Merge nearby older cloud, preserving its location and represented smoke amount.
+      // Fresh impact particles are excluded so a new click always has a visible plume.
+      const eligible = Math.max(2, puffs.length - 10);
+      let first = 0, second = 1, best = Infinity;
+      for (let i = 0; i < eligible; i++) for (let j = i + 1; j < eligible; j++) {
+        if (puffs[i].stage === 'clearing' || puffs[j].stage === 'clearing') continue;
+        const score = Math.hypot(puffs[i].x - puffs[j].x, puffs[i].y - puffs[j].y) + (puffs[i].mass + puffs[j].mass) * 3;
+        if (score < best) { best = score; first = i; second = j; }
+      }
+      const a = puffs[first], b = puffs[second];
+      const sa = shape(a), sb = shape(b), mass = a.mass + b.mass;
+      const weight = a.mass / mass;
+      const x = a.x * weight + b.x * (1 - weight), y = a.y * weight + b.y * (1 - weight);
+      const targetX = a.targetX * weight + b.targetX * (1 - weight);
+      const targetY = a.targetY * weight + b.targetY * (1 - weight);
+      const resting = a.stage === 'resting' && b.stage === 'resting';
+      const clearing = a.stage === 'clearing' && b.stage === 'clearing';
+      puffs[first] = { ...a, mass, x, y, startX: x, startY: y, targetX, targetY,
+        radius: Math.min(40, Math.sqrt(sa.radius * sa.radius + sb.radius * sb.radius) * .88),
+        alpha: Math.min(1.15, 1 - (1 - sa.alpha * .8) * (1 - sb.alpha * .8)),
+        stage: clearing ? 'clearing' : resting ? 'resting' : 'rising', age: resting ? 1 : clearing ? 0 : .08,
+        duration: clearing ? Math.max(.05, Math.max(a.duration - a.age, b.duration - b.age)) : resting ? 1 : .9,
+        curl: a.curl * .35, ribbon: false,
+      };
+      puffs.splice(second, 1);
+    }
+  }
   function burst(strength = 1) {
-    if (!allowed()) return;
-    const time = now();
-    recentTaps.push(time);
-    recentTaps = recentTaps.slice(-32);
-    const energy = density(time);
-    const amount = 5 + Math.round(energy * 4);
+    if (destroyed) return;
+    const time = now(); recentTaps.push(time); recentTaps = recentTaps.slice(-32);
+    const energy = density(time), amount = 5 + Math.round(energy * 4);
     const power = clamp(Number(strength) || 1, .2, 2);
     const scale = clamp(Math.min(width / 280, height / 210), .65, 1.5);
     for (let i = 0; i < amount; i++) {
       const side = i % 2 ? 1 : -1;
-      puffs.push({
-        born: time - i * 4,
-        life: random(2000, 3300) + energy * 1500,
-        x: width * emitter.x + random(-9, 9) * scale,
-        y: height * emitter.y + random(-4, 7) * scale,
-        vx: side * random(7, 25) * (1 + energy * .55) * scale,
-        vy: random(-29, -17) * scale,
-        curl: random(12, 28) * scale,
-        radius: random(16, 24) * scale * (.9 + power * .15 + energy * .2),
-        angle: random(-.6, .6), spin: side * random(.18, .55),
-        phase: random(0, Math.PI * 2), side,
-        alpha: random(.65, .88) + energy * .15,
-        ribbon: i < 2, sprite: i % sprites.length, clearing: false,
-      });
+      const x = width * emitter.x + random(-9, 9) * scale, y = height * emitter.y + random(-4, 7) * scale;
+      // Gather into an uneven crown: most smoke rises to the plump middle,
+      // with a few lower side lobes instead of filling a flat horizontal band.
+      const lobe = Math.random();
+      const middle = lobe < .64;
+      const centerX = middle ? .50 : lobe < .82 ? .31 : .69;
+      const centerY = middle ? .19 : lobe < .82 ? .27 : .245;
+      const jitter = () => (Math.random() + Math.random() + Math.random() - 1.5) / 1.5;
+      const puff = {
+        stage: 'rising', age: .001, duration: random(1.5, 2.8), mass: 1,
+        x, y, startX: x, startY: y,
+        targetX: width * (centerX + jitter() * (middle ? .065 : .04)),
+        targetY: height * (centerY + jitter() * .025),
+        radius: random(20, 27) * scale * (.9 + power * .15 + energy * .15) * (middle ? 1 : .78),
+        angle: random(-.6, .6), phase: random(0, Math.PI * 2), side,
+        curl: random(7, 19) * scale, alpha: random(.65, .88) + energy * .15,
+        ribbon: i < 2, sprite: i % sprites.length,
+      };
+      if (!motionEnabled()) settle(puff);
+      puffs.push(puff);
     }
-    // Every new impact remains visible; retiring the oldest bounds memory and paint.
-    if (puffs.length > SMOKE_LIMIT) puffs.splice(0, puffs.length - SMOKE_LIMIT);
-    schedule();
+    coalesce(); paint(); schedule();
   }
-
   function clear() {
     if (destroyed) return;
     recentTaps = [];
-    if (!allowed()) { wipe(); return; }
+    if (!motionEnabled()) { puffs = []; breezes = []; stop(); paint(); return; }
     if (!puffs.length) return;
-    const time = now();
-    const cx = width * .5, cy = height * .53;
+    const cx = width * .5, cy = height * .2;
     puffs.forEach((puff, index) => {
-      const progress = clamp((time - puff.born) / puff.life, 0, 1);
-      const growth = puff.clearing ? 1 + progress * 1.7 : .52 + progress * 1.42;
-      const appear = puff.clearing ? 1 : clamp(progress / .065, 0, 1);
-      const fade = Math.pow(1 - progress, puff.clearing ? 1.8 : 1.12);
-      // Continue from the size and opacity already on screen when the breeze starts.
-      puff.radius *= growth;
-      puff.alpha *= appear * fade;
-      const side = puff.x >= cx ? 1 : -1;
-      puff.clearing = true; puff.born = time; puff.life = random(480, 820);
-      puff.vx = side * random(65, 120); puff.vy = random(-75, -25);
-      puff.spin = side * 1.8; puff.curl = 15;
-      if (index < 6) breezes.push({
-        born: time, life: 650 + index * 30, x: cx, y: cy + random(-16, 22),
-        dx: side * random(55, 100), dy: random(-55, -15), side,
-      });
+      const current = shape(puff);
+      puff.radius = current.radius; puff.alpha = current.alpha;
+      puff.side = puff.x >= cx ? 1 : -1;
+      puff.stage = 'clearing'; puff.age = 0; puff.duration = random(.55, .95);
+      puff.vx = puff.side * random(65, 120); puff.vy = random(-42, -10);
+      if (index < 6) breezes.push({ age: 0, duration: .7 + index * .03, x: cx, y: cy + random(-5, 18), dx: puff.side * random(55, 100), dy: random(-25, -5), side: puff.side });
     });
-    breezes = breezes.slice(-6);
-    schedule();
+    breezes = breezes.slice(-6); schedule();
   }
-
-  function onReducedMotion() { if (!allowed()) wipe(); }
-  function onVisibility() { if (doc.hidden) wipe(); }
-  buildSprites();
-  resize();
+  function sync() {
+    if (!canAnimate()) stop();
+    // A requested clear still completes without animation if motion is then disabled.
+    if (!motionEnabled()) {
+      puffs = puffs.filter(puff => puff.stage !== 'clearing'); breezes = [];
+    }
+    paint(); schedule();
+  }
+  buildSprites(); resize();
   const observer = win.ResizeObserver ? new win.ResizeObserver(resize) : null;
   observer?.observe(canvas);
   if (!observer) win.addEventListener?.('resize', resize);
-  media?.addEventListener?.('change', onReducedMotion);
-  doc.addEventListener('visibilitychange', onVisibility);
-
+  media?.addEventListener?.('change', sync); doc.addEventListener('visibilitychange', sync);
   return {
-    burst,
-    clear,
+    burst, clear,
+    pause() { manuallyPaused = true; stop(); },
+    resume() { manuallyPaused = false; sync(); },
     setTheme(value) {
       if (destroyed) return;
-      selectedTheme = Object.hasOwn(SMOKE_PALETTES, value) ? value : 'acid';
-      buildSprites();
+      selectedTheme = Object.hasOwn(SMOKE_PALETTES, value) ? value : 'acid'; buildSprites(); paint();
     },
-    setMotion(value) { motionRequested = Boolean(value); if (!allowed()) wipe(); },
+    setMotion(value) { motionRequested = Boolean(value); sync(); },
     getState() {
       return { particles: puffs.length, energy: density(), running: frame !== null,
-        motion: allowed(), clearing: puffs.some(puff => puff.clearing), theme: selectedTheme };
+        motion: motionEnabled() && !destroyed, paused: !visible(),
+        clearing: puffs.some(puff => puff.stage === 'clearing'),
+        resting: puffs.filter(puff => puff.stage === 'resting').length,
+        smokeAmount: puffs.reduce((sum, puff) => sum + puff.mass, 0), theme: selectedTheme };
     },
     destroy() {
       if (destroyed) return;
-      destroyed = true; wipe();
-      observer?.disconnect();
-      if (!observer) win.removeEventListener?.('resize', resize);
-      media?.removeEventListener?.('change', onReducedMotion);
-      doc.removeEventListener('visibilitychange', onVisibility);
-      sprites = [];
+      destroyed = true; stop(); puffs = []; breezes = []; recentTaps = []; clearPixels();
+      observer?.disconnect(); if (!observer) win.removeEventListener?.('resize', resize);
+      media?.removeEventListener?.('change', sync); doc.removeEventListener('visibilitychange', sync); sprites = [];
     },
   };
 }
@@ -650,7 +671,7 @@ const themes = Object.freeze({
   lavender: { name: '精神离线', mood: '人在，魂先走了', headline: '人还在线，精神离线。', greeting: '允许自己偶尔待机。', release: '先离线一会儿，没关系。', partner: 'horse', effect: '杂念掉线', pulse: '·', paper: '#F0EDF7', surface: '#FCFAFF', raised: '#EAE2F4', ink: '#3B2C4D', muted: '#796A88', line: '#D9CDE8', accent: '#C6A6EF', accentInk: '#3B244D', cloud: '#B29EC9' },
   moss: { name: '佛系摸鱼', mood: '慢一点，也可以', headline: '不急，先把今天过好。', greeting: '松口气，日子慢慢来。', release: '不着急，先给自己松口气。', partner: 'horse', effect: '烦恼散开', pulse: '○', paper: '#EFF2E8', surface: '#FBFCF6', raised: '#E2EADA', ink: '#304C39', muted: '#6D7F67', line: '#D1DDC7', accent: '#A9C38F', accentInk: '#2E4B30', cloud: '#9AB69B' },
   orange: { name: '大动脉橙', mood: '我值得，很有底气', headline: '裁我，就是裁大动脉。', greeting: '我的付出，值得被看见。', release: '功劳给自己，情绪也还给自己。', partner: 'horse', effect: '班味退散', pulse: '✦', paper: '#FFF6E9', surface: '#FFFCF7', raised: '#FFE5C9', ink: '#3C281E', muted: '#89664D', line: '#EAD3B8', accent: '#FF914D', accentInk: '#4B2918', cloud: '#D8AE91' },
-  lamb: { name: '元气小羊', mood: '夸夸自己，温柔充电', headline: '今天太棒了，先夸夸我！', greeting: '能量有限，先照顾自己。', release: '今天也照顾到自己啦。', partner: 'lamb', effect: '烦恼吹走', pulse: '♡', paper: '#FFFDF1', surface: '#FFFFF9', raised: '#E7F1DE', ink: '#375842', muted: '#758568', line: '#D9E3C6', accent: '#F4E68F', accentInk: '#40573C', cloud: '#B7D1BB' },
+  lamb: { name: '从容茶歇', mood: '夸夸自己，温柔充电', headline: '今天太棒了，先夸夸我！', greeting: '能量有限，先照顾自己。', release: '今天也照顾到自己啦。', partner: 'lamb', effect: '烦恼吹走', pulse: '♡', paper: '#FFFDF1', surface: '#FFFFF9', raised: '#E7F1DE', ink: '#375842', muted: '#758568', line: '#D9E3C6', accent: '#F4E68F', accentInk: '#40573C', cloud: '#B7D1BB' },
 });
 
 return {themes};
@@ -661,14 +682,14 @@ const {createSmoke} = __modules["smoke.mjs"];
 const {createStrikeQueue} = __modules["strike-queue.mjs"];
 const {themes} = __modules["themes.mjs"];
 const $=id=>document.getElementById(id);
-let theme='acid', count=0, energy=0, lastTap=0, energyTimer=0, demoTimer=0, playing=true;
+let theme='acid', count=0, energy=0, lastTap=0, energyTimer=0, demoTimer=0, playing=true, pendingSmoke=0;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)');
-const names={acid:'呼呼喘气的小牛',lavender:'正在放空的小马',moss:'晒太阳的松弛搭子',orange:'底气十足的小马',lamb:'认真忙活的小羊'};
+const names={acid:'喘口粗气的老牛',lavender:'放空片刻的老马',moss:'晒太阳的水豚',orange:'底气十足的老马',lamb:'慢慢喝茶的老山羊'};
 const companion=mountCompanion($('companion'),{theme,motion:!reduce.matches});
 const thumbs=[...document.querySelectorAll('[data-thumb]')].map(el=>mountCompanion(el,{theme:el.dataset.thumb,motion:false}));
-const smoke=createSmoke($('smoke'),{theme,motion:!reduce.matches,origin:{x:.61,y:.44}});
+const smoke=createSmoke($('smoke'),{theme,motion:!reduce.matches,origin:{x:.61,y:.55}});
 function allowed(){return playing&&!reduce.matches&&!document.hidden;}
-function syncMotion(){const motion=allowed();companion.setMotion(motion);smoke.setMotion(motion);if(!motion){strikes.cancel();clearTimeout(demoTimer);$('burst').disabled=false;document.querySelectorAll('.float').forEach(e=>e.remove());} $('motion').disabled=reduce.matches;$('motion').checked=playing&&!reduce.matches;$('motion').parentElement.title=reduce.matches?'已跟随系统减少动态效果':'';}
+function syncMotion(){const motion=allowed();companion.setMotion(motion);smoke.setMotion(motion);if(!motion){strikes.cancel();while(pendingSmoke>0){pendingSmoke--;smoke.burst(.65+energy*.65);}clearTimeout(demoTimer);$('burst').disabled=false;document.querySelectorAll('.float').forEach(e=>e.remove());} $('motion').disabled=reduce.matches;$('motion').checked=playing&&!reduce.matches;$('motion').parentElement.title=reduce.matches?'已跟随系统减少动态效果':'';}
 function decay(){clearTimeout(energyTimer);const age=performance.now()-lastTap;energy=Math.max(0,energy-(age>1000?.055:.015));companion.setEnergy(energy);if(energy>0)energyTimer=setTimeout(decay,140);}
 function float(){const nodes=document.querySelectorAll('.float');if(nodes.length>=12)nodes[0].remove();const p=document.createElement('span');p.className='float';p.textContent='+1 RMB';p.style.setProperty('--float-x',`${Math.round(Math.random()*35-10)}px`);$('floatLayer').append(p);p.addEventListener('animationend',()=>p.remove(),{once:true});}
 const strikes=createStrikeQueue({
@@ -677,13 +698,13 @@ const strikes=createStrikeQueue({
     let frame=0,cancelled=false;const track=()=>{if(cancelled)return;if(Number(anim.currentTime)>=duration*.44)impact();frame=requestAnimationFrame(track);};frame=requestAnimationFrame(track);
     anim.onfinish=()=>{cancelAnimationFrame(frame);finish();};return{accelerate(rate){anim.playbackRate=rate;},cancel(){cancelled=true;cancelAnimationFrame(frame);anim.cancel();}};
   },
-  onImpact(){if(!allowed())return;smoke.burst(.65+energy*.65);companion.react();float();$('fish').animate([{transform:'translateY(0) scale(1)'},{transform:'translateY(3px) scale(1.035,.94)',offset:.23},{transform:'translateY(-1px) scale(.99,1.02)',offset:.6},{transform:'translateY(0) scale(1)'}],{duration:200,easing:'ease-out'});$('impact').animate([{opacity:0,transform:'scale(.4)'},{opacity:1,transform:'scale(1.08)',offset:.2},{opacity:0,transform:'scale(1.4)'}],{duration:220});}
+  onImpact(){pendingSmoke=Math.max(0,pendingSmoke-1);smoke.burst(.65+energy*.65);if(!allowed())return;companion.react();float();$('fish').animate([{transform:'translateY(0) scale(1)'},{transform:'translateY(3px) scale(1.035,.94)',offset:.23},{transform:'translateY(-1px) scale(.99,1.02)',offset:.6},{transform:'translateY(0) scale(1)'}],{duration:200,easing:'ease-out'});$('impact').animate([{opacity:0,transform:'scale(.4)'},{opacity:1,transform:'scale(1.08)',offset:.2},{opacity:0,transform:'scale(1.4)'}],{duration:220});}
 });
-function tap(){count++;$('count').textContent=`${count} 下`;lastTap=performance.now();energy=Math.min(1,energy+.13);companion.setEnergy(energy);decay();strikes.enqueue();}
+function tap(){$('status').textContent='';count++;$('count').textContent=`${count} 下`;lastTap=performance.now();energy=Math.min(1,energy+.13);companion.setEnergy(energy);decay();pendingSmoke++;strikes.enqueue();}
 $('hit').addEventListener('click',tap);
-$('clear').addEventListener('click',()=>{strikes.cancel();clearTimeout(demoTimer);$('burst').disabled=false;smoke.clear();energy=0;companion.setEnergy(0);clearTimeout(energyTimer);document.querySelectorAll('.float').forEach(e=>e.remove());$('status').textContent=`烟雾已吹散，${count} 次敲击保留。`;});
+$('clear').addEventListener('click',()=>{strikes.cancel();pendingSmoke=0;clearTimeout(demoTimer);$('burst').disabled=false;smoke.clear();energy=0;companion.setEnergy(0);clearTimeout(energyTimer);document.querySelectorAll('.float').forEach(e=>e.remove());$('status').textContent=`烟雾已吹散，${count} 次敲击保留。`;});
 $('burst').addEventListener('click',()=>{clearTimeout(demoTimer);$('burst').disabled=true;let left=10;function next(){tap();if(--left>0)demoTimer=setTimeout(next,110);else $('burst').disabled=false;}next();});
-$('collapse').addEventListener('click',()=>{const collapsed=!$('toyContents').hidden;$('toyContents').hidden=collapsed;document.querySelector('.toy').dataset.collapsed=String(collapsed);$('collapse').textContent=collapsed?'+':'−';$('collapse').setAttribute('aria-label',collapsed?'展开木鱼':'收起木鱼');});
+$('collapse').addEventListener('click',()=>{const collapsed=!$('toyContents').hidden;$('toyContents').hidden=collapsed;if(collapsed)smoke.pause();else smoke.resume();document.querySelector('.toy').dataset.collapsed=String(collapsed);$('collapse').textContent=collapsed?'+':'−';$('collapse').setAttribute('aria-label',collapsed?'展开木鱼':'收起木鱼');});
 for(const b of document.querySelectorAll('[data-theme-choice]'))b.addEventListener('click',()=>{theme=b.dataset.themeChoice;document.documentElement.dataset.theme=theme;document.querySelectorAll('[data-theme-choice]').forEach(e=>e.setAttribute('aria-pressed',String(e===b)));$('headline').textContent=themes[theme].headline;$('mood').textContent=themes[theme].mood;$('buddyLabel').textContent=names[theme];$('fish').src=__asset(`body-${theme==='lamb'?'lamb':theme==='moss'?'horse-calm':'horse'}.webp`);companion.setTheme(theme);companion.setEnergy(energy);smoke.setTheme(theme);});
 $('motion').addEventListener('change',()=>{playing=$('motion').checked;syncMotion();});
 reduce.addEventListener('change',syncMotion);document.addEventListener('visibilitychange',syncMotion);syncMotion();
