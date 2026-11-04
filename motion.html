@@ -3,82 +3,100 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="dark light">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-nfd5AnsoYJpkF1vgucwIeEcJTT1JAGutXvXdFd1Ff6I='; style-src 'sha256-qcrd+jno0VTJraEsMnkuHcHn6VEHbykpp/Jr5ZtlWN8='; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-/S3rRrygWpopARL63L/yJcatC+U4orGg5Hp5jE2czcM='; style-src 'sha256-J7At6UgsvzCzNFIMGvzwUjnD8YQNK7zTWJLgLnkATUg='; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>薪动 · 动态形象与烟雾预览</title>
 <style>:root{--paper:#161b18;--surface:#222a24;--raised:#2c362d;--ink:#f1f5e8;--muted:#adb9a7;--line:#3c493b;--accent:#d8fb68;--accent-ink:#243016;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--paper);color-scheme:dark}
 :root[data-theme="lavender"]{--paper:#f0edf7;--surface:#fcfaff;--raised:#eae2f4;--ink:#3b2c4d;--muted:#796a88;--line:#d9cde8;--accent:#c6a6ef;--accent-ink:#3b244d;color-scheme:light}
 :root[data-theme="moss"]{--paper:#eff2e8;--surface:#fbfcf6;--raised:#e2eada;--ink:#304c39;--muted:#6d7f67;--line:#d1ddc7;--accent:#a9c38f;--accent-ink:#2e4b30;color-scheme:light}
 :root[data-theme="orange"]{--paper:#fff6e9;--surface:#fffcf7;--raised:#ffe5c9;--ink:#3c281e;--muted:#89664d;--line:#ead3b8;--accent:#ff914d;--accent-ink:#4b2918;color-scheme:light}
 :root[data-theme="lamb"]{--paper:#fffdf1;--surface:#fffff9;--raised:#e7f1de;--ink:#375842;--muted:#758568;--line:#d9e3c6;--accent:#f4e68f;--accent-ink:#40573c;color-scheme:light}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 15%,color-mix(in srgb,var(--accent) 5%,transparent),transparent 48%),var(--paper);min-height:100vh}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{border:1px solid var(--line);background:var(--surface)}.preview{max-width:1020px;margin:0 auto;padding:25px 34px 50px}.masthead{display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:19px;font-weight:800}.brand>span{display:grid;place-items:center;width:31px;height:34px;border-radius:8px;background:var(--accent);color:var(--accent-ink);transform:rotate(-7deg)}.brand small{font-size:8px;letter-spacing:3px;font-weight:500}.preview-tag{padding:5px 9px;font-size:10px;border:1px solid var(--line);border-radius:20px;color:var(--muted)}.motion-switch{margin-left:auto;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}.motion-switch input{accent-color:var(--accent)}.intro{margin:34px 0 26px}.eyebrow{font-size:9px;letter-spacing:2.8px;color:var(--muted)}h1{font-size:clamp(26px,3vw,35px);letter-spacing:-1px;margin:8px 0 12px}.intro>p:last-child{font-size:12px;color:var(--muted);line-height:1.7}.theme-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.theme-list button{min-width:0;display:flex;align-items:center;gap:4px;text-align:left;padding:6px;border-radius:13px;transition:background .15s,box-shadow .15s}.theme-list button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 10%,var(--surface));border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.thumb{width:51px;height:60px;flex-shrink:0;pointer-events:none}.theme-list button>span:last-child{font-size:11px;font-weight:750;white-space:nowrap}.theme-list small{font-size:8px;font-weight:400;color:var(--muted);display:block;margin-top:5px;white-space:normal;line-height:1.5}.app-sample{margin-top:24px;padding:21px 24px 12px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}.sample-top{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.sample-label{font-size:9px}.sample-head{display:flex;align-items:center;justify-content:space-between;min-height:173px;gap:12px}.sample-head p{font-size:10px;color:var(--muted);margin:0 0 11px}.sample-head h2{font-size:clamp(18px,2.7vw,26px);margin:0 0 15px;letter-spacing:-.6px}.sample-head small{font-size:10px;color:var(--muted)}.buddy-area{width:175px;flex:none;text-align:center;position:relative}.buddy-area>div{width:160px;height:148px;margin:auto}.buddy-area>span{display:block;font-size:9px;color:var(--muted);position:relative;top:-5px}.salary{border-radius:16px;background:var(--accent);color:var(--accent-ink);display:grid;grid-template-columns:1.4fr 1fr;padding:23px 26px;gap:28px;min-height:165px}.salary>div>span{display:block;font-size:11px}.salary span small{border:1px solid #0002;border-radius:3px;padding:1px 3px;font-size:8px;margin-left:4px}.salary strong{display:block;font-size:46px;letter-spacing:-2px;margin:10px 0;font-variant-numeric:tabular-nums;line-height:1.1}.salary strong>span{font-size:27px;letter-spacing:-1px}.salary small{font-size:10px}.shift{border-left:1px solid #0002;padding-left:28px}.shift strong{font-size:28px;letter-spacing:-.5px;margin:15px 0}.progress{height:4px;background:#0002;border-radius:4px;margin:13px 0 9px;overflow:hidden}.progress i{display:block;background:var(--accent-ink);height:100%;width:51%}.life-list{padding:17px 2px 0}.life-list h3{font-size:13px;margin:0 0 10px}.life-list h3 small{background:var(--raised);padding:2px 5px;border-radius:4px;margin-left:4px;font-size:9px}.life-list>div{display:grid;grid-template-columns:1fr 90px 90px;padding:12px 0;border-top:1px solid var(--line);font-size:11px}.life-list small{color:var(--muted);font-size:10px;text-align:right}footer{display:grid;gap:8px;margin-top:22px;color:var(--muted);font-size:11px;line-height:1.7}footer small{font-size:9px}.toy{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:280px;max-width:calc(100vw - 24px);border:1px solid var(--line);border-radius:18px;padding:11px 12px 9px;background:var(--surface);box-shadow:0 14px 45px #0003;z-index:20}.toy header{display:flex;align-items:center;gap:10px}.toy header strong{font-size:12px}.toy header>span{margin-left:auto;font-size:10px;color:var(--muted)}.toy header button{width:25px;height:25px;background:var(--raised);border:0;border-radius:50%;font-size:18px;line-height:20px}.smoke-stage{width:244px;height:200px;position:relative;margin:0 auto;isolation:isolate;overflow:hidden;border-radius:12px}.smoke-stage canvas{width:100%;height:100%;position:absolute;inset:0;z-index:3;pointer-events:none}#hit{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;border-radius:12px;user-select:none}#fish{position:absolute;left:25px;top:56px;width:152px;height:152px;object-fit:contain;transform-origin:50% 87%;pointer-events:none;filter:drop-shadow(0 5px 4px #0002)}#mallet{position:absolute;left:130px;top:134px;width:113px;height:30px;transform-origin:100px 14px;transform:rotate(52deg);pointer-events:none;filter:drop-shadow(0 3px 2px #0002);z-index:2}.shaft{position:absolute;left:12px;top:9px;width:99px;height:11px;border-radius:7px;border:1px solid #9b6028;background:repeating-linear-gradient(175deg,#dca85f 0 2px,#e5b36c 3px 6px);box-shadow:inset 0 2px 2px #fff3}.head{position:absolute;left:0;top:0;width:29px;height:29px;border-radius:50%;background:radial-gradient(circle at 30% 24%,#ffe0a2,#d7994d 58%,#a86b2c);border:1px solid #b78042}#impact{position:absolute;left:138px;top:96px;opacity:0;color:var(--accent);font-size:22px;pointer-events:none;z-index:4}#floatLayer{position:absolute;inset:0;pointer-events:none;z-index:5}.float{position:absolute;left:145px;top:100px;font-size:11px;font-weight:750;border-radius:5px;background:var(--surface);padding:3px 5px;color:var(--ink);animation:float-away 950ms ease-out both}.toy-actions{display:flex;gap:8px}.toy-actions button{flex:1;min-height:35px;border-radius:9px;font-size:11px;padding:8px}.toy-actions button:first-child{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}.toy-note{text-align:center;font-size:9px;color:var(--muted);margin:7px 0 0}.toy[data-collapsed="true"]{width:170px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}[hidden]{display:none!important}@keyframes float-away{0%{opacity:0;transform:translate(0,4px) scale(.8)}18%{opacity:1}100%{opacity:0;transform:translate(var(--float-x,20px),-55px) scale(1.05)}}
-@media(max-width:700px){.preview{padding:18px 18px 350px}.masthead{gap:9px}.brand small{display:none}.intro{margin:26px 0 20px}.intro>p:last-child{max-width:295px;font-size:11px}.theme-list{gap:6px}.theme-list button{flex-direction:column;gap:0;text-align:center;padding:3px 1px 8px;border-radius:11px}.thumb{width:51px;height:53px}.theme-list button>span:last-child{font-size:9px}.theme-list small{display:none}.app-sample{padding:16px 14px 10px;margin-top:18px}.sample-head{min-height:150px;gap:0}.sample-head h2{font-size:19px;max-width:175px;line-height:1.35}.sample-head p{font-size:9px}.sample-head small{font-size:8px;display:block;max-width:160px;line-height:1.6}.buddy-area{width:108px}.buddy-area>div{width:111px;height:120px}.buddy-area>span{font-size:8px;top:0}.salary{padding:19px 15px;gap:12px;grid-template-columns:1.1fr 1fr;min-height:145px}.salary strong{font-size:32px;letter-spacing:-1.5px;margin:13px 0}.salary strong>span{font-size:20px}.shift{padding-left:12px}.shift strong{font-size:19px;letter-spacing:-.5px;margin:17px 0}.salary small{font-size:8px}.salary>div>span{font-size:10px}.life-list>div{grid-template-columns:1fr 55px 65px}.toy{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}footer{font-size:10px}.sample-top{font-size:9px}.sample-label{font-size:8px}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 15%,color-mix(in srgb,var(--accent) 5%,transparent),transparent 48%),var(--paper);min-height:100vh}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{border:1px solid var(--line);background:var(--surface)}.preview{max-width:1020px;margin:0 auto;padding:25px 34px 50px}.masthead{display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:19px;font-weight:800}.brand>span{display:grid;place-items:center;width:31px;height:34px;border-radius:8px;background:var(--accent);color:var(--accent-ink);transform:rotate(-7deg)}.brand small{font-size:8px;letter-spacing:3px;font-weight:500}.preview-tag{padding:5px 9px;font-size:10px;border:1px solid var(--line);border-radius:20px;color:var(--muted)}.motion-switch{margin-left:auto;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}.motion-switch input{accent-color:var(--accent)}.intro{margin:34px 0 26px}.eyebrow{font-size:9px;letter-spacing:2.8px;color:var(--muted)}h1{font-size:clamp(26px,3vw,35px);letter-spacing:-1px;margin:8px 0 12px}.intro>p:last-child{font-size:12px;color:var(--muted);line-height:1.7}.theme-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.theme-list button{min-width:0;display:flex;align-items:center;gap:4px;text-align:left;padding:6px;border-radius:13px;transition:background .15s,box-shadow .15s}.theme-list button[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 10%,var(--surface));border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.thumb{width:51px;height:60px;flex-shrink:0;pointer-events:none}.theme-list button>span:last-child{font-size:11px;font-weight:750;white-space:nowrap}.theme-list small{font-size:8px;font-weight:400;color:var(--muted);display:block;margin-top:5px;white-space:normal;line-height:1.5}.app-sample{margin-top:24px;padding:21px 24px 12px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}.sample-top{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.sample-label{font-size:9px}.sample-head{display:flex;align-items:center;justify-content:space-between;min-height:173px;gap:12px}.sample-head p{font-size:10px;color:var(--muted);margin:0 0 11px}.sample-head h2{font-size:clamp(18px,2.7vw,26px);margin:0 0 15px;letter-spacing:-.6px}.sample-head small{font-size:10px;color:var(--muted)}.buddy-area{width:205px;flex:none;text-align:center;position:relative}.buddy-area>div{width:200px;height:170px;margin:auto}.buddy-area>span{display:block;font-size:9px;color:var(--muted);position:relative;top:-5px}.salary{border-radius:16px;background:var(--accent);color:var(--accent-ink);display:grid;grid-template-columns:1.4fr 1fr;padding:23px 26px;gap:28px;min-height:165px}.salary>div>span{display:block;font-size:11px}.salary span small{border:1px solid #0002;border-radius:3px;padding:1px 3px;font-size:8px;margin-left:4px}.salary strong{display:block;font-size:46px;letter-spacing:-2px;margin:10px 0;font-variant-numeric:tabular-nums;line-height:1.1}.salary strong>span{font-size:27px;letter-spacing:-1px}.salary small{font-size:10px}.shift{border-left:1px solid #0002;padding-left:28px}.shift strong{font-size:28px;letter-spacing:-.5px;margin:15px 0}.progress{height:4px;background:#0002;border-radius:4px;margin:13px 0 9px;overflow:hidden}.progress i{display:block;background:var(--accent-ink);height:100%;width:51%}.life-list{padding:17px 2px 0}.life-list h3{font-size:13px;margin:0 0 10px}.life-list h3 small{background:var(--raised);padding:2px 5px;border-radius:4px;margin-left:4px;font-size:9px}.life-list>div{display:grid;grid-template-columns:1fr 90px 90px;padding:12px 0;border-top:1px solid var(--line);font-size:11px}.life-list small{color:var(--muted);font-size:10px;text-align:right}footer{display:grid;gap:8px;margin-top:22px;color:var(--muted);font-size:11px;line-height:1.7}footer small{font-size:9px}.toy{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:280px;max-width:calc(100vw - 24px);border:1px solid var(--line);border-radius:18px;padding:11px 12px 9px;background:var(--surface);box-shadow:0 14px 45px #0003;z-index:20}.toy header{display:flex;align-items:center;gap:10px}.toy header strong{font-size:12px}.toy header>span{margin-left:auto;font-size:10px;color:var(--muted)}.toy header button{width:25px;height:25px;background:var(--raised);border:0;border-radius:50%;font-size:18px;line-height:20px}.smoke-stage{width:244px;height:200px;position:relative;margin:0 auto;isolation:isolate;overflow:hidden;border-radius:12px}.smoke-stage canvas{width:100%;height:100%;position:absolute;inset:0;z-index:3;pointer-events:none}#hit{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;border-radius:12px;user-select:none}#fish{position:absolute;left:25px;top:56px;width:152px;height:152px;object-fit:contain;transform-origin:50% 87%;pointer-events:none;filter:drop-shadow(0 5px 4px #0002)}#mallet{position:absolute;left:130px;top:134px;width:113px;height:30px;transform-origin:100px 14px;transform:rotate(52deg);pointer-events:none;filter:drop-shadow(0 3px 2px #0002);z-index:2}.shaft{position:absolute;left:12px;top:9px;width:99px;height:11px;border-radius:7px;border:1px solid #9b6028;background:repeating-linear-gradient(175deg,#dca85f 0 2px,#e5b36c 3px 6px);box-shadow:inset 0 2px 2px #fff3}.head{position:absolute;left:0;top:0;width:29px;height:29px;border-radius:50%;background:radial-gradient(circle at 30% 24%,#ffe0a2,#d7994d 58%,#a86b2c);border:1px solid #b78042}#impact{position:absolute;left:138px;top:96px;opacity:0;color:var(--accent);font-size:22px;pointer-events:none;z-index:4}#floatLayer{position:absolute;inset:0;pointer-events:none;z-index:5}.float{position:absolute;left:145px;top:100px;font-size:11px;font-weight:750;border-radius:5px;background:var(--surface);padding:3px 5px;color:var(--ink);animation:float-away 950ms ease-out both}.toy-actions{display:flex;gap:8px}.toy-actions button{flex:1;min-height:35px;border-radius:9px;font-size:11px;padding:8px}.toy-actions button:first-child{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}.toy-note{text-align:center;font-size:9px;color:var(--muted);margin:7px 0 0}.toy[data-collapsed="true"]{width:170px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}[hidden]{display:none!important}@keyframes float-away{0%{opacity:0;transform:translate(0,4px) scale(.8)}18%{opacity:1}100%{opacity:0;transform:translate(var(--float-x,20px),-55px) scale(1.05)}}
+@media(max-width:700px){.preview{padding:18px 18px 350px}.masthead{gap:9px}.brand small{display:none}.intro{margin:26px 0 20px}.intro>p:last-child{max-width:295px;font-size:11px}.theme-list{gap:6px}.theme-list button{flex-direction:column;gap:0;text-align:center;padding:3px 1px 8px;border-radius:11px}.thumb{width:51px;height:53px}.theme-list button>span:last-child{font-size:9px}.theme-list small{display:none}.app-sample{padding:16px 14px 10px;margin-top:18px}.sample-head{min-height:150px;gap:0}.sample-head h2{font-size:19px;max-width:175px;line-height:1.35}.sample-head p{font-size:9px}.sample-head small{font-size:8px;display:block;max-width:160px;line-height:1.6}.buddy-area{width:130px}.buddy-area>div{width:130px;height:126px}.buddy-area>span{font-size:8px;top:0}.salary{padding:19px 15px;gap:12px;grid-template-columns:1.1fr 1fr;min-height:145px}.salary strong{font-size:32px;letter-spacing:-1.5px;margin:13px 0}.salary strong>span{font-size:20px}.shift{padding-left:12px}.shift strong{font-size:19px;letter-spacing:-.5px;margin:17px 0}.salary small{font-size:8px}.salary>div>span{font-size:10px}.life-list>div{grid-template-columns:1fr 55px 65px}.toy{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}footer{font-size:10px}.sample-top{font-size:9px}.sample-label{font-size:8px}}
 @media(min-width:1000px){.preview{max-width:1030px;margin-left:max(16px,calc((100vw - 1340px)/2));margin-right:300px;padding-left:24px;padding-right:24px}}
-.thumb.animated-companion{width:51px;height:60px;aspect-ratio:auto}.buddy-area>div.animated-companion{width:160px;height:148px;aspect-ratio:auto}
-@media(max-width:700px){.thumb.animated-companion{width:51px;height:53px}.buddy-area>div.animated-companion{width:111px;height:120px}}
+.thumb.animated-companion{width:51px;height:60px;aspect-ratio:auto}.buddy-area>div.animated-companion{width:200px;height:170px;aspect-ratio:auto}
+@media(max-width:700px){.thumb.animated-companion{width:51px;height:53px}.buddy-area>div.animated-companion{width:130px;height:126px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
-.animated-companion{width:160px;max-width:100%;aspect-ratio:200/190;position:relative;isolation:isolate;--buddy-energy:0;--buddy-breath-duration:3.8s;--buddy-puff-opacity:.28}
+.animated-companion{width:160px;max-width:100%;aspect-ratio:240/190;position:relative;isolation:isolate;--buddy-energy:0;--buddy-breath-duration:3.8s;--buddy-puff-opacity:.28}
 .animated-companion .buddy-art{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;user-select:none}
-.animated-companion .buddy-art g{transform-box:view-box}
-.animated-companion .buddy-breathe{transform-origin:100px 150px;animation:buddy-breath var(--buddy-breath-duration) ease-in-out infinite}
-.animated-companion .buddy-cow-head{transform-origin:100px 103px;animation:buddy-cow-breath var(--buddy-breath-duration) ease-in-out infinite}
-.animated-companion .buddy-nostril-puff{opacity:0;transform-origin:100px 96px;animation-duration:var(--buddy-breath-duration);animation-timing-function:ease-out;animation-iteration-count:infinite}
-.animated-companion .buddy-puff-left{animation-name:buddy-exhale-left}
-.animated-companion .buddy-puff-right{animation-name:buddy-exhale-right;animation-delay:.12s}
-.animated-companion .buddy-eyes{transform-origin:100px 62px;animation:buddy-blink 6.4s ease-in-out infinite}
-.animated-companion .buddy-ear-left{transform-origin:76px 49px;animation:buddy-ear-left 9s ease-in-out infinite}
-.animated-companion .buddy-ear-right{transform-origin:123px 49px;animation:buddy-ear-right 10.3s ease-in-out infinite}
-.animated-companion .buddy-drowsy-body{transform-origin:98px 150px;animation:buddy-drowsy-sway 5.6s ease-in-out infinite}
-.animated-companion .buddy-drowsy-head{transform-origin:99px 105px;animation:buddy-drowsy-nod 5.6s ease-in-out infinite}
-.animated-companion .buddy-off-eyes{transform-origin:99px 62px;animation:buddy-sleep-blink 7s ease-in-out infinite}
-.animated-companion .buddy-ghost{transform-origin:153px 62px;animation:buddy-soul-float 5.6s ease-in-out infinite}
+.animated-companion .buddy-art g,.animated-companion .buddy-art path{transform-box:view-box}
+/* The desk hand remains planted while shoulders, collar and head carry the breath. */
+.animated-companion .buddy-cow-torso{transform-origin:106px 104px;animation:buddy-cow-breathe var(--buddy-breath-duration) ease-in-out infinite}
+.animated-companion .buddy-cow-head{transform-origin:104px 88px;animation:buddy-cow-heave var(--buddy-breath-duration) ease-in-out infinite}
+.animated-companion .buddy-collar-hand{transform-origin:82px 109px;animation:buddy-collar-tug var(--buddy-breath-duration) ease-in-out infinite}
+.animated-companion .buddy-cow-sweat{transform-origin:112px 28px;animation:buddy-sweat 4.8s ease-in infinite}
+.animated-companion .buddy-nostril-puff{opacity:0;transform-origin:138px 98px;animation-duration:var(--buddy-breath-duration);animation-timing-function:ease-out;animation-iteration-count:infinite}
+.animated-companion .buddy-puff-one{animation-name:buddy-exhale-one}
+.animated-companion .buddy-puff-two{animation-name:buddy-exhale-two;animation-delay:.13s}
+.animated-companion .buddy-cow-eyes{transform-origin:97px 64px;animation:buddy-blink 6.4s ease-in-out infinite}
+.animated-companion .buddy-ear-left{transform-origin:81px 49px;animation:buddy-ear-flick 8.4s ease-in-out infinite}
+/* The office chair, body and crossed legs rock together; neck and foot add lag. */
+.animated-companion .buddy-office-rock{transform-origin:110px 145px;animation:buddy-chair-rock 6.2s ease-in-out infinite}
+.animated-companion .buddy-off-head{transform-origin:81px 94px;animation:buddy-off-nod 6.2s ease-in-out infinite}
+.animated-companion .buddy-office-crossleg{transform-origin:126px 138px;animation:buddy-office-foot 3.1s ease-in-out infinite}
+.animated-companion .buddy-off-eyes{transform-origin:86px 66px;animation:buddy-sleep-blink 6.2s ease-in-out infinite}
+.animated-companion .buddy-ghost{transform-origin:165px 53px;animation:buddy-soul-float 5.6s ease-in-out infinite}
 .animated-companion .buddy-faint-spark{animation:buddy-faint-spark 5.6s ease-in-out infinite}
-.animated-companion .buddy-recline{transform-origin:85px 140px;animation:buddy-sunny-breathe 5.5s ease-in-out infinite}
-.animated-companion .buddy-swing-foot{transform-origin:121px 133px;animation:buddy-foot-swing 4.5s ease-in-out infinite}
-.animated-companion .buddy-sun{transform-origin:155px 43px;animation:buddy-sun-turn 30s linear infinite}
-.animated-companion .buddy-sun-glow{transform-origin:155px 43px;animation:buddy-sunlight 5.5s ease-in-out infinite}
-.animated-companion .buddy-leaf{transform-origin:24px 174px;animation:buddy-leaf-sway 6s ease-in-out infinite}
-.animated-companion .buddy-proud-chest{transform-origin:100px 148px;animation:buddy-proud-breathe 4.8s ease-in-out infinite}
-.animated-companion .buddy-proud-head{transform-origin:100px 106px;animation:buddy-proud-nod 4.8s ease-in-out infinite}
-.animated-companion .buddy-proud-spark{transform-box:fill-box;transform-origin:center;animation:buddy-glimmer 4.2s ease-in-out infinite}
-.animated-companion .buddy-goat-body{transform-origin:100px 150px;animation:buddy-goat-breathe 8.8s ease-in-out infinite}
-.animated-companion .buddy-goat-head{transform-origin:100px 97px;animation:buddy-goat-sip-head 8.8s ease-in-out infinite}
-.animated-companion .buddy-goat-beard{transform-box:fill-box;transform-origin:50% 0;animation:buddy-beard-sway 4.4s ease-in-out infinite}
-.animated-companion .buddy-tea-lift{transform-origin:100px 126px;animation:buddy-tea-sip 8.8s cubic-bezier(.4,0,.3,1) infinite}
-.animated-companion .buddy-tea-steam-one{animation:buddy-tea-steam 3s ease-in-out infinite}
-.animated-companion .buddy-tea-steam-two{animation:buddy-tea-steam 3s ease-in-out -1.4s infinite}
-.animated-companion.buddy-reacting .buddy-reaction{transform-origin:100px 170px;animation:buddy-react .6s ease-out both}
-.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-left{animation-duration:2.8s}
-.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-right{animation-duration:3.1s}
+/* Slow sunlight and a loose swinging ankle make the reclining pose read as leisure. */
+.animated-companion .buddy-sunny-breathe{transform-origin:105px 145px;animation:buddy-sunny-breathe 5.8s ease-in-out infinite}
+.animated-companion .buddy-sunny-head{transform-origin:71px 91px;animation:buddy-sunny-nod 7.2s ease-in-out infinite}
+.animated-companion .buddy-swing-foot{transform-origin:145px 134px;animation:buddy-foot-swing 3.4s ease-in-out infinite}
+.animated-companion .buddy-sun{transform-origin:196px 41px;animation:buddy-sun-turn 36s linear infinite}
+.animated-companion .buddy-sun-glow{transform-origin:196px 41px;animation:buddy-sunlight 5.8s ease-in-out infinite}
+.animated-companion .buddy-leaf{transform-origin:25px 174px;animation:buddy-leaf-sway 5.5s ease-in-out infinite}
+/* One hoof is raised, the other stays on the hip; the stepped leg keeps its footing. */
+.animated-companion .buddy-proud-chest{transform-origin:105px 140px;animation:buddy-proud-breathe 4.6s ease-in-out infinite}
+.animated-companion .buddy-proud-head{transform-origin:104px 98px;animation:buddy-proud-nod 4.6s ease-in-out infinite}
+.animated-companion .buddy-raised-hoof{transform-origin:148px 83px;animation:buddy-hoof-pump 4.6s ease-in-out infinite}
+.animated-companion .buddy-proud-eyes{transform-origin:104px 62px;animation:buddy-blink 5.9s ease-in-out infinite}
+.animated-companion .buddy-confidence-lines{transform-origin:174px 53px;animation:buddy-confidence 4.6s ease-in-out infinite}
+/* Elbow pivot (130,128): -35deg brings the near rim edge to the mouth around (119,90). */
+.animated-companion .buddy-goat-body{transform-origin:127px 139px;animation:buddy-goat-breathe 8.8s ease-in-out infinite}
+.animated-companion .buddy-goat-head{transform-origin:99px 99px;animation:buddy-goat-sip-head 8.8s ease-in-out infinite}
+.animated-companion .buddy-goat-foot{transform-origin:161px 145px;animation:buddy-goat-foot 4.4s ease-in-out infinite}
+.animated-companion .buddy-goat-eyes{transform-origin:98px 65px;animation:buddy-blink 7.3s ease-in-out infinite}
+.animated-companion .buddy-goat-beard{transform-origin:100px 101px;animation:buddy-beard-sway 4.4s ease-in-out infinite}
+.animated-companion .buddy-tea-forearm{transform-origin:130px 128px;animation:buddy-tea-sip 8.8s cubic-bezier(.4,0,.3,1) infinite}
+.animated-companion .buddy-tea-cup{transform-origin:153.5px 97px;animation:buddy-cup-upright 8.8s cubic-bezier(.4,0,.3,1) infinite}
+.animated-companion .buddy-tea-steam-one{animation:buddy-tea-steam 3.1s ease-in-out infinite}
+.animated-companion .buddy-tea-steam-two{animation:buddy-tea-steam 3.1s ease-in-out -1.5s infinite}
+.animated-companion.buddy-reacting .buddy-reaction{transform-origin:120px 174px;animation:buddy-react .6s ease-out both}
+.animated-companion.buddy-energetic[data-companion-theme="acid"] .buddy-ear-left{animation-duration:2.5s}
 .animated-companion.buddy-paused *{animation-play-state:paused!important}
 .animated-companion.buddy-paused .buddy-nostril-puff{opacity:0!important}
-@keyframes buddy-breath{0%,100%{transform:scale(1)}34%{transform:scale(1.045,1.075) translateY(-1px)}56%{transform:scale(1.015,.985)}76%{transform:scale(1)}}
-@keyframes buddy-cow-breath{0%,100%{transform:translateY(0) rotate(-.6deg)}34%{transform:translateY(-3px) rotate(.6deg)}56%{transform:translateY(1px) rotate(-.8deg)}}
-@keyframes buddy-exhale-left{0%,39%{opacity:0;transform:translate(5px,0) scale(.35)}48%{opacity:var(--buddy-puff-opacity);transform:translate(-4px,-1px) scale(.85)}80%{opacity:0;transform:translate(-23px,-8px) scale(1.45)}100%{opacity:0;transform:translate(-23px,-8px) scale(1.45)}}
-@keyframes buddy-exhale-right{0%,39%{opacity:0;transform:translate(-5px,0) scale(.35)}48%{opacity:var(--buddy-puff-opacity);transform:translate(4px,-1px) scale(.85)}80%{opacity:0;transform:translate(23px,-8px) scale(1.45)}100%{opacity:0;transform:translate(23px,-8px) scale(1.45)}}
+@keyframes buddy-cow-breathe{0%,100%{transform:scale(1)}34%{transform:scale(1.025,1.065) rotate(-1deg)}58%{transform:scale(1.008,.99)}78%{transform:scale(1)}}
+@keyframes buddy-cow-heave{0%,100%{transform:translate(0,0) rotate(0)}34%{transform:translate(-1px,-3px) rotate(-2.2deg)}58%{transform:translate(1px,1px) rotate(1.4deg)}78%{transform:translate(0,0) rotate(0)}}
+@keyframes buddy-collar-tug{0%,100%{transform:rotate(0)}31%{transform:rotate(-8deg) translateX(-1px)}56%{transform:rotate(2deg)}}
+@keyframes buddy-sweat{0%,20%{opacity:0;transform:translateY(-2px)}35%{opacity:.8}76%{opacity:0;transform:translateY(9px)}100%{opacity:0;transform:translateY(9px)}}
+@keyframes buddy-exhale-one{0%,39%{opacity:0;transform:translate(-3px,-1px) scale(.35)}49%{opacity:var(--buddy-puff-opacity);transform:translate(3px,1px) scale(.9)}84%,100%{opacity:0;transform:translate(21px,-4px) scale(1.4)}}
+@keyframes buddy-exhale-two{0%,39%{opacity:0;transform:translate(-3px,-1px) scale(.35)}49%{opacity:var(--buddy-puff-opacity);transform:translate(2px,2px) scale(.85)}87%,100%{opacity:0;transform:translate(22px,10px) scale(1.45)}}
 @keyframes buddy-blink{0%,42%,47%,76%,81%,100%{transform:scaleY(1)}44%,79%{transform:scaleY(.15)}}
-@keyframes buddy-ear-left{0%,42%,50%,100%{transform:rotate(0)}45%{transform:rotate(-4deg)}48%{transform:rotate(1.5deg)}}
-@keyframes buddy-ear-right{0%,60%,68%,100%{transform:rotate(0)}63%{transform:rotate(4deg)}66%{transform:rotate(-1.5deg)}}
-@keyframes buddy-drowsy-sway{0%,100%{transform:rotate(-.7deg) scaleY(1)}50%{transform:rotate(.7deg) scaleY(.98)}}
-@keyframes buddy-drowsy-nod{0%,100%{transform:translateY(0) rotate(-1.5deg)}48%{transform:translateY(3px) rotate(2.5deg)}72%{transform:translateY(2px) rotate(1deg)}}
-@keyframes buddy-sleep-blink{0%,30%,62%,100%{transform:scaleY(1)}38%,55%{transform:scaleY(.25)}}
-@keyframes buddy-soul-float{0%,100%{transform:translate(-2px,7px) rotate(-5deg);opacity:.25}50%{transform:translate(3px,-7px) rotate(4deg);opacity:.85}}
-@keyframes buddy-faint-spark{0%,100%{opacity:.1}50%{opacity:.6}}
-@keyframes buddy-sunny-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.022)}}
-@keyframes buddy-foot-swing{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(5deg)}}
+@keyframes buddy-ear-flick{0%,42%,51%,100%{transform:rotate(0)}45%{transform:rotate(-6deg)}48%{transform:rotate(2deg)}}
+@keyframes buddy-chair-rock{0%,100%{transform:rotate(-1.8deg)}48%{transform:rotate(2deg)}70%{transform:rotate(.3deg)}}
+@keyframes buddy-off-nod{0%,100%{transform:rotate(-2deg) translateY(0)}38%{transform:rotate(3deg) translateY(1px)}62%{transform:rotate(7deg) translateY(3px)}77%{transform:rotate(-3deg) translateY(-1px)}}
+@keyframes buddy-office-foot{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(5deg)}}
+@keyframes buddy-sleep-blink{0%,29%,79%,100%{transform:scaleY(1)}39%,64%{transform:scaleY(.2)}}
+@keyframes buddy-soul-float{0%,100%{transform:translate(-2px,7px) rotate(-6deg);opacity:.25}50%{transform:translate(5px,-9px) rotate(5deg);opacity:.85}}
+@keyframes buddy-faint-spark{0%,100%{opacity:.1}50%{opacity:.65}}
+@keyframes buddy-sunny-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.025)}}
+@keyframes buddy-sunny-nod{0%,100%{transform:rotate(-1deg)}52%{transform:rotate(2deg)}}
+@keyframes buddy-foot-swing{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(7deg)}}
 @keyframes buddy-sun-turn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-@keyframes buddy-sunlight{0%,100%{opacity:.45;transform:scale(.94)}50%{opacity:.8;transform:scale(1.07)}}
-@keyframes buddy-leaf-sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(4deg)}}
-@keyframes buddy-proud-breathe{0%,100%{transform:scale(1)}45%{transform:scale(1.02,1.035)}}
-@keyframes buddy-proud-nod{0%,100%{transform:translateY(0) rotate(-.8deg)}35%{transform:translateY(-2px) rotate(2deg)}55%{transform:translateY(-.5px) rotate(0)}70%{transform:translateY(-1px) rotate(.6deg)}}
-@keyframes buddy-glimmer{0%,100%{transform:scale(.9);opacity:.3}45%{transform:scale(1.1);opacity:.8}}
-@keyframes buddy-goat-breathe{0%,100%{transform:scaleY(1)}34%{transform:scaleY(1.025)}63%{transform:scaleY(1.01)}}
-@keyframes buddy-goat-sip-head{0%,42%,88%,100%{transform:translateY(0) rotate(-.7deg)}56%,72%{transform:translateY(2px) rotate(2deg)}80%{transform:translateY(1px) rotate(.5deg)}}
-@keyframes buddy-tea-sip{0%,39%,90%,100%{transform:translate(0,0) rotate(0)}58%,72%{transform:translate(-2px,-27px) rotate(-5deg)}78%{transform:translate(-1px,-25px) rotate(-2deg)}}
-@keyframes buddy-tea-steam{0%{opacity:0;transform:translateY(2px) scaleX(.9)}35%{opacity:.65}80%{opacity:0;transform:translateY(-10px) scaleX(1.08)}100%{opacity:0;transform:translateY(-10px) scaleX(1.08)}}
-@keyframes buddy-beard-sway{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.2deg)}}
+@keyframes buddy-sunlight{0%,100%{opacity:.5;transform:scale(.96)}50%{opacity:.9;transform:scale(1.05)}}
+@keyframes buddy-leaf-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(6deg)}}
+@keyframes buddy-proud-breathe{0%,100%{transform:scale(1)}38%{transform:scale(1.025,1.04)}63%{transform:scale(1.008,1.015)}}
+@keyframes buddy-proud-nod{0%,100%{transform:rotate(-1deg) translateY(0)}37%{transform:rotate(3.5deg) translateY(-2px)}57%{transform:rotate(-1.5deg) translateY(0)}70%{transform:rotate(1.5deg) translateY(-1px)}}
+@keyframes buddy-hoof-pump{0%,100%{transform:rotate(0)}32%{transform:rotate(12deg)}44%{transform:rotate(-9deg)}60%{transform:rotate(4deg)}75%{transform:rotate(0)}}
+@keyframes buddy-confidence{0%,20%,100%{opacity:.2;transform:scale(.9)}40%,55%{opacity:1;transform:scale(1.08)}72%{opacity:.3;transform:scale(1)}}
+@keyframes buddy-goat-breathe{0%,100%{transform:scaleY(1)}31%{transform:scaleY(1.025)}68%{transform:scaleY(1.008)}}
+@keyframes buddy-goat-sip-head{0%,38%,88%,100%{transform:rotate(0)}56%,70%{transform:rotate(1deg)}78%{transform:rotate(-.5deg)}}
+@keyframes buddy-goat-foot{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(3.5deg)}}
+@keyframes buddy-tea-sip{0%,30%,91%,100%{transform:rotate(0)}53%,71%{transform:rotate(-35deg)}79%{transform:rotate(-31.5deg)}}
+@keyframes buddy-cup-upright{0%,30%,91%,100%{transform:rotate(0)}53%,71%{transform:rotate(35deg)}79%{transform:rotate(31.5deg)}}
+@keyframes buddy-tea-steam{0%{opacity:0;transform:translateY(2px) scaleX(.9)}35%{opacity:.65}80%,100%{opacity:0;transform:translateY(-10px) scaleX(1.08)}}
+@keyframes buddy-beard-sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2deg)}}
 @keyframes buddy-react{0%,100%{transform:translateY(0)}25%{transform:translateY(1px) rotate(-.6deg)}55%{transform:translateY(-2px) rotate(.6deg)}80%{transform:translateY(.5px)}}
-@media(prefers-reduced-motion:reduce){.animated-companion *{animation:none!important;transition:none!important}.animated-companion .buddy-nostril-puff{display:none}.animated-companion .buddy-ghost{opacity:.7}.animated-companion .buddy-tea-steam{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.animated-companion *{animation:none!important;transition:none!important}.animated-companion .buddy-nostril-puff,.animated-companion .buddy-cow-sweat{display:none}.animated-companion .buddy-ghost{opacity:.7}.animated-companion .buddy-tea-steam{opacity:.35}}
 </style>
 </head>
 <body>
@@ -86,15 +104,15 @@
     <header class="masthead"><a class="brand" href="https://26zhanghaojie-art.github.io/xindong-web/"><span>薪</span>薪动<small>XIN DONG</small></a><span class="preview-tag">动态效果预览</span><label class="motion-switch"><input id="motion" type="checkbox" checked> 动效</label></header>
     <section class="intro"><p class="eyebrow">A LITTLE COMPANY AT WORK</p><h1>陪你上班的，小动静。</h1><p>选一个状态，点点右下角木鱼。看它喘气、喝茶；烟雾往上攒，想散时再吹散。</p></section>
     <nav class="theme-list" aria-label="选择动态形象">
-      <button data-theme-choice="acid" aria-pressed="true"><span class="thumb" data-thumb="acid"></span><span>怨气荧光<small>喘口粗气的老牛</small></span></button>
-      <button data-theme-choice="lavender" aria-pressed="false"><span class="thumb" data-thumb="lavender"></span><span>精神离线<small>放空片刻的老马</small></span></button>
-      <button data-theme-choice="moss" aria-pressed="false"><span class="thumb" data-thumb="moss"></span><span>佛系摸鱼<small>晒太阳的水豚</small></span></button>
-      <button data-theme-choice="orange" aria-pressed="false"><span class="thumb" data-thumb="orange"></span><span>大动脉橙<small>底气十足的老马</small></span></button>
-      <button data-theme-choice="lamb" aria-pressed="false"><span class="thumb" data-thumb="lamb"></span><span>从容茶歇<small>慢慢喝茶的老山羊</small></span></button>
+      <button data-theme-choice="acid" aria-pressed="true"><span class="thumb" data-thumb="acid"></span><span>怨气荧光<small>扶桌喘气的老牛</small></span></button>
+      <button data-theme-choice="lavender" aria-pressed="false"><span class="thumb" data-thumb="lavender"></span><span>精神离线<small>瘫椅放空的青年马</small></span></button>
+      <button data-theme-choice="moss" aria-pressed="false"><span class="thumb" data-thumb="moss"></span><span>佛系摸鱼<small>翘脚晒太阳的青年水豚</small></span></button>
+      <button data-theme-choice="orange" aria-pressed="false"><span class="thumb" data-thumb="orange"></span><span>大动脉橙<small>抬蹄打气的中年马</small></span></button>
+      <button data-theme-choice="lamb" aria-pressed="false"><span class="thumb" data-thumb="lamb"></span><span>从容茶歇<small>躺椅品茶的老山羊</small></span></button>
     </nav>
     <section class="app-sample" aria-label="页面中的陪伴效果示例">
       <div class="sample-top"><span>我的工作日</span><span class="sample-label">页面示意 · 示例金额</span></div>
-      <div class="sample-head"><div><p id="mood">厌班，但钱要赚</p><h2 id="headline">精神已下班，工资请继续。</h2><small>09:00 — 18:00 · 本月 21 个工作日</small></div><div class="buddy-area"><div id="companion"></div><span id="buddyLabel">喘口粗气的老牛</span></div></div>
+      <div class="sample-head"><div><p id="mood">厌班，但钱要赚</p><h2 id="headline">精神已下班，工资请继续。</h2><small>09:00 — 18:00 · 本月 21 个工作日</small></div><div class="buddy-area"><div id="companion"></div><span id="buddyLabel">扶桌喘气的老牛</span></div></div>
       <div class="salary"><div><span>今日计薪 <small>示例</small></span><strong>¥ 248<span>.82</span></strong><small>每一秒，都算数。</small></div><div class="shift"><span>距离下班</span><strong>04:25:00</strong><div class="progress"><i></i></div><small>生活也在慢慢攒起来</small></div></div>
       <div class="life-list"><h3>优先支付清单 <small>03</small></h3><div><span>☕ 一杯咖啡</span><span>¥ 10</span><small>✓ 已覆盖</small></div><div><span>🍱 一顿午饭</span><span>¥ 20</span><small>✓ 已覆盖</small></div><div><span>🍰 一点小甜头</span><span>¥ 18</span><small>✓ 已覆盖</small></div></div>
     </section>
@@ -113,175 +131,176 @@ const __assets = Object.freeze({"body-horse.webp":"data:image/webp;base64,UklGRn
 const __asset = name => { if (!Object.hasOwn(__assets, name)) throw new Error('Missing embedded image: '+name); return __assets[name]; };
 const __modules = Object.create(null);
 __modules["companions.mjs"] = (() => {
-/** Original adult companions for the isolated animation preview. No saved data. */
+/** Original grown-up cartoon scenes. Preview-only; no storage or network. */
 const labels = Object.freeze({
-  acid: '灰白鬓毛、疲惫喘气的老牛',
-  lavender: '垂眼待机、灵魂轻飘的成年马',
-  moss: '靠椅晒太阳、慢慢晃脚的成年水豚',
-  orange: '叉腰挺胸、神态笃定的成年马',
-  lamb: '长角长须、捧茶慢饮的老山羊',
+  acid: '半侧身撑桌、松着领口喘粗气的疲惫老牛',
+  lavender: '瘫在办公转椅里、歪头翘腿的青年马',
+  moss: '躺椅晒太阳、翘腿晃脚的青年水豚',
+  orange: '一脚踩凳、一蹄叉腰一蹄举起的自信中年马',
+  lamb: '半躺躺椅、双腿搭脚凳、举杯慢饮的老山羊',
 });
 let nextId = 0;
-
-function art(theme, id) {
-  const defs = `<defs>
-    <linearGradient id="${id}-cream" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#D8C9AF"/><stop offset="1" stop-color="#B6A78F"/></linearGradient>
-    <linearGradient id="${id}-tan" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#BC946A"/><stop offset="1" stop-color="#987451"/></linearGradient>
-    <linearGradient id="${id}-hair" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#E8E3D5"/><stop offset="1" stop-color="#B5B0A4"/></linearGradient>
-    <linearGradient id="${id}-orange" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#C89769"/><stop offset="1" stop-color="#AB7851"/></linearGradient>
-    <linearGradient id="${id}-shirt" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#BFC6A5"/><stop offset="1" stop-color="#8E9C7C"/></linearGradient>
-    <linearGradient id="${id}-robe" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#B4B4A0"/><stop offset="1" stop-color="#8D9683"/></linearGradient>
-    <linearGradient id="${id}-chair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C5CEAB"/><stop offset="1" stop-color="#92A27A"/></linearGradient>
-    <radialGradient id="${id}-shine"><stop stop-color="#F5DB91" stop-opacity=".6"/><stop offset="1" stop-color="#F5DB91" stop-opacity="0"/></radialGradient>
-  </defs>`;
-  const fill = name => `url(#${id}-${name})`;
-  const shadow = `<ellipse cx="100" cy="174" rx="47" ry="5" fill="#5C4B3C" opacity=".12" stroke="none"/>`;
-  const bodies = {
-    acid: `<g class="buddy-cow">
-      <path d="M130 137q20 12 12 28" fill="none"/><path d="M141 160l-7 11l10-1l4-9Z" fill="#777366"/>
-      <path d="M73 143l-6 26q8 8 21 3l10-29M109 144l4 28q14 6 21-3l-5-28" fill="#777B6C"/>
-      <path d="M67 165q13 3 22-1v9q-16 5-24-2Z" fill="#5F5A4C"/><path d="M113 165q10 4 20-2l3 9q-10 6-23 1Z" fill="#5F5A4C"/>
-      <g class="buddy-breathe">
-        <path d="M79 83q-22 7-25 30l9 32q36 14 76-1l5-31q-7-24-27-29Z" fill="${fill('shirt')}"/>
-        <path d="M78 86l19 19l20-20l-7 24l-13-4l-10 6Z" fill="#D0D3B8"/>
-        <path d="M98 106v39M84 130l-11 3m37 9l14-1" fill="none" stroke="#7C896E" stroke-width="1.6"/>
-        <path d="M113 114h17v14h-16Z" fill="#A9B493" stroke-width="1.5"/>
-        <path d="M57 106q-13 15-8 39q2 10 13 6l4-32M137 106q16 18 10 39q-2 10-14 5l-4-30" fill="${fill('shirt')}"/>
-        <path d="M49 141l-1 13q3 7 9 4l5-13M136 143l1 13q7 6 11-2l-2-13" fill="${fill('cream')}"/>
-        <path d="M49 136l14 1M134 137l13-2" fill="none" stroke-width="1.7"/>
-      </g>
-      <g class="buddy-cow-head">
-        <path d="M76 44q-30-7-22-29q1 15 25 17M120 43q30-8 23-29q-2 15-27 18" fill="#B8AB89"/>
-        <path d="M59 27l7-4M64 34l7-5M134 27l-7-4M129 34l-6-5" stroke="#8D846C" stroke-width="1.4"/>
-        <g class="buddy-ear buddy-ear-left"><path d="M74 50q-29-11-30 1q7 17 28 9Z" fill="#A7A394"/><path d="M52 50l16 6" stroke="#7E8274" stroke-width="2"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M124 50q27-13 31-1q-6 18-28 12Z" fill="#A7A394"/><path d="M145 50l-14 7" stroke="#7E8274" stroke-width="2"/></g>
-        <path d="M73 39q25-11 49 1q9 13 4 34l-4 17q-3 19-23 21q-21-3-25-21l-5-20q-3-21 4-32Z" fill="${fill('cream')}"/>
-        <path d="M71 44l-7 12l8-2l-6 12l9-4M124 43l9 13l-9-2l7 13l-9-4" fill="${fill('hair')}" stroke="#9D9E8E" stroke-width="1.6"/>
-        <path d="M76 38q8-12 16-9l-3 8q11-13 17-6l-3 8q12-8 18 2l-12 1l-10-3l-10 3Z" fill="${fill('hair')}"/>
-        <path d="M82 45l13-2M103 44l11 2M87 49h18" fill="none" stroke="#9C927F" stroke-width="1.4"/>
-        <path d="M76 54l16 3M106 57l15-4" stroke="#E0DED0" stroke-width="4"/>
-        <g class="buddy-eyes"><path d="M78 61l12 1M108 62l11-2" stroke-width="2.5"/><path d="M84 62v3M113 62v3" stroke-width="2.4"/></g>
-        <path d="M77 67q8 5 16 1M106 68q8 4 16-2M76 71l-4 3m51-4l4 3" fill="none" stroke="#96846D" stroke-width="1.5"/>
-        <path d="M84 68l-5 18M113 68l6 17" fill="none" stroke="#A59883" stroke-width="1.4"/>
-        <path d="M78 85q20-10 43 0q8 10 1 21q-22 13-43 0q-8-11-1-21Z" fill="#B6A18A"/>
-        <path d="M84 93l4 2M113 94l4-2" stroke-width="3.5"/><path d="M91 104q8-3 16 0" stroke-width="1.7"/>
-      </g>
-      <g class="buddy-nostril-puff buddy-puff-left" fill="#CFD7C1" stroke="none"><ellipse cx="77" cy="96" rx="5" ry="3"/><ellipse cx="68" cy="92" rx="9" ry="5"/><ellipse cx="59" cy="97" rx="7" ry="4"/></g>
-      <g class="buddy-nostril-puff buddy-puff-right" fill="#CFD7C1" stroke="none"><ellipse cx="122" cy="96" rx="5" ry="3"/><ellipse cx="132" cy="92" rx="9" ry="5"/><ellipse cx="141" cy="97" rx="7" ry="4"/></g>
-    </g>`,
-    lavender: `<g class="buddy-horse-off">
-      <path d="M131 139q19 6 12 27" fill="none"/><path d="M140 160l-8 13l13-4l4-10" fill="#726C74"/>
-      <path d="M76 142l-9 27q8 7 18 3l13-29M107 144l6 28q12 5 21-3l-9-29" fill="#8D8897"/>
-      <path d="M67 166l19-2l-1 9q-12 6-21-1ZM113 165l19-2l5 8q-11 7-24 2Z" fill="#625C67"/>
-      <g class="buddy-drowsy-body">
-        <path d="M78 84q-22 6-26 31l10 33q34 14 76-1l6-34q-7-24-28-28Z" fill="#ABA3B5"/>
-        <path d="M80 87l18 20l18-21M98 107v42" fill="none" stroke="#817589" stroke-width="1.7"/>
-        <path d="M87 102l10 3l8-3l-4 13l4 25l-7 8l-7-8l3-25Z" fill="#8B7B96"/>
-        <path d="M56 108q-10 20-7 38l12 1l8-25M139 110q13 19 9 38l-12-1l-9-27" fill="#ABA3B5"/>
-        <path d="M49 143l-1 12q4 7 11 2l3-12M136 145l2 12q6 5 11-2l-1-12" fill="${fill('cream')}"/>
-        <path d="M110 118h18v12h-18Z" fill="#BCB3C5" stroke-width="1.4"/>
-      </g>
-      <g class="buddy-drowsy-head">
-        <g class="buddy-ear buddy-ear-left"><path d="M78 39q-15-26-7-29q14 4 18 30" fill="${fill('cream')}"/><path d="M74 20l7 13" stroke="#A99583" stroke-width="2.5"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M113 37q4-27 14-23q8 10-4 30" fill="${fill('cream')}"/><path d="M121 23l-4 12" stroke="#A99583" stroke-width="2.5"/></g>
-        <path d="M78 34q19-9 38 3q10 17 7 42l-5 23q-9 12-25 10q-17-4-19-19l-5-25q-1-22 9-34Z" fill="${fill('cream')}"/>
-        <path d="M78 34q5-14 23-12q21 0 24 15l-11-3l3 10l-15-8l-4 13l-7-11l-13 9Z" fill="#89818D"/>
-        <path d="M74 43l-6 19l9-7M119 43l7 19l-8-6" fill="#AAA6AA"/>
-        <path d="M79 55l12 1M104 56l13-1" fill="none" stroke="#8E827B" stroke-width="2.8"/>
-        <g class="buddy-off-eyes"><path d="M80 62h10M106 62h10"/><path d="M85 63v2M111 63v2" stroke-width="2.6"/></g>
-        <path d="M78 68q7 4 14 0M104 68q8 4 14 0M80 73l4 2m27-1l4-2" fill="none" stroke="#A28E7B" stroke-width="1.4"/>
-        <path d="M83 88q17-7 32 1l3 12q-16 17-33 1Z" fill="#BAA48A"/>
-        <path d="M88 95v2M109 95v2M94 106h11" stroke-width="1.9"/>
-      </g>
-      <g class="buddy-ghost" stroke="#A294B3" stroke-width="1.4"><path d="M146 62q-5-8-3-17q1-12 9-16q8 1 8 13l-2 18l-5-4l-3 7l-4-4Z" fill="#E8E4EC" fill-opacity=".7"/><path d="M147 45h3m5-1h3"/><path d="M149 53h5"/></g>
-      <path class="buddy-faint-spark" d="M145 73l-2 5M158 70l3 4" fill="none" stroke="#B4A2C7" stroke-width="1.5"/>
-    </g>`,
-    moss: `<g class="buddy-sunny">
-      <circle class="buddy-sun-glow" cx="155" cy="43" r="34" fill="${fill('shine')}" stroke="none"/>
-      <g class="buddy-sun" stroke="#C8AB62" stroke-width="1.6"><circle cx="155" cy="43" r="14" fill="#EBD18A"/><path d="M155 21v-5m0 54v-5m22-22h5m-54 0h5m7-16l-4-4m35 35l4 4m-4-35l4-4m-35 35l-4 4" fill="none"/></g>
-      <path d="M50 137l-12 38M143 139l12 36" stroke="#7B6850" stroke-width="4"/>
-      <path d="M40 99q-4-11-10-6q-5 4 0 14l23 41q5 6 15 6h80q12-1 12-9q-1-8-13-6l-77 3Z" fill="${fill('chair')}"/>
-      <g class="buddy-recline">
-        <path d="M68 88q32-9 49 22l20 29q-30 14-64 2l-27-32Z" fill="#A9B19A"/>
-        <path d="M67 94l18 17l-9 7M85 111l15 27M87 126l15 1" fill="none" stroke="#7D8B70" stroke-width="1.6"/>
-        <path d="M97 134q13 5 28 4l24-5q11-3 15 5q3 7-7 10l-37 3" fill="#8C967C"/>
-        <path d="M152 133q14-5 20 2q4 10-12 12l-6-6Z" fill="${fill('tan')}"/>
-        <g class="buddy-swing-foot"><path d="M108 132l29-23q9-7 19-3l6 7l-7 9l-17-2l-17 17" fill="#8C967C"/><path d="M153 106q18-9 24-1q5 11-12 14l-9-3Z" fill="${fill('tan')}"/><path d="M169 105l2 6M164 107l2 5" stroke="#7D5E44" stroke-width="1.5"/></g>
-        <g class="buddy-sunny-head">
-          <path d="M44 63q-10-9-3-14q8-3 12 8M79 54q2-13 10-8q7 8-2 14" fill="${fill('tan')}"/>
-          <path d="M46 57q28-15 43 7q7 13-6 31q-13 15-43 10l-14-9q-6-12 0-20Z" fill="${fill('tan')}"/>
-          <path d="M28 77q13-5 19 2l-5 12q-11 6-17 0Z" fill="#A27D57" stroke-width="1.8"/>
-          <path d="M26 81l6-1M31 96q13 7 25 0" fill="none" stroke-width="1.9"/>
-          <path d="M54 71l12-2M77 65l8 2" stroke="#7B6048" stroke-width="2.3"/><path d="M54 77l10-2M76 73l8-1" stroke-width="1.8"/>
-          <path d="M52 82q7 4 13 0M73 78l10-1M52 88l4 2M47 61l13-4M48 65l13-3" fill="none" stroke="#8A6749" stroke-width="1.2"/>
-        </g>
-        <path d="M78 105q-1 16 24 16" fill="none" stroke="#717F66" stroke-width="10"/><path d="M78 105q-1 16 24 16" fill="none" stroke="#ADB59F" stroke-width="6"/>
-        <path d="M99 117q12-1 11 6q-4 6-13 1" fill="${fill('tan')}"/>
-      </g>
-      <g class="buddy-leaf" fill="#9AAE82" stroke="#71845F" stroke-width="1.5"><path d="M24 160q-14-5-8-17q10 3 8 17M24 159q5-13 14-8q-1 11-14 8"/><path d="M24 157v17" fill="none"/></g>
-    </g>`,
-    orange: `<g class="buddy-proud">
-      <path d="M129 139q20 5 16 25" fill="none"/><path d="M141 159l-6 14l12-3l4-9Z" fill="#6F5948"/>
-      <path d="M78 140l-11 30q9 6 20 2l12-30M108 141l6 30q13 5 23-2l-14-29" fill="#8B7B62"/>
-      <path d="M67 166l20-2l-1 9q-11 5-22-1ZM114 165l20-1l5 8q-12 6-25 1Z" fill="#625445"/>
-      <g class="buddy-proud-chest">
-        <path d="M80 84q-22 4-28 29l13 35q32 10 73-3l8-33q-9-24-29-28Z" fill="#E1C5A1"/>
-        <path d="M82 85l15 20l19-20l13 59q-27 7-51 1Z" fill="#B98658"/>
-        <path d="M97 105v40M94 116h5m-5 9h5m-5 9h5" fill="none" stroke="#8E6547" stroke-width="1.4"/>
-        <path d="M58 102q-23 5-19 25q5 11 27 11l5-11q-15 1-16-5l14-10M137 101q23 4 23 24q-3 13-24 14l-6-11q14-1 15-6l-13-10" fill="#E1C5A1"/>
-        <path d="M62 125q10-2 15 5l-4 9l-10-2M135 126q-10-2-14 5l4 9l10-3" fill="${fill('orange')}"/>
-        <path d="M109 116h14v12h-14Z" fill="#C99669" stroke-width="1.4"/>
-      </g>
-      <g class="buddy-proud-head">
-        <g class="buddy-ear buddy-ear-left"><path d="M79 38q-15-25-6-28q14 5 16 29" fill="${fill('orange')}"/><path d="M75 20l7 14" stroke="#8F6145" stroke-width="2.2"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M113 37q2-27 13-23q8 10-3 29" fill="${fill('orange')}"/><path d="M121 23l-4 11" stroke="#8F6145" stroke-width="2.2"/></g>
-        <path d="M79 34q18-9 37 1q12 17 8 43l-5 22q-7 12-24 11q-17-2-21-17l-4-28q-2-20 9-32Z" fill="${fill('orange')}"/>
-        <path d="M78 34q9-17 24-14q18 1 23 16l-14-7l-7 6l-8-7l-17 17Z" fill="#75624D"/>
-        <path d="M74 42l-5 16l8-5M121 42l6 16l-9-5" fill="#A59C88"/>
-        <path d="M79 54l13-2M105 52l12 3" fill="none" stroke="#765B43" stroke-width="2.8"/>
-        <g class="buddy-eyes"><path d="M80 62l10-1M106 61l10 1" stroke-width="2.2"/><path d="M85 62v2M111 62v2" stroke-width="2.5"/></g>
-        <path d="M79 68q6 3 12 0M106 68q7 3 12 0M87 43h19M91 47h12" fill="none" stroke="#986E4E" stroke-width="1.2"/>
-        <path d="M84 86q15-6 30 0l5 13q-15 15-33 3Z" fill="#CCA27A"/>
-        <path d="M89 93v2M109 93v2M93 103q9 4 17-2" fill="none" stroke-width="1.7"/>
-      </g>
-      <g class="buddy-proud-spark buddy-spark-one" stroke="#D6AD60" stroke-width="1.8" fill="none"><path d="M157 72l3-7m-1 17l8-1"/></g>
-    </g>`,
-    lamb: `<g class="buddy-old-goat">
-      <path d="M76 142l-10 29q9 7 22 2l11-30M109 142l5 30q13 6 23-1l-12-30" fill="#868E79"/>
-      <path d="M67 166l21-1v9q-13 5-24-1ZM114 166l20-1l5 8q-12 5-25 1Z" fill="#646D5A"/>
-      <g class="buddy-goat-body">
-        <path d="M77 85q-23 6-28 31l11 35q39 12 81-1l9-34q-7-25-31-31Z" fill="${fill('robe')}"/>
-        <path d="M80 86l18 27l20-28M98 113v39M75 134l-9 3M121 141l12-1" fill="none" stroke="#7B846F" stroke-width="1.7"/>
-        <path d="M89 101q-2 18 3 23l5-6l4 7l6-8l1-15Z" fill="#D1CEC0" stroke="#989C8A" stroke-width="1.2"/>
-      </g>
-      <g class="buddy-goat-head">
-        <path d="M78 41Q45 22 56 6q-1 17 28 25M119 40q35-18 23-34q2 17-29 25" fill="#A9A38C"/>
-        <path d="M59 18l9-2M64 25l9-4M71 31l8-5M139 18l-9-2M134 25l-9-4M127 31l-8-5" stroke="#777B68" stroke-width="1.4"/>
-        <g class="buddy-ear buddy-ear-left"><path d="M76 45q-23-7-33 2q12 15 31 10Z" fill="#C1B9A1"/><path d="M53 49l16 3" stroke="#9F967F" stroke-width="1.8"/></g>
-        <g class="buddy-ear buddy-ear-right"><path d="M122 45q24-7 34 2q-13 16-33 10Z" fill="#C1B9A1"/><path d="M145 49l-17 4" stroke="#9F967F" stroke-width="1.8"/></g>
-        <path d="M77 37q23-10 44 0q6 12 1 31l-4 20q-3 16-18 21q-18-7-21-21l-5-22q-3-17 3-29Z" fill="#C8C2AC"/>
-        <path d="M78 36q5-11 14-8l-1 7q6-11 13-6l-2 7q11-8 18 1l-12 3l-9-2l-9 3Z" fill="${fill('hair')}"/>
-        <path d="M79 44l12-2M105 42l11 3M86 47h22" fill="none" stroke="#9B9E88" stroke-width="1.3"/>
-        <path d="M77 53l16 2M105 55l15-3" stroke="#E0DDD0" stroke-width="4"/>
-        <g class="buddy-eyes"><path d="M79 60h12M107 60h11" stroke-width="1.8"/><path d="M84 61h3M111 61h3" stroke-width="2.5"/></g>
-        <path d="M78 66q8 4 15 0M105 66q8 4 15 0M81 71l7 2m22-1l7-2" fill="none" stroke="#969B84" stroke-width="1.3"/>
-        <path d="M96 74h8l-4 6Z" fill="#7F846D" stroke="none"/><path d="M100 80v7m-7-1q5 3 7 1q4 2 8-1" fill="none" stroke-width="1.6"/>
-        <path class="buddy-goat-beard" d="M84 86q7 9 16 6q10 3 17-7l-2 25l-8 17l-5-8l-6 13l-4-15l-6 5l-3-19Z" fill="${fill('hair')}" stroke="#959B88" stroke-width="1.4"/>
-        <path d="M92 97l3 18M101 97v19M109 96l-4 16" fill="none" stroke="#BBBDAF" stroke-width="1.1"/>
-        <path d="M78 75l-6 11l10-2M121 74l8 12l-11-3" fill="#DAD7C9" stroke="#9FA58F" stroke-width="1.4"/>
-      </g>
-      <g class="buddy-tea-lift">
-        <path d="M57 110q-9 14 4 25l20 5l5-10l-16-7l4-11M141 110q11 15-3 25l-18 5l-5-10l15-7l-3-10" fill="#A4AD96"/>
-        <path d="M80 127q8-5 13 2l2 10q-11 8-19 0Z" fill="#C8C2AC"/><path d="M115 127q-8-5-13 2l-1 11q11 7 19-1Z" fill="#C8C2AC"/>
-        <path d="M113 121q13-2 13 8q-1 10-13 7" fill="none" stroke="#7E9476" stroke-width="3"/>
-        <path d="M87 120h28l-2 20q-11 8-24 0Z" fill="#AFC3A3" stroke="#758B6C" stroke-width="1.8"/>
-        <ellipse cx="101" cy="120" rx="14" ry="3.6" fill="#D0DBC2" stroke="#758B6C" stroke-width="1.6"/><ellipse cx="101" cy="120" rx="10.5" ry="2" fill="#8E9565" stroke="none"/>
-        <path d="M93 126v10" stroke="#DAE5D0" stroke-width="1.8"/>
-        <g class="buddy-tea-steam" fill="none" stroke="#C8CFBB" stroke-width="2"><path class="buddy-tea-steam-one" d="M96 112q-5-5 0-9q5-5 1-9"/><path class="buddy-tea-steam-two" d="M107 111q5-6 0-11q-4-4 0-8"/></g>
-      </g>
-    </g>`,
-  };
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190" role="img" aria-label="${labels[theme]}" class="buddy-art" fill="none" stroke="#635A48" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">${defs}${shadow}<g class="buddy-reaction">${bodies[theme]}</g></svg>`;
+function art(theme,id){
+ const defs=`<defs>
+ <linearGradient id="${id}-hide" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#DFCFAD"/><stop offset="1" stop-color="#BBA88B"/></linearGradient>
+ <linearGradient id="${id}-horse" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#D2A16C"/><stop offset="1" stop-color="#AE7D52"/></linearGradient>
+ <linearGradient id="${id}-young-hide" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#DDB283"/><stop offset="1" stop-color="#C19063"/></linearGradient>
+ <linearGradient id="${id}-capybara" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#DDB479"/><stop offset="1" stop-color="#BF8E58"/></linearGradient>
+ <linearGradient id="${id}-hair" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#E9E5D6"/><stop offset="1" stop-color="#B4B6A5"/></linearGradient>
+ <linearGradient id="${id}-shirt" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#C4CEA9"/><stop offset="1" stop-color="#8E9E73"/></linearGradient>
+ <linearGradient id="${id}-robe" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#B7C3A6"/><stop offset="1" stop-color="#8D9E7E"/></linearGradient>
+ <linearGradient id="${id}-chair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DED4AF"/><stop offset="1" stop-color="#BAAF87"/></linearGradient>
+ <linearGradient id="${id}-leather" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B6A6C7"/><stop offset="1" stop-color="#8D7D9B"/></linearGradient>
+ <radialGradient id="${id}-sunlight"><stop stop-color="#F4DA83" stop-opacity=".7"/><stop offset="1" stop-color="#F4DA83" stop-opacity="0"/></radialGradient>
+ </defs>`;
+ const f=name=>`url(#${id}-${name})`;
+ const scene={
+ acid:`<g class="buddy-cow-scene">
+ <ellipse cx="119" cy="177" rx="91" ry="5" fill="#39412E" opacity=".12" stroke="none"/>
+ <path d="M145 115l-5 59M206 115l7 59" stroke="#817554" stroke-width="4"/>
+ <path d="M133 106h83v10h-83Z" fill="#BBA77C"/><path d="M137 106h76" stroke="#E2D1A4" stroke-width="2"/>
+ <path d="M182 103v-17q10-4 18 0v17Z" fill="#C3C7AC"/><path d="M200 89q12-2 11 7q-1 6-11 3" fill="none"/><path d="M181 103h21"/>
+ <path d="M55 139q-13 9-9 27l-12 4q-6 8 7 9l25-3l8-33M81 142l14 27l-5 4q-2 7 11 7l19-4q6-6-3-11l-15-27" fill="#777E65"/>
+ <path d="M33 171q16 5 31-1l1 7q-24 9-33 1ZM91 172q13 1 24-6l6 7q-9 10-28 7Z" fill="#555D4B"/>
+ <path d="M51 131q-20 2-19 24" fill="none"/><path d="M29 149l-4 14l9-4l3-9Z" fill="#7B7E69"/>
+ <g class="buddy-cow-torso">
+ <path d="M81 81q22-4 34 17l-6 34q-12 19-48 15q-19-4-13-24l17-30Z" fill="${f('shirt')}"/>
+ <path d="M86 82l10 20l14-9l-2 16l-11-7l-7 6l-10-19Z" fill="#D9DEB9"/>
+ <path d="M97 103l-17 34M57 124l13-2M91 135l12-3" stroke="#7C8B65" stroke-width="1.6"/>
+ <path d="M67 102q-20 5-13 22q10 7 30-10l-5-9l-13 7l7-9" fill="${f('shirt')}"/>
+ <g class="buddy-collar-hand"><path d="M77 107l7-12q2-6 7-4l3 7l-5 14l-8 3Z" fill="${f('hide')}"/><path d="M86 98l3 4M83 103l4 3" stroke-width="1.2"/></g>
+ </g>
+ <path class="buddy-support-arm" d="M104 91q9-3 14 8l9 9l17-5q10-2 12 5q-1 7-11 7l-22 4q-9 0-17-13" fill="${f('shirt')}"/>
+ <path d="M143 104q11-6 17 0l7 3q4 4-3 7l-19 1Z" fill="${f('hide')}"/><path d="M153 106l4 6M158 105l4 6" stroke-width="1.3"/>
+ <g class="buddy-cow-head">
+ <path d="M83 40Q54 28 62 9q4 16 27 20M114 36q26-17 19-28q0 16-24 18" fill="#B8AB83"/><path d="M66 23l8-3M73 31l8-5M128 22l-7-3M122 29l-6-4" stroke="#8B856B" stroke-width="1.4"/>
+ <g class="buddy-ear-left"><path d="M82 45q-23-8-28 4q7 13 26 7Z" fill="#BFC2A9"/><path d="M62 48l14 4" stroke="#969D82" stroke-width="1.7"/></g>
+ <path d="M116 45q18-9 25 1q-4 12-20 11Z" fill="#BEC1A8"/>
+ <path d="M82 31q28-6 39 12q8 14 2 27l13 12q9 13-4 22q-20 13-38-4l-8-18q-20-15-13-35Z" fill="${f('hide')}"/>
+ <path d="M79 36l-9 8l8 3l-7 9l11-3M78 33q6-13 15-6l-1 7q10-11 17-5l-2 7l10 2l-14 4l-11-5Z" fill="${f('hair')}" stroke="#A4AA91" stroke-width="1.6"/>
+ <path d="M88 43l16-1M92 48l14 1" stroke="#A79A7F" stroke-width="1.3"/>
+ <path d="M88 54l18 4" stroke="#E5E7D1" stroke-width="4"/><g class="buddy-cow-eyes"><path d="M90 61l12 3M98 64v3" stroke-width="2.5"/></g>
+ <path d="M88 69q8 7 17 2M87 74l7 4M111 62l7 1M110 68l5 2" stroke="#9A896E" stroke-width="1.5"/>
+ <path d="M111 80q17-5 27 5q7 12-7 19q-16 7-26-5Z" fill="#BBA387"/>
+ <path d="M122 87l5 2M134 91l3 2M115 99q8 3 15 0" stroke-width="2"/>
+ <path class="buddy-cow-sweat" d="M112 33q-4-7-3-11q7 7 7 10q-1 4-4 1Z" fill="#B6CBD0" stroke="#8FA9AB" stroke-width="1.2"/>
+ </g>
+ <g class="buddy-nostril-puff buddy-puff-one" fill="#CBD7B8" stroke="none"><ellipse cx="141" cy="93" rx="5" ry="3"/><ellipse cx="151" cy="96" rx="8" ry="5"/><ellipse cx="161" cy="91" rx="7" ry="4"/></g>
+ <g class="buddy-nostril-puff buddy-puff-two" fill="#DCE3CA" stroke="none"><ellipse cx="137" cy="100" rx="6" ry="3"/><ellipse cx="150" cy="106" rx="9" ry="5"/></g>
+ </g>`,
+ lavender:`<g class="buddy-office-scene">
+ <ellipse cx="121" cy="179" rx="81" ry="4" fill="#54425E" opacity=".12" stroke="none"/>
+ <path d="M110 146v21M110 166l-29 10M110 166l29 10" stroke="#706B78" stroke-width="4"/><ellipse cx="78" cy="177" rx="7" ry="3" fill="#6C6674"/><ellipse cx="142" cy="177" rx="7" ry="3" fill="#6C6674"/>
+ <g class="buddy-office-rock">
+ <path d="M60 69q-4-15 12-18q14 0 19 13l31 60q8 12-5 19l-21-2Z" fill="${f('leather')}"/><path d="M76 66l31 62" stroke="#C4B6D0" stroke-width="3"/>
+ <path d="M83 134h56q12 0 12 9q-3 8-16 7l-47-1q-10-4-5-15Z" fill="${f('leather')}"/>
+ <path d="M77 134l-13-20M135 138l10-21" fill="none" stroke="#8B8395" stroke-width="3"/><path d="M56 112h23M137 115h18" stroke="#7A7187" stroke-width="5"/>
+ <path d="M103 124q8 11 26 10l29 14l23 1l4 10l-29 5q-10-1-26-13l-22-7" fill="#8F829C"/><path d="M178 147q15-5 22 3q3 9-14 12l-10-4Z" fill="#62596D"/>
+ <g class="buddy-office-crossleg"><path d="M111 133l31-24q10-4 20 3l14 11l-7 10l-22-10l-21 22" fill="#8F829C"/><path d="M169 120q16-5 24 3q5 9-16 13l-10-6Z" fill="#62596D"/><path d="M177 125l10 1" stroke="#AEA2B8" stroke-width="1.5"/></g>
+ <path d="M79 83q23 1 34 17l19 30q-19 18-35 8L71 109Z" fill="#B5A8C1"/>
+ <path d="M79 87l17 16l5-7M95 105l14 27" stroke="#8E7E9D" stroke-width="1.7"/>
+ <path d="M89 96l8 7l-1 13l16 8l-5 7l-18-12l3-13Z" fill="#8D789D"/>
+ <path d="M92 107q-4 17-18 18l-14-7l-4 8q20 19 34 7l13-17" fill="#B5A8C1"/><path d="M57 117q-9-5-12 0l6 13q8 5 12-3Z" fill="${f('young-hide')}"/>
+ <path d="M80 88q-14 1-19-6l-3-15l-10 1q-6 21 8 28l17 5" fill="#B5A8C1"/><path d="M49 69q-7-12-1-15q6 2 7 10l6 5Z" fill="${f('young-hide')}"/>
+ <g class="buddy-off-head">
+ <path d="M74 39q-19-22-13-28q13 3 22 27M102 36q1-25 12-24q9 9-2 28" fill="${f('young-hide')}"/><path d="M65 20l9 11M109 20l-3 12" stroke="#A5927D" stroke-width="2.2"/>
+ <path d="M74 32q23-7 35 9q10 18-1 35l-7 19q-12 12-28 4q-15-7-11-25l-2-19q-1-16 14-23Z" fill="${f('young-hide')}"/>
+ <path d="M68 35q6-17 23-16q20-2 24 16l-12-4l3 12l-14-10l-7 12l-5-10l-14 9Z" fill="#70516E"/>
+ <path d="M67 49l-7 13l9-5M105 48l9 14l-9-5" fill="#785B75"/>
+ <path d="M69 56l13 4M91 60l13-2" stroke="#8C644D" stroke-width="2.5"/><g class="buddy-off-eyes"><path d="M69 63l11 3M91 66l11-2"/><path d="M74 65v2M97 65v2" stroke-width="2.3"/></g>
+ <path d="M68 83q18-7 33 2l-3 12q-17 10-29-1Z" fill="#C69C76"/><path d="M76 88v2M93 89v2M78 99l10 1" stroke-width="1.8"/>
+ </g>
+ </g>
+ <g class="buddy-ghost" stroke="#A196AF" stroke-width="1.4"><path d="M158 61q-5-13-1-23q6-13 14-10q9 5 5 20l-3 14l-5-6l-6 8l-4-7Z" fill="#E8E4EF" fill-opacity=".85"/><path d="M161 41l4 1m5 2l4 1M163 50l6 1"/></g>
+ <path class="buddy-faint-spark" d="M154 70l-3 6M171 74l2 5" stroke="#B5A6C4" stroke-width="1.5"/>
+ </g>`,
+ moss:`<g class="buddy-sunny-scene">
+ <ellipse cx="125" cy="177" rx="90" ry="5" fill="#36523A" opacity=".1" stroke="none"/>
+ <circle class="buddy-sun-glow" cx="196" cy="41" r="34" fill="${f('sunlight')}" stroke="none"/><g class="buddy-sun" fill="none" stroke="#D0AE58" stroke-width="1.7"><circle cx="196" cy="41" r="15" fill="#EFD58A"/><path d="M196 18v-6m0 58v-6m23-23h6m-58 0h6m7-17l-4-4m38 38l4 4m-4-38l4-4m-38 38l-4 4"/></g>
+ <path d="M58 138l-14 36M157 143l16 32" stroke="#8F7853" stroke-width="4"/>
+ <path d="M40 83q-7-13-14-7q-5 5 2 16l29 57q5 8 15 8h85q13-1 13-10q-2-7-15-6l-80 2Z" fill="${f('chair')}"/>
+ <path d="M34 85l30 57M76 149h77" stroke="#E9DDB7" stroke-width="2"/>
+ <g class="buddy-sunny-breathe">
+ <path d="M72 87q24-6 44 15l28 35q-30 19-62 3l-26-30Z" fill="#ADB99A"/><path d="M74 92l17 15l-11 9M92 109l16 29M96 122h13" stroke="#849672" stroke-width="1.6"/>
+ <path d="M114 131q15 7 33 6l27 12l23-1l4 12l-29 4l-29-12l-27-6" fill="#8A9B76"/><path d="M195 147q15-6 23 2q4 11-15 14l-10-5Z" fill="${f('capybara')}"/>
+ <g class="buddy-swing-foot"><path d="M112 136l40-25q12-7 23 3l17 10l-8 13l-24-12l-34 23" fill="#8A9B76"/><path d="M184 122q18-6 27 3q6 11-17 15l-12-8Z" fill="${f('capybara')}"/><path d="M200 126l3 7m-9-5l3 6" stroke="#8E6747" stroke-width="1.5"/></g>
+ <path d="M75 99q-24 3-25-15l3-17l11 2l-2 14q3 5 17 4" fill="#ADB99A"/><path d="M52 68q-5-9 2-13q8-1 13 7l-3 10Z" fill="${f('capybara')}"/>
+ <g class="buddy-sunny-head">
+ <path d="M48 52q-8-11-1-15q9-2 13 8M84 45q4-13 12-6q5 8-5 14" fill="${f('capybara')}"/>
+ <path d="M49 46q30-13 44 10q8 14-7 31q-15 16-44 10l-18-9q-6-11 1-22Z" fill="${f('capybara')}"/>
+ <path d="M25 68q14-6 22 2l-7 14q-12 6-18-3Z" fill="#B88B59"/><path d="M24 72l7-1M30 89q13 7 26-1" stroke-width="1.8"/>
+ <path d="M56 67q6-5 12-2M77 63q5-4 10-1" stroke-width="2"/>
+ <path d="M43 44q6-11 28-10q17 0 22 12l-13 3q-22-7-45 0l-5-4Z" fill="#B6C298"/><path d="M48 38l2-10q16-7 31 0l3 11" fill="#A3B684"/>
+ </g>
+ <path d="M86 105q0 18 24 18" stroke="#7E906F" stroke-width="11" fill="none"/><path d="M86 105q0 18 24 18" stroke="#ADB99A" stroke-width="7" fill="none"/><path d="M106 119q15-2 14 5q-4 7-15 2" fill="${f('capybara')}"/>
+ </g>
+ <g class="buddy-leaf" fill="#A0B780" stroke="#7E965F" stroke-width="1.4"><path d="M25 162q-16-6-10-18q12 3 10 18M25 161q6-14 17-7q-2 11-17 7"/><path d="M25 160v15"/></g>
+ </g>`,
+ orange:`<g class="buddy-proud-scene">
+ <ellipse cx="115" cy="178" rx="68" ry="5" fill="#6C492C" opacity=".12" stroke="none"/>
+ <path d="M142 145h47v29h-47Z" fill="#BA9465"/><path d="M142 145l9-7h45l-7 7ZM189 145l7-7v28l-7 8" fill="#D3AF7D"/><path d="M166 149v15" stroke="#D9BB91" stroke-width="3"/>
+ <path d="M88 135l-9 33l-11 4q-5 7 7 9l25-5l8-38" fill="#937C59"/><path d="M68 173q17 4 31-4l2 7q-18 9-33 3Z" fill="#685440"/>
+ <g class="buddy-proud-step"><path d="M113 137l19-20q9-7 18 2l13 21l-13 7l-13-15l-15 18" fill="#937C59"/><path d="M149 139q15-4 25 2q5 6-7 8l-20-1Z" fill="#685440"/></g>
+ <path d="M122 131q22 9 14 31" fill="none"/><path d="M134 155l-6 15l12-7l2-8Z" fill="#7D644B"/>
+ <g class="buddy-proud-chest">
+ <path d="M85 80q24-5 41 15l5 42q-20 17-53 7l-6-37Z" fill="#E2BD88"/>
+ <path d="M90 84l15 18l14-17l9 52q-28 10-47 4Z" fill="#BB8551"/><path d="M105 102v39M100 114h6m-6 10h6m-6 10h6" stroke="#91663D" stroke-width="1.4"/>
+ <path d="M78 96q-24 4-24 22q3 16 28 18l5-11q-15-1-17-7l14-10" fill="#E2BD88"/><path d="M81 124q12-2 15 5l-5 9l-12-3Z" fill="${f('horse')}"/>
+ <path d="M123 94q12-2 20-14l10 7q-6 19-23 25" fill="#E2BD88"/>
+ <g class="buddy-raised-hoof"><path d="M143 82q0-17 6-30l11 3q-2 18-7 31Z" fill="#E2BD88"/><path d="M149 56l-1-13q3-9 10-6q7-4 11 3l-3 18Z" fill="${f('horse')}"/><path d="M149 43l6 9l11-1M158 39v10" stroke-width="1.5"/></g>
+ </g>
+ <g class="buddy-proud-head">
+ <path d="M87 38q-14-25-6-29q14 5 17 29M117 34q4-26 14-21q8 10-4 29" fill="${f('horse')}"/><path d="M84 19l7 14M126 22l-5 12" stroke="#A17149" stroke-width="2.1"/>
+ <path d="M87 32q21-9 38 6q10 14 3 37l-6 19q-12 13-29 7q-15-5-16-22l-1-24q-1-17 11-23Z" fill="${f('horse')}"/>
+ <path d="M84 35q8-18 25-15q19 1 23 17l-13-7l-8 6l-9-7l-17 17Z" fill="#795334"/><path d="M80 45l-5 16l9-6M125 45l5 14l-8-5" fill="#8D6846"/>
+ <path d="M86 53l13-2M111 51l12 4" stroke-width="2.7"/><g class="buddy-proud-eyes"><path d="M87 61l11-1M111 60l10 2" stroke-width="2"/><path d="M93 61v2M116 61v2" stroke-width="2.5"/></g>
+ <path d="M90 81q17-7 31 1l3 12q-16 14-32 3Z" fill="#D6AE7B"/><path d="M96 87v2M114 87v2M98 96q9 5 17-2" stroke-width="1.7"/>
+ </g>
+ <path class="buddy-confidence-lines" d="M177 48l7-6M180 58l9 1M173 36l2-9" stroke="#D4A548" stroke-width="2"/>
+ </g>`,
+ lamb:`<g class="buddy-goat-scene">
+ <ellipse cx="124" cy="178" rx="91" ry="4.5" fill="#4C5D3F" opacity=".12" stroke="none"/>
+ <path d="M87 139l-15 37M153 145l15 31" stroke="#8B7958" stroke-width="4"/>
+ <path d="M61 57q-8-11-14-5q-3 5 2 15l35 84q5 7 17 6l57-4q11-2 10-9q-2-7-13-5l-58 4Z" fill="${f('chair')}"/>
+ <path d="M55 62l35 81M103 149l51-3" stroke="#EEE1B8" stroke-width="2"/>
+ <path d="M181 148h39v10h-39ZM187 158l-3 17M215 158l5 17" fill="#C3B590"/><path d="M185 148h32" stroke="#E6D6B0" stroke-width="2"/>
+ <g class="buddy-goat-body">
+ <path d="M92 87q20 0 35 19l20 30q-14 15-39 10l-32-34Z" fill="${f('robe')}"/>
+ <path d="M95 92l12 21l11-8M107 114l14 28M93 123l11 1" stroke="#7D916C" stroke-width="1.6"/>
+ <path d="M133 135q18 1 37 7l31-1l2 10l-36 7l-33-9" fill="#899C77"/><path d="M196 141q15-7 22 0q5 8-13 13l-10-4Z" fill="#777D60"/>
+ <g class="buddy-goat-foot"><path d="M125 140q21-6 38-5l26 8l-3 11l-27-6l-25 5" fill="#96A982"/><path d="M183 141q15-6 23 1q4 8-12 13l-13-3Z" fill="#777D60"/></g>
+ <path d="M88 101q-9 17 4 31l16 7l6-10l-15-8l1-15" fill="${f('robe')}"/><path d="M107 129q11-5 17 3q3 6-5 8l-13-2Z" fill="#CCC6AC"/>
+ </g>
+ <path d="M84 131l25 9M81 133l9 10" stroke="#A48E67" stroke-width="4"/>
+ <g class="buddy-goat-head">
+ <path d="M86 38Q63 21 71 6q1 15 23 23M109 34q18-15 15-28q10 12-8 33" fill="#AEB093"/><path d="M75 19l7-2M79 26l9-3M120 18l-6-2M117 25l-6-2" stroke="#7C886A" stroke-width="1.4"/>
+ <g class="buddy-ear-left"><path d="M85 43q-25-7-30 4q10 14 30 8Z" fill="#C6CCB1"/><path d="M65 47l15 4" stroke="#9AA68A" stroke-width="1.7"/></g>
+ <path d="M116 44q19-7 26 3q-5 11-20 9Z" fill="#C6CCB1"/>
+ <path d="M84 34q22-6 35 10q8 13 1 28l9 10q8 9-3 17q-10 7-23 4q-18 0-22-17l-6-25q-3-16 9-27Z" fill="#D0D2B6"/>
+ <path d="M81 36q5-13 14-7l-1 7q9-10 16-4l-2 6l10 1l-13 5l-9-6l-15 7Z" fill="${f('hair')}" stroke="#9DA98B" stroke-width="1.5"/>
+ <path d="M88 46l13-1M92 50l12 1" stroke="#9AA58B" stroke-width="1.2"/>
+ <path d="M88 56l17 3" stroke="#ECECDB" stroke-width="3.8"/><g class="buddy-goat-eyes"><path d="M90 63l12 2M98 65v2" stroke-width="2.1"/></g>
+ <path d="M88 70q9 5 18 1M88 75l8 3M111 62l7 1M111 68l6 1" stroke="#9AA184" stroke-width="1.3"/>
+ <path d="M113 78l8 3l-3 4l-7-3Z" fill="#7C8567" stroke="none"/><path d="M118 85l2 4l-8 2" stroke-width="1.5"/>
+ <path class="buddy-goat-beard" d="M92 88q10 12 22 10l-1 16l-8 18l-5-8l-7 12l-3-14l-6 4l1-19l-4-13Z" fill="${f('hair')}" stroke="#98A58A" stroke-width="1.4"/>
+ <path d="M94 102l2 18M103 105l-2 15" stroke="#B9C3A9" stroke-width="1.1"/>
+ <path d="M83 77l-9 14l13-4" fill="#E3E5D1" stroke="#9DA98B" stroke-width="1.5"/>
+ </g>
+ <path d="M110 105q9-2 17 12l7 10l-11 9l-17-21" fill="${f('robe')}"/>
+ <g class="buddy-tea-forearm">
+ <path d="M123 131q-2-4 2-9l13-18l10 7l-12 20q-5 8-13 0Z" fill="#B4C29E"/>
+ <g class="buddy-tea-cup">
+ <path d="M162 100q13-2 13 6q-1 9-12 8" stroke="#7B9269" stroke-width="2.6" fill="none"/>
+ <path d="M141 97h25l-2 22q-12 7-21 0Z" fill="#B7CDA3" stroke="#7B9269" stroke-width="1.7"/>
+ <ellipse cx="153.5" cy="97" rx="12.5" ry="3.4" fill="#E3EBCF" stroke="#7B9269" stroke-width="1.6"/><ellipse cx="153.5" cy="97" rx="9.5" ry="1.8" fill="#9BA16A" stroke="none"/>
+ <path d="M148 103v10" stroke="#E9F1DA" stroke-width="1.8"/>
+ <g class="buddy-tea-steam" fill="none" stroke="#C3D2B4" stroke-width="2"><path class="buddy-tea-steam-one" d="M149 89q-4-5 0-9q4-5 0-8"/><path class="buddy-tea-steam-two" d="M158 89q4-7 0-11q-3-4 1-8"/></g>
+ </g>
+ <path d="M137 105q6-6 10-2l2 10q-5 7-12 2Z" fill="#D0D2B6"/><path d="M140 107l7 2M140 111l7 2" stroke-width="1.2"/>
+ </g>
+ </g>`
+ };
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="${labels[theme]}" class="buddy-art" fill="none" stroke="#665A43" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">${defs}<g class="buddy-reaction">${scene[theme]}</g></svg>`;
 }
 
 function mountCompanion(root, { theme = 'acid', motion = true } = {}) {
@@ -684,7 +703,7 @@ const {themes} = __modules["themes.mjs"];
 const $=id=>document.getElementById(id);
 let theme='acid', count=0, energy=0, lastTap=0, energyTimer=0, demoTimer=0, playing=true, pendingSmoke=0;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)');
-const names={acid:'喘口粗气的老牛',lavender:'放空片刻的老马',moss:'晒太阳的水豚',orange:'底气十足的老马',lamb:'慢慢喝茶的老山羊'};
+const names={acid:'扶桌喘气的老牛',lavender:'瘫椅放空的青年马',moss:'翘脚晒太阳的青年水豚',orange:'抬蹄打气的中年马',lamb:'躺椅品茶的老山羊'};
 const companion=mountCompanion($('companion'),{theme,motion:!reduce.matches});
 const thumbs=[...document.querySelectorAll('[data-thumb]')].map(el=>mountCompanion(el,{theme:el.dataset.thumb,motion:false}));
 const smoke=createSmoke($('smoke'),{theme,motion:!reduce.matches,origin:{x:.61,y:.55}});
