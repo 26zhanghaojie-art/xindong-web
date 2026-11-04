@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="acid" data-density="comfortable" data-layout="full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://formsubmit.co; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>薪动 · 下班才是主线</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./positive-themes.css">
+  <link rel="stylesheet" href="./relief-atmosphere.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-icon">薪</span><span>薪动<small>XIN DONG</small></span></a>
+    <p class="nav-caption">我的工作日</p>
+    <button class="nav-item active" id="todayNav"><span>◴</span> 今日薪动 <i></i></button>
+    <button class="nav-item" id="goalsNav"><span>▧</span> 日常开销</button>
+    <button class="nav-item" id="settingsNav"><span>⚙</span> 薪资与作息</button>
+    <button class="nav-item" id="reliefNav"><span>↯</span> 敲走班味</button><button class="nav-item" id="personalizeNav"><span>◐</span> 按我的来</button><div class="sidebar-note"><span class="note-spark">↯</span><p id="sidebarMotto">工牌在线，<br>本人待机。</p><small>工资归工资，<br>生活归自己。</small></div>
+    <button class="nav-item send-nav" id="sendNav"><span>↗</span> 提交我的信息</button>
+    <div class="sidebar-foot"><span class="live-dot"></span> 每一秒，都算数 <small>网页 0.5 测试版</small></div>
+  </aside>
+  <main>
+    <header><div class="date-label" id="todayDate"></div><div class="header-actions"><button class="text-button" id="demoToggle">查看演示</button><button class="text-button" id="personalizeButton" aria-label="个性化设置">按我的来 ◐</button><button class="icon-button" hidden id="pinButton" title="窗口置顶" aria-label="窗口置顶">◇</button><button class="avatar" id="profileButton" aria-label="编辑个人信息">薪</button></div></header>
+    <div class="page-title"><div class="page-title-copy"><div class="eyebrow">MY TIME. MY LIFE.</div><h1 id="mainHeadline">精神已下班，工资请继续。</h1><p id="greeting">人去干饭，工资站岗。</p><p class="calendar-note" id="calendarNote"></p><span class="demo-badge" id="demoBadge" hidden>演示中 · 示例数据</span></div><img id="heroMascot" class="hero-mascot" alt="" width="180" height="180" aria-hidden="true" hidden></div>
+    <section class="earn-card" aria-label="今日收入">
+      <div class="earn-main"><div class="earn-caption"><span>今日计薪 <small>税后估算</small></span><button id="hideMoney" aria-label="隐藏薪资" title="隐藏薪资" aria-pressed="false">◉</button></div><div class="money"><span class="currency">¥</span><span id="earnedInteger">0</span><span class="decimals" id="earnedDecimal">.0000</span></div><div class="earning-speed"><span class="pulse-dot"></span><span id="speedText">设置工资，开始看见收入</span></div><div class="next-reward" id="nextReward">你的下一份小美好，正在路上。</div></div>
+      <div class="shift-panel"><span class="status" id="workStatus">等待开始</span><div class="countdown-label" id="countdownLabel">距离下班</div><div class="countdown" id="countdown">--<span>:</span>--<span>:</span>--</div><div class="progress-caption"><span>距离收工的进度</span><b id="progressText">0%</b></div><div class="progress-track" id="workProgressTrack" role="progressbar" aria-label="距离收工的进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="workProgress"></div></div><div class="shift-hours"><span id="workedHours">已工作 0 小时</span><span id="shiftHours">09:00 — 18:00</span></div><div class="shift-hours" id="shiftDateNote" hidden></div></div>
+    </section>
+    <section class="stats-row" aria-label="薪资概览"><div><span id="netLabel">税后月薪</span><strong id="monthlySalary">¥ —</strong><small id="estimateNote">填写后自动计算</small></div><div><span>税后日薪</span><strong id="dailySalary">¥ —</strong><small id="workdaysNote">按月工作日折算</small></div><div><span>税后时薪</span><strong id="hourlySalary">¥ —</strong><small id="hoursNote">按每日计薪时长折算</small></div><button id="editSalary">调整薪资与作息 <span>↗</span></button></section>
+    <div id="reliefRoot"></div>
+    <div class="bottom-grid" id="expensePanels">
+      <section class="goals-section"><div class="section-heading"><div><h2>优先支付清单 <span id="goalsCount">05</span></h2><p>月度账单分摊到工作日，每日开销按优先级覆盖</p></div><button class="text-button" id="editGoals">编辑清单 ↗</button></div><div class="goal-table-head"><span>生活开销</span><span>累计门槛</span><span>今日进度</span></div><div id="goalsList"></div></section>
+      <section class="obtained-section"><div class="section-heading"><div><h2>今日已保住 <span class="tiny-star">✦</span></h2><p id="coveredCaption">收入已经可以支撑这些开销</p></div></div><div id="obtainedList" class="obtained-list"></div><div class="covered-summary"><span>已覆盖开销</span><strong id="coveredTotal">¥ 0.00</strong></div><p class="obtained-note">这是收入的生活化展示，<br>不代表已购买或可以领取实物。</p></section>
+    </div>
+    <div class="quick-actions"><button class="secondary-button" id="editCalendar">▦ 安排本月休息</button><button class="secondary-button" id="mobileSend">自愿提交信息</button></div><footer><span id="footerMotto">↯ 下班以后，时间还给自己。</span><button class="text-button" id="calculationInfo">计算说明</button></footer>
+  </main>
+  <dialog id="profileDialog" aria-labelledby="profileDialogTitle"><form id="profileForm">
+    <div class="modal-head"><div><div class="eyebrow">MAKE IT YOURS</div><h2 id="profileDialogTitle">作息由我，工资照算。</h2></div><button type="button" class="close-button" data-close="profileDialog" aria-label="关闭">×</button></div>
+    <p class="modal-intro">保存仅在本机生效，不会上传昵称、工资或休息安排。</p>
+    <div class="form-grid">
+      <label class="full">怎么称呼你<input name="nickname" placeholder="你的昵称" maxlength="24" required></label>
+      <div class="mode-switch full salary-modes">
+        <label><input type="radio" name="salaryMode" value="estimate" checked> 税前工资＋扣款金额</label>
+        <label><input type="radio" name="salaryMode" value="contributions"> 税前工资＋缴费基数／比例</label>
+        <label><input type="radio" name="salaryMode" value="manual"> 已知实际税后工资</label>
+      </div>
+      <label data-estimated>税前月薪（元）<input name="gross" type="number" min="0.01" max="10000000" step="0.01" placeholder="例如 12000"></label>
+      <label data-manual hidden>实际税后月薪（元）<input name="net" type="number" min="0.01" max="10000000" step="0.01" placeholder="以工资条为准"></label>
+      <label data-amount>个人五险一金合计／月（元）<input name="social" type="number" min="0" step="0.01" value="0"></label>
+      <div class="region-reference full" data-contributions hidden><b>浙江企业职工参考 · 可修改</b><p>养老 8%，医保暂按杭州 2%；公积金 5% 为试算初值，按单位实际填写。失业比例请按工资条确认。只扣个人承担部分，社保与公积金基数可不同，未自动套用年度上下限。</p></div>
+      <label data-contributions hidden>社保缴费基数（元）<input name="socialBase" type="number" min="0" step="0.01" placeholder="按工资条填写"></label>
+      <label data-contributions hidden>公积金缴存基数（元）<input name="housingBase" type="number" min="0" step="0.01" placeholder="可以与社保基数不同"></label>
+      <label data-contributions hidden>养老个人比例（%）<input name="pensionRate" type="number" min="0" max="100" step="0.01" value="8"></label>
+      <label data-contributions hidden>医保个人比例（%）<input name="medicalRate" type="number" min="0" max="100" step="0.01" value="2"></label>
+      <label data-contributions hidden>失业个人比例（%）<input name="unemploymentRate" type="number" min="0" max="100" step="0.01" placeholder="当前比例请按工资条填写"></label>
+      <label data-contributions hidden>公积金个人比例（%）<input name="housingRate" type="number" min="0" max="100" step="0.01" value="5"></label>
+      <label data-contributions hidden>其他个人社保定额扣款／月（元）<input name="socialFixed" type="number" min="0" step="0.01" value="0"></label>
+      <label data-estimated>专项附加扣除／月（元）<input name="special" type="number" min="0" step="0.01" value="0"></label>
+      <div class="salary-preview full" id="salaryPreview">填写后显示税后估算。</div>
+      <div class="time-field"><span id="startTimeLabel">上班时间</span><div class="time-picker" data-time-picker="start" aria-labelledby="startTimeLabel"></div><input name="start" type="hidden" value="09:00"></div>
+      <div class="time-field"><span id="endTimeLabel">下班时间</span><div class="time-picker" data-time-picker="end" aria-labelledby="endTimeLabel"></div><input name="end" type="hidden" value="18:00"></div>
+      <div class="salary-preview full">分钟每 10 分一档，60 自动进位到下一小时 00 分。</div><p class="full muted" id="timeRoundingNote" hidden></p>
+      <label class="full">默认工作日历<select name="calendarMode"><option value="china">中国大陆法定节假日及调休</option><option value="custom">自定义每周工作日</option></select></label>
+      <fieldset class="weekdays full" id="customWeekdays"><legend>通常哪几天上班？</legend><div id="weekdayOptions"></div><small>作为默认安排；下面的整月日历可以单独修改任意日期。</small></fieldset>
+      <div class="salary-preview full" id="calendarPreview"></div>
+      <details class="full month-calendar-details" id="monthCalendarDetails"><summary>▦ 展开整月日历，自由选择休息日</summary><div id="monthCalendar"></div></details>
+      <label>日薪折算方式<select name="workdaysMode"><option value="calendar">按该月实际工作日自动折算</option><option value="manual">手动填写工作日数</option></select></label>
+      <label>本月计薪工作日（天）<input name="workdays" type="number" min="0" max="31" step="0.01" value="22" required></label>
+      <div class="full automatic-note">日薪＝税后月薪÷当月工作日。到点自动计薪，晚打开也会补算；自选休息日也会同步改变房贷、车贷的每日分摊。</div>
+      <label class="check-label full" id="loginSetting" hidden><input type="checkbox" id="launchAtLogin"> 登录电脑时自动打开薪动</label><small class="full muted" id="loginMessage"></small>
+    </div><p class="form-error" id="profileError" role="alert"></p><div class="modal-actions"><button type="button" class="secondary-button" id="previewDemo">先看演示</button><button type="submit" class="primary-button">保存作息，自动计薪 ↗</button></div>
+  </form></dialog>
+  <dialog id="goalsDialog" aria-labelledby="goalsDialogTitle"><div class="modal-head"><div><div class="eyebrow">THE LITTLE THINGS</div><h2 id="goalsDialogTitle">从班里，捞回一点生活。</h2></div><button class="close-button" data-close="goalsDialog" aria-label="关闭">×</button></div><p class="modal-intro">房贷、车贷选“每月”，自动分摊到当月工作日。咖啡、午饭选“每天”。门槛按优先级逐项累加。</p><div class="preset-actions"><button class="secondary-button" id="addMortgage">＋ 房贷</button><button class="secondary-button" id="addCarLoan">＋ 车贷</button></div><div id="allocationNote" class="salary-preview"></div><div id="goalsEditor"></div><button class="secondary-button" id="addGoal">＋ 添加一项开销</button><p id="goalsError" class="form-error" role="alert"></p><div class="modal-actions"><small>拖动左侧 ⋮⋮ 上下排序，也可使用箭头。</small><button class="primary-button" id="saveGoals">保存清单</button></div></dialog>
+  <dialog id="sendDialog" aria-labelledby="sendDialogTitle"><div class="modal-head"><div><div class="eyebrow">SHARE YOUR PROFILE</div><h2 id="sendDialogTitle">提交我的信息</h2></div><button class="close-button" data-close="sendDialog" aria-label="关闭">×</button></div><p class="modal-intro">自愿提交下面的信息，帮助软件创建者了解用户情况、改进产品。</p><div id="submissionSummary" class="submission-summary"></div><div class="privacy-notice"><strong>收件人：895429442@qq.com</strong><p>通过第三方 FormSubmit 服务发送。提交内容包含昵称、税前工资、扣款合计、税后估算、工作日数和上下班时间；不发送缴费基数／比例明细、逐日休息安排、开销清单或解压记录。FormSubmit 的文档说明表单记录保留 30 天。首次使用需收件人在激活邮件中确认。</p></div><label class="check-label consent"><input type="checkbox" id="submitConsent"> 我同意将以上信息经 FormSubmit 发送至该邮箱。</label><p id="submissionStatus" class="form-error" role="status"></p><div class="modal-actions"><small>修改设置不会自动发送。</small><button class="primary-button" id="submitProfile">确认提交</button></div></dialog>
+  <dialog id="infoDialog" aria-labelledby="infoDialogTitle"><div class="modal-head"><h2 id="infoDialogTitle">收入是怎么算的？</h2><button class="close-button" data-close="infoDialog" aria-label="关闭">×</button></div><div class="info-content"><p><b>税后日薪</b> = 税后月薪 ÷ 每月工作日。</p><p><b>今日已赚</b> = 税后日薪 × 今日已计薪时间 ÷ 每日计薪总时长。按设备当前时间计算；关闭后重开会恢复到当前进度。下班后封顶，未开工和休息日不增加。</p><p>上下班时段连续计薪，午休也计薪，支持跨午夜班次。跨午夜班次归入上班日，并使用上班日所在月的工作日数。中国大陆日历已依据国务院通知内置 2026 年节假日与调休；其他年份会明确提示未加载，暂按周一至周五估算，也可切换自定义工作日。日历跟随应用版本更新。你可以展开整月日历逐日选择休息／工作；手动日期优先于默认日历。</p><p><b>缴费基数模式</b>：个人社保按各项基数和个人比例计算，公积金使用独立基数。浙江参考初值不是全省统一标准：养老 8%、医保暂按杭州 2%，公积金 5% 为试算初值；失业比例须自行核对。所有参数可修改，不能把单位承担部分从到手工资再次扣掉。公积金等缴费取整以实际工资条为准。</p><p><b>大陆税后估算</b>：假设全年固定月薪、无奖金或其他综合所得，按全年税率计算后取月平均。每年扣除 60,000 元基本费用、个人五险一金和专项附加扣除。专项附加扣除只减少计税所得，不直接扣减到手工资。</p><p>估算不等于当月累计预扣后的实发工资。已知实际到手工资时，优先使用“填写实际税后工资”。</p><p><b>月度账单</b>分摊到当月日历工作日，不使用手动填写的薪资除数。按“分”平均分配，余数分配给当月最前面的工作日，保证整月合计等于原账单金额。休息日显示参考份额，但不解锁；极小账单当日无分摊时标为“今日无需分摊”。</p><p><b>支付优先级</b>按清单顺序累计每日门槛，不重复使用同一笔收入。修改顺序会立即重新分配今天的收入；清单跨天保留，每天重新计算覆盖状态。软件不会实际扣款或偿还贷款。</p><p>薪资保存在本机，不会自动上传。只有在“提交我的信息”勾选同意并确认后才发送。隐藏薪资仅影响屏幕展示，日常开销的价格仍然显示。</p><p><b>敲走班味</b>：+1 RMB 只是解压飘字，不影响工资、账单或已覆盖开销。敲击记录与自己填写的感受仅保存在当前浏览器，可导出或删除，不会随薪资信息提交。点击次数不代表压力程度。</p><p class="muted">税率依据：国家税务总局《中华人民共和国个人所得税法》及综合所得税率表，2026 年 11 月查阅。当前版本为体验版。</p></div></dialog>
+  <dialog id="personalizeDialog" aria-labelledby="personalizeTitle"><form id="personalizeForm">
+    <div class="modal-head"><div><div class="eyebrow">MY SPACE, MY RULES</div><h2 id="personalizeTitle">按我的来。</h2></div><button type="button" class="close-button" data-close="personalizeDialog" aria-label="关闭">×</button></div>
+    <p class="modal-intro">颜色、文案性格、解压伙伴，分别选择。仅在当前浏览器保存。</p>
+    <div class="personalization-grid form-grid">
+      <fieldset class="positive-presets full"><legend>也可以直接选一套</legend><div class="preset-pair"><button type="button" data-positive-preset="confident" class="positive-preset preset-orange"><strong>大动脉橙</strong><span>自信打工人 · 我的付出值得</span></button><button type="button" data-positive-preset="lamb" class="positive-preset preset-lamb"><strong>元气小羊</strong><span>温柔夸夸 · 先照顾自己</span></button></div><small>只是搭配建议，下面每一项都可以单独换。</small></fieldset>
+      <fieldset class="theme-options full"><legend>主题色</legend>
+      <label><input type="radio" name="theme" value="acid"><span>◉ 怨气荧光</span></label><label><input type="radio" name="theme" value="moss"><span>◉ 工位苔绿</span></label><label><input type="radio" name="theme" value="lavender"><span>◉ 精神离线</span></label><label><input type="radio" name="theme" value="brick"><span>◉ 日落砖红</span></label><label><input type="radio" name="theme" value="mono"><span>◉ 黑白低调</span></label><label><input type="radio" name="theme" value="orange"><span>◉ 大动脉橙</span></label><label><input type="radio" name="theme" value="lamb"><span>◉ 奶油薄荷</span></label></fieldset>
+      <label>文案性格<select name="tone"><option value="spicy">重班味 · 精神已下班</option><option value="dry">轻吐槽 · 人在工位，精神待机</option><option value="confident">自信打工人 · 裁我就是裁大动脉</option><option value="lamb">温柔夸夸 · 今天太棒了</option><option value="quiet">平静一点</option><option value="none">关闭情绪文案</option></select></label>
+      <label>解压伙伴<select name="companion"><option value="horse">打工小马</option><option value="lamb">元气小羊</option><option value="none">不显示角色</option></select></label>
+      <label>金额精度<select name="precision"><option value="4">4 位小数 · 看见每秒变化</option><option value="2">2 位小数 · 简洁金额</option></select></label>
+      <label>页面密度<select name="density"><option value="comfortable">舒展</option><option value="compact">紧凑</option></select></label>
+      <label>首页显示<select name="layout"><option value="full">完整 · 计薪＋解压＋开销</option><option value="focus">专注 · 计薪＋解压</option></select></label>
+      <label class="check-label full"><input type="checkbox" name="hideByDefault"> 每次打开时先隐藏工资金额</label>
+      <p class="full muted">比如荧光绿配元气小羊，也可以奶油薄荷配重班味。解压区可另外选择木鱼／回车键、声音和动效。</p>
+    </div><p class="form-error" id="preferencesError" role="alert"></p><div class="modal-actions"><button type="button" class="secondary-button" id="resetPreferences">恢复推荐设置</button><button type="submit" class="primary-button">就按这个来</button></div>
+  </form></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
